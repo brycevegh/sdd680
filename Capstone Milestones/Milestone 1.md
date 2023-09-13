@@ -69,11 +69,7 @@ Out of Scope Features:
 
 - Design the application to accept qualification data from the tool’s qualifications so that trends can be made, and tool efficiency can be determined. 
 
-|  |  | Responsiblities |
-| .. | .. | .. |
-| Bryce Vegh | Lead Designer | To draft and finalize all documents pertaining to the project. While also designing all the code for the project |
-
-| Stakeholder Name | Role | Price |
+| Stakeholder Name | Role | Responsiblities |
 | :----------------: | :------: | :----: |
-| Bryce Vegh | True | 23.99 |
+| Bryce Vegh | Lead Designer | To draft and finalize all documents pertaining to the project. While also designing all the code for the project |
 
