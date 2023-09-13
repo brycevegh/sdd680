@@ -73,7 +73,7 @@ Out of Scope Features:
 | .. | .. | .. |
 | Bryce Vegh | Lead Designer | To draft and finalize all documents pertaining to the project. While also designing all the code for the project |
 
-| Stakeholder Name   | Role | Price |
+| Stakeholder Name | Role | Price |
 | :----------------: | :------: | :----: |
-| Bryce Vegh         |   True   | 23.99 |
+| Bryce Vegh | True | 23.99 |
 
