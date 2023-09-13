@@ -69,13 +69,11 @@ Out of Scope Features:
 
 - Design the application to accept qualification data from the tool’s qualifications so that trends can be made, and tool efficiency can be determined. 
 
-| Stakeholder Name | Role | Responsiblities |
+|  |  | Responsiblities |
 | .. | .. | .. |
 | Bryce Vegh | Lead Designer | To draft and finalize all documents pertaining to the project. While also designing all the code for the project |
 
-| Item              | In Stock | Price |
-| :---------------- | :------: | ----: |
-| Python Hat        |   True   | 23.99 |
-| SQL Hat           |   True   | 23.99 |
-| Codecademy Tee    |  False   | 19.99 |
-| Codecademy Hoodie |  False   | 42.99 |
+| Stakeholder Name   | Role | Price |
+| :----------------: | :------: | :----: |
+| Bryce Vegh         |   True   | 23.99 |
+
