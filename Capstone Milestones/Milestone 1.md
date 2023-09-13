@@ -200,7 +200,7 @@ The following solution described above meets the objective of this project becau
 | :----------------: | :------: | :----: |
 | Bryce Vegh | Lead Designer | To draft and finalize all documents pertaining to the project. While also designing all the code for the project |
 
-#Issues Log Table Goes Here
+# Issues Log Table Goes Here
 
 | Stakeholder Name | Role | Responsiblities |
 | :----------------: | :------: | :----: |
@@ -257,7 +257,6 @@ SQLite Tutorial. (2018). SQLite Python. SQLiteTutorial.com; SQLite Tutorial. htt
 The PySimpleGUI library was used to develop the GUI of the business application, which allows the users to interact with the SQL databases to either view, edit, add, or remove data from the databases. Next, this library was not adapted at all for this application, it was just used in a custom way to add the different features that were needed for this application to allow the most functionality for the end users. Plus, there were no modification done to the library because the library already provided all the needed functions in its original state. The development team decided to use this library and not develop our own because developing this library would take a considerable amount of time and significantly increase the development cost due to engineering time. Lastly, a library is used/required because if it is not used then the development team is spending valuable time developing these features from scratch leading to this time being wasted that could have been used to improve the system. 
 
 **PySimpleGUI Library Copyright Reference**
-
 
 Free Software Foundation, Inc. (2007, June 29). PySimpleGUI License. GitHub.com. https://github.com/PySimpleGUI/PySimpleGUI/blob/master/license.txt
 
