@@ -1,16 +1,16 @@
-<p style="text-align: center;">Tool Upgrade Tracking Business Application
+<p align="center">Tool Upgrade Tracking Business Application
 
-<p style="text-align: center;">Bryce Ryan Vegh
+<p align="center">Bryce Ryan Vegh
 
-<p style="text-align: center;">Master of Science in Software Development Capstone Project Proposal
+<p align="center">Master of Science in Software Development Capstone Project Proposal
 
-<p style="text-align: center;">Grand Canyon University
+<p align="center">Grand Canyon University
 
-<p style="text-align: center;">Professor Jeremy Wright
+<p align="center">Professor Jeremy Wright
 
-<p style="text-align: center;">Revision: B
+<p align="center">Revision: B
 
-<p style="text-align: center;">January 11,2023
+<p align="center">January 11,2023
 
 # Abstract
 The Tool Upgrade Tracking Business Application is an application that is being designed to give Equipment Engineers the ability to track upgrades on the semiconductor tools that they work on that are used to build the different layers of a microchip. This application will give the ability for the engineers to track what upgrades are available to install on their tools while also giving them the ability to track the upgrades that have already been installed on their tools. The idea of creating this application came from studying how younger and older (more experienced) Equipment Engineers work to track the different upgrades of the tools they work on. From the study it showed that the younger less experienced Equipment Engineers struggled to track the different upgrades that they installed or have available to them to install on their different tools. But the studied showed the main cause of this issue was that the younger engineers just did not have the years under their belt of working on their tools and knowing the tools like the back of their hand. So, creating an application like this has the possibility to bring the younger engineers up to speed by allowing them to get a better feel for their tools and have a resource they can go to when needed. 
