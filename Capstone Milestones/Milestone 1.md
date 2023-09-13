@@ -73,5 +73,214 @@ Out of Scope Features:
 | :----------------: | :------: | :----: |
 | Bryce Vegh | Lead Designer | To draft and finalize all documents pertaining to the project. While also designing all the code for the project |
 
-<p align="center">***Table 1:Stakeholder Information***
+# Work Breakdown Structure Table Goes Here 
 
+| Stakeholder Name | Role | Responsiblities |
+| :----------------: | :------: | :----: |
+| Bryce Vegh | Lead Designer | To draft and finalize all documents pertaining to the project. While also designing all the code for the project |
+
+## Project Success Measures
+
+# Project Completion Criterian Table Goes Here 
+
+| Stakeholder Name | Role | Responsiblities |
+| :----------------: | :------: | :----: |
+| Bryce Vegh | Lead Designer | To draft and finalize all documents pertaining to the project. While also designing all the code for the project |
+
+# Assumptions and Contraints Table Goes Here 
+
+| Stakeholder Name | Role | Responsiblities |
+| :----------------: | :------: | :----: |
+| Bryce Vegh | Lead Designer | To draft and finalize all documents pertaining to the project. While also designing all the code for the project |
+
+## Tool Upgrade Tracking Applicaiton High-Level Solution
+
+### Introduction 
+
+The challenge that is being addressed is how Equipment Engineers track the different upgrades that are available to install or have been installed on the tools they are responsible for. With having discussions with various Equipment Engineers, it was found that there was not a single way to track this information in an efficient way whatsoever. The various engineers also discussed that they tried to keep track of this information either in their head, in notebooks at their desk, or in excel files on their work computers. The commonality that was found from these discussions with the engineers was that all of them said that the listed ways were inefficient and took too much time to find the information. In addition, the engineers said they would like to see a more efficient and reliable way to track this information developed. Leading to the need to develop this application so that these Equipment Engineers have an efficient way to track this information and reference it at a moment’s notice. 
+
+### Known Information
+
+The information that is known is that the Equipment Engineers are using one of the following methods for tracking tool upgrade information, which are to remember them off the top of their head, writing them down in notebooks at their desk, or tracking the information in excel files on their work computers. It is also known that there are multiple engineers that would like to see a better way of tracking this information created because their current methods are inefficient and take too much time to reference. In addition, it is known that the information will need to be tracked with two different categories which are what available upgrades there are to install on the tools and what upgrades have already been installed on the tools. In these categories there is different information that will need to be kept track in an efficient and reliable way. For example, with the available upgrades category the needed information that will be tracked are the name of the upgrade, the cost of the upgrade, the needed parts for the upgrade, and how long it will take to install the upgrade. While the installed upgrade category will only need to keep track of the tool name and the running list of upgrades that have been installed on the tool so far. With this, this is all the known information for the project and next examples of the data that will be inputted into the application will be provided.
+
+### Example of Data Inputted into the Application
+
+**Available Upgrade Data**
+
+This data will be inputted into the portion of the SQL database that is used to track the available upgrades. The user will need to supply the application with a name of the upgrade, how much it costs, the needed parts for the upgrade, and how long it will take to install the upgrade. The Upgrade name will be used to allow the user to easily sort the different upgrades within the SQL database and allow the user to search for the upgrade. An example of the data that will be inputted into the application is provided below. 
+
+**Upgrade Name:** Power Valve Card
+
+**Cost:** $13,200
+
+**Part/Parts:** 6 x Power Valve Cards
+
+**Time:** 4 Hours
+
+**Upgrade on Tool**
+
+This data will be inputted into the second portion of the SQL database that is used to track which upgrades have been installed on the different tools that the Equipment Engineers is responsible for. The user will supply the application with a tool name and the list of all the upgrades that they have installed on the tool so far. The tool name will be used to sort all of this data in the SQL database so that the user can easily put in the tool’s name and find all the upgrades that have been installed on it. An example of how this data will be inputted into the application is provided below. 
+
+**Tool Name:** CFM T1A
+
+**List of Upgrades:** Power Valve Card, UPS, IPA Sniffers
+
+### Objective of the Application
+
+The objective of this project is to develop an application that allows Equipment Engineers to track upgrade information more efficiently and reliably for the tools they are responsible for. In addition, the objective is to develop an application that is user-friendly that allows all Equipment Engineers to learn the application quickly. The last part of the objective is to provide Microchip’s upper management a resource that allows them to better prioritize how they approve capital for the various upgrades that are available on the tools in the fab. 
+
+### Solution
+
+The solution that will be designed for the problem stated earlier is going to be a business application that uses an SQL databases and a GUI that the user can interact with. Each of these components of the application will be broken down in the following paragraphs of the proposal. 
+The first portion of the SQL database will be used to take in and store the data that relates to the upgrades that are available to install on the different tools that the Equipment Engineers is responsible for. This portion of the SQL database will store the following data for the available upgrades, which are the name of the upgrade, how much the upgrade costs, the part or parts that are needed for the upgrade, and how much time it will take to install the upgrade. The application will use the name of the upgrade to sort and filter the data within the SQL Database. The SQL database will have functions built in that the GUI will use to search and retrieve the cost, parts, and time data values that are stored in the SQL database. In addition, the SQL database will have functions that will allow the GUI to use to update these data values as well. Lastly, the SQL database will have a function built in that the GUI will use to completely delete a user selected available upgrade that is stored in the database. A class diagram for the first SQL database is provided below for reference. 
+
+# Figure 1 Goes Here
+
+The second portion of the SQL database will be used to take in and store the data that relates to what upgrades have been installed on each of the different tools that the Equipment Engineers is responsible for. The data that will be stored in this portion of the SQL database will be the name of the tool and a running list of the upgrades that have been installed on the tool already, with the tool name being used to sort and filter the data within the SQL database. The SQL database will have a function built in that will allow the GUI to search and retrieve specific installed upgrade data from a tool name within the database. In addition, The SQL database will have a function built in that the GUI will use that allows for the running list of upgrades to be updated and a new upgrade added to the list. Lastly, the SQL database will have a function that the GUI will use to delete a user selected tool name completely from the SQL database. A Class diagram for the second SQL databases is provided below for reference. 
+
+#Figure 2 Goes Here
+
+The GUI or Graphical User Interface will be the main component of the application that the user will interact with directly. Meaning that this is where the user will have the ability to input new data, edit data, or delete data from the SQL database talked about above. The main function of this component is to allow the user to view and change the data that is stored the SQL database, which means that the GUI will have a connection to the SQL database. With this, the GUI will have five buttons designed for the user to click which will allow them to interact with the SQL database, one button that will be designed to close the application, and one button designed to restart the application. The five buttons will be designed to allow the application to select which portion of the database the user wants to view, search and output data to the user, view data from either portions of the database in a popup window, edit data in either portion of the database that the user wants, and for the user to delete data from either portions of the database. Each of the five buttons will have a functions tied to them that will allow the task to be executed when the button is clicked by the user. With this, a class diagram has been provided below for the Graphical User Interface for reference. 
+
+# Figure 3 Goes Here
+
+### Architecture Diagram of the Application
+
+**Component #1 Available Upgrade Portion**
+
+In the figure below, component #1 is the first portion of the SQL database that is used to store the available upgrade data for the tools that the Equipment Engineer is responsible for. The function of this component is to store the data on the upgrades that are available to install on the tools. This component does this by having built in functions that allow the database to add new data to the database and edit the existing data within the database so that all the information is up to date all the time. These functions are the main functions that this component uses, but there is also a partial function built into this component. This partial function is used in conjunction with component #3, which is the Graphical User Interface, which allows for data in this component to be searched for and outputted for the user to view. 
+
+**Component #1 Installed Upgrades Portion**
+
+In the figure below, component #1 is the second portion of the SQL database that is used to store the data for the upgrades that are installed on the tools that the Equipment Engineer is responsible for. The function of this component is to store the data on the upgrades that have been installed on the tools. This component also does this by having built in functions that allow the database to add new data to the database and edit the existing data within the database so that all the information is up to date. These functions are also the main functions that this component uses, but there is also a partial function built into this component. This partial function is used in conjunction with component #3, which is the Graphical User Interface, which allows for data in this component to be search for and outputted for the user to view. 
+
+**Component #2**
+
+In the figure below, component #2 is the Graphical User Interface. The function of this component is  to allow the user to interact with the internal SQL databases. Meaning that the GUI allows the user to select different buttons on the GUI that will execute different commands for adding, editing, deleting, or viewing the data within the SQL databases. In addition, the GUI’s function is to take the data that is stored within the SQL database and display the data to the user in a way that allows the user to easily understand and reference the data. 
+
+**Component #3**
+
+In the figure below, component #3 is the Python IDE Shell/ Compiler. The function of this component is to compile the code to verify that there are no errors within the code of the application. Plus, it allows the code to be executed which allows for the application to start up and run in the way it was designed to. 
+
+**Component #4**
+
+In the figure below, component #4 is windows computer. The function of this component is to give the application all the needed storage and hardware to allow the application to be run so that the Equipment Engineers can use the application. 
+
+# Figure 4 Goes Here
+
+### Inputs to the Application
+
+The data that will be inputted into the system will be what available upgrades there are for the tools that the Equipment Engineer is responsible for. This data will include the name of the upgrade, how much the upgrade costs to purchase, the needed parts of the upgrade, and how long the upgrade will take to install. With this the key or important data that is included is the name of the upgrade because this portion of the inputted data will be used to sort and find grouped data within the SQL database. In addition to this there will be data inputted to the application for the installed upgrades on the tools that the Equipment Engineer is responsible for. This data will include the name of the tool that the upgrade or upgrades were installed on and the running list of upgrades that were installed on the tool. With the name of the tool being the key or important data of the grouped data because the tool name will be used to sort and find the data within the SQL database.
+
+### Outputs to the Application
+
+The output of the application will be which data the user is trying to view that is stored in either portion of the SQL database. When the user requests to view specific data that is stored in either portion of the databases the application will go to the desired portion, find the data by sorting through the database. Once the application finds the data within the database, the application will pull the data from the database and modify the data to be visual appealing and understandable for the user to view. Finally, the application will display the data in a window within the GUI for the user to view and reference the data. The only other outputs that the user will see is an output that tells the user that the data has been successfully added, edited, or deleted from either of the SQL database.
+
+### Key Code Snippets 
+
+In the figure below, it provides a code snippet of how the SQL databases initial connection is created when the application first creates the databases. Plus, this snippet of code is also used every time when the user adds, edits, views, or deletes data from either of the database. This portion of code is important and key to the application working because without it the application would not have the ability to access or interact with the SQL databases. 
+
+# Figure 5 Goes Here 
+
+In figure 6 it shows the code snippet for how the SQL database is created for storing the available upgrades to install on the tools. This portion of code is important and key to the application because it allows for the SQL database to be created allowing the user to store all the data on available upgrades for their tools. In addition, without this snippet of code the application would not be able to meet the objective of storing this data in an efficient and easily reference able manner. 
+
+# Figure 6 Goes Here
+
+The figure below is a code snippet showing how the portion of the SQL database is created for storing the data for what upgrades have been installed on the tools already. This code snippet is important and key to the application because it allows for the other half of the data of the application to be stored in an efficient and reliable way for the user to reference at a moment’s notice. In addition, it shows how easily this SQL database can be modified to allow for more data to be stored within this database. For example, another data field for how much money has been spent on installing the upgrades could be added if there was a need for this data to be tracked. 
+
+### Summary of Solution
+
+The following solution described above meets the objective of this project because it gives the Equipment Engineers a viable option for tracking the upgrade information they have for their tools. This solution is the most viable way for the engineers because it provides them with the ability to track all of this information in once place while also allowing the application to sort and filter through this data internal which decreases the amount of time it takes to find this data. Plus, it gives upper management a resource that they can use to help determine why different tools within the fab run more efficiently and are more reliable than other tools. Leading to upper management having a better understanding on how to invest money on upgrading tools so that the fab is impacted in the best way. 
+
+## Project Controls
+
+# Risk Management Table Goes Here
+
+| Stakeholder Name | Role | Responsiblities |
+| :----------------: | :------: | :----: |
+| Bryce Vegh | Lead Designer | To draft and finalize all documents pertaining to the project. While also designing all the code for the project |
+
+#Issues Log Table Goes Here
+
+| Stakeholder Name | Role | Responsiblities |
+| :----------------: | :------: | :----: |
+| Bryce Vegh | Lead Designer | To draft and finalize all documents pertaining to the project. While also designing all the code for the project |
+
+# Change Control Log Table Goes Here
+
+| Stakeholder Name | Role | Responsiblities |
+| :----------------: | :------: | :----: |
+| Bryce Vegh | Lead Designer | To draft and finalize all documents pertaining to the project. While also designing all the code for the project |
+
+# Role and Responsibilites of End Users Table Goes Here
+
+| Stakeholder Name | Role | Responsiblities |
+| :----------------: | :------: | :----: |
+| Bryce Vegh | Lead Designer | To draft and finalize all documents pertaining to the project. While also designing all the code for the project |
+
+## Project Cost and Schedule
+
+The project did not require any materials or elements to be purchased to develop the project effectively. This is due to all the materials and elements that are used within the project are free to use for public and/or commercial use. The only cost of the project was developing and testing the project which will be included within the programming work breakdown portion of this section. The cost for engineering time was set at 100 dollars per hour and the cost for testing time was set at 65 dollars per hour. 
+
+# Materials and Elements of Project Table Goes Here
+
+| Stakeholder Name | Role | Responsiblities |
+| :----------------: | :------: | :----: |
+| Bryce Vegh | Lead Designer | To draft and finalize all documents pertaining to the project. While also designing all the code for the project |
+
+# Figure 8 Goes Here
+
+# Figure 9 Goes Here
+
+## Appendix A - References
+
+JetBrains. (2019). PyCharm: The Python IDE for Professional Developers. JetBrains.com; JetBrains. https://www.jetbrains.com/pycharm/
+
+Pycharm. (2022, December 22). Create and run your first Python project - Help | PyCharm. PyCharmHelp.com; Pycharm. https://www.jetbrains.com/help/pycharm/ creating-and-running-your-first-python-project.html
+
+PySimpleGUI. (2022). Cookbook - PySimpleGUI. Pysimplegui.org; PySimpleGUI. https://www.pysimplegui.org/en/latest/cookbook/
+
+PySimpleGUI. (2021). PySimpleGUI. Www.pysimplegui.org; PySimpleGUI. https://www.pysimplegui.org/en/latest/
+
+Python Software Foundation. (2019, May 29). Welcome to Python.org. Python.org; Python Software Foundation. https://www.python.org/
+
+SQLite. (2022, December 14). Appropriate Uses for SQLite. Sqlite.org. https://www.sqlite.org/whentouse.html#:~:text=SQLite%20is%20often%20used%20as
+
+SQLite Tutorial. (2022). SQLite Tutorial - An Easy Way to Master SQLite Fast. SQLiteTutorial.com; SQLite Tutorial. https://www.sqlitetutorial.net/
+
+SQLite Tutorial. (2018). SQLite Python. SQLiteTutorial.com; SQLite Tutorial. https://www.sqlitetutorial.net/sqlite-python/
+
+## Aprendix A - Copyright Compliance
+
+**Description of PySimpleGUI Library**
+
+The PySimpleGUI library was used to develop the GUI of the business application, which allows the users to interact with the SQL databases to either view, edit, add, or remove data from the databases. Next, this library was not adapted at all for this application, it was just used in a custom way to add the different features that were needed for this application to allow the most functionality for the end users. Plus, there were no modification done to the library because the library already provided all the needed functions in its original state. The development team decided to use this library and not develop our own because developing this library would take a considerable amount of time and significantly increase the development cost due to engineering time. Lastly, a library is used/required because if it is not used then the development team is spending valuable time developing these features from scratch leading to this time being wasted that could have been used to improve the system. 
+
+**PySimpleGUI Library Copyright Reference**
+
+
+Free Software Foundation, Inc. (2007, June 29). PySimpleGUI License. GitHub.com. https://github.com/PySimpleGUI/PySimpleGUI/blob/master/license.txt
+
+**Description of PyCharm Python IDE Compiler**
+
+JetBrains is the developer for PyCharm that was used in the development process, which PyCharm is a Python IDE compiler that was used to compile and run the Python code that was developed for the application. Next, PyCharm was not adapted for this application because it provides the application with a place to write, test, and compile all the code for the project like it would for any other software development project. Lastly, PyCharm was not modified in any way because the compiler provided all the needed resources for developing the application so there was no need to modify the compiler to add more features. In addition, the development team decided to use the IDE compiler instead of developing our own because this would create a whole second project that would require massive amounts of engineering and testing time that would cost a significant amount of money. 
+
+**PyCharm Copyright Reference**
+
+JetBrains. (2020, October 27). Terms of Use. JetBrains.com. https://www.jetbrains.com/ legal/docs/company/useterms/
+
+**Description of Python Language**
+
+Python was the language that was used to develop the application due to the ease of use that the language provides to the developers. Plus, the Python language is one of the easiest languages to learn due to the number of resources that can be found on the internet. Next, the Python language was adapted by adding two different libraries to it that allowed for more capabilities of the language like creating SQL databases and GUIs. Lastly, the Python language was not modified by anyone on the development team because the language with the libraries added was everything that was needed to develop the application. In addition, the development team did not try to write our own language due to the limited amount of time that was given, and all the time would be used just to develop the new language. 
+
+**Python Copyright Reference**
+
+Python Software Foundation. (2022). Python Copyright Policy. Python.org. https://www.python.org/doc/copyright/#:~:text=A%20few%20files%20have%20a
+
+**Description of SQLite Library**
+
+The SQLite library was used in this capstone project to allow for the databases where all the data was stored to be developed. Meaning the addition of this library added the features that allowed for the developer to design and build the SQL databases. Next, the SQL library was not adapted at all because the library already provided all the needed functionality to design and build different SQL databases for the application. In addition, there was no modifications done to the library due to all the functionality that the library already provided to the development team. This library was used instead of designing our own because the work involved with building this library would have taken away valuable time from developing and refining the application. Lastly, libraries are used/required because it allows for added functionality to be included within the coding language that is being used allowing for more complex and useful software system to be developed at a faster rate. 
+
+**SQLite Library Copyright Reference**
+
+SQLite. (2021, November 10). SQLite Copyright. Sqlite.org. https://www.sqlite.org/copyrigh .html#:~:text=SQLite%20Is%20Public%20Domain&text=Anyone%20is%20free%20to%20copy
