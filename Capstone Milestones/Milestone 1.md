@@ -157,17 +157,22 @@ The objective of this project is to develop an application that allows Equipment
 The solution that will be designed for the problem stated earlier is going to be a business application that uses an SQL databases and a GUI that the user can interact with. Each of these components of the application will be broken down in the following paragraphs of the proposal. 
 The first portion of the SQL database will be used to take in and store the data that relates to the upgrades that are available to install on the different tools that the Equipment Engineers is responsible for. This portion of the SQL database will store the following data for the available upgrades, which are the name of the upgrade, how much the upgrade costs, the part or parts that are needed for the upgrade, and how much time it will take to install the upgrade. The application will use the name of the upgrade to sort and filter the data within the SQL Database. The SQL database will have functions built in that the GUI will use to search and retrieve the cost, parts, and time data values that are stored in the SQL database. In addition, the SQL database will have functions that will allow the GUI to use to update these data values as well. Lastly, the SQL database will have a function built in that the GUI will use to completely delete a user selected available upgrade that is stored in the database. A class diagram for the first SQL database is provided below for reference. 
 
-<p align="center">
-  <img width="460" height="300" src="https://github.com/brycevegh/sdd680/blob/main/Milestone%201%20Figures/Figure%201.png">
-</p>
+
+![Figure 1](https://github.com/brycevegh/sdd680/blob/main/Milestone%201%20Figures/Figure%201.png)
+
+Figure 1: UML Class Diagram of the SQL Database for Upgrades Available to Install
 
 The second portion of the SQL database will be used to take in and store the data that relates to what upgrades have been installed on each of the different tools that the Equipment Engineers is responsible for. The data that will be stored in this portion of the SQL database will be the name of the tool and a running list of the upgrades that have been installed on the tool already, with the tool name being used to sort and filter the data within the SQL database. The SQL database will have a function built in that will allow the GUI to search and retrieve specific installed upgrade data from a tool name within the database. In addition, The SQL database will have a function built in that the GUI will use that allows for the running list of upgrades to be updated and a new upgrade added to the list. Lastly, the SQL database will have a function that the GUI will use to delete a user selected tool name completely from the SQL database. A Class diagram for the second SQL databases is provided below for reference. 
 
-# Figure 2 Goes Here
+![Figure 2](https://github.com/brycevegh/sdd680/blob/main/Milestone%201%20Figures/Figure%202.png)
+
+Figure 2: UML Class Diagram of the SQL Database for Upgrades Installed
 
 The GUI or Graphical User Interface will be the main component of the application that the user will interact with directly. Meaning that this is where the user will have the ability to input new data, edit data, or delete data from the SQL database talked about above. The main function of this component is to allow the user to view and change the data that is stored the SQL database, which means that the GUI will have a connection to the SQL database. With this, the GUI will have five buttons designed for the user to click which will allow them to interact with the SQL database, one button that will be designed to close the application, and one button designed to restart the application. The five buttons will be designed to allow the application to select which portion of the database the user wants to view, search and output data to the user, view data from either portions of the database in a popup window, edit data in either portion of the database that the user wants, and for the user to delete data from either portions of the database. Each of the five buttons will have a functions tied to them that will allow the task to be executed when the button is clicked by the user. With this, a class diagram has been provided below for the Graphical User Interface for reference. 
 
-# Figure 3 Goes Here
+![Figure 3](https://github.com/brycevegh/sdd680/blob/main/Milestone%201%20Figures/Figure%203.png)
+
+Figure 3: UML Class Diagram for Graphical User Interface (GUI)
 
 ### Architecture Diagram of the Application
 
@@ -191,7 +196,9 @@ In the figure below, component #3 is the Python IDE Shell/ Compiler. The functio
 
 In the figure below, component #4 is windows computer. The function of this component is to give the application all the needed storage and hardware to allow the application to be run so that the Equipment Engineers can use the application. 
 
-# Figure 4 Goes Here
+![Figure 4](https://github.com/brycevegh/sdd680/blob/main/Milestone%201%20Figures/Figure%204.png)
+
+Figure 4: Architecture Diagram of the Tool Upgrade Tacking Application
 
 ### Inputs to the Application
 
@@ -203,15 +210,66 @@ The output of the application will be which data the user is trying to view that
 
 ### Key Code Snippets 
 
-In the figure below, it provides a code snippet of how the SQL databases initial connection is created when the application first creates the databases. Plus, this snippet of code is also used every time when the user adds, edits, views, or deletes data from either of the database. This portion of code is important and key to the application working because without it the application would not have the ability to access or interact with the SQL databases. 
+In the code block below, it provides a code snippet of how the SQL databases initial connection is created when the application first creates the databases. Plus, this snippet of code is also used every time when the user adds, edits, views, or deletes data from either of the database. This portion of code is important and key to the application working because without it the application would not have the ability to access or interact with the SQL databases. 
 
-# Figure 5 Goes Here 
+```Python 
+# Creates or connects to the path of the SQL database
+def create_connection(path):
+	connection = None
+	try:
+		connection = sqlite3.connect(path)
+	except Error as e:
+		print("The error '{e}' occurred")
+	
+	return connection
+	
+```
 
-In figure 6 it shows the code snippet for how the SQL database is created for storing the available upgrades to install on the tools. This portion of code is important and key to the application because it allows for the SQL database to be created allowing the user to store all the data on available upgrades for their tools. In addition, without this snippet of code the application would not be able to meet the objective of storing this data in an efficient and easily reference able manner. 
+Code Block 1: Code Snippet for Connecting to the SQL Databases
 
-# Figure 6 Goes Here
+In code block 2 it shows the code snippet for how the SQL database is created for storing the available upgrades to install on the tools. This portion of code is important and key to the application because it allows for the SQL database to be created allowing the user to store all the data on available upgrades for their tools. In addition, without this snippet of code the application would not be able to meet the objective of storing this data in an efficient and easily reference able manner. 
+
+```Python 
+# Creates the initial SQL Database for the tool upgrades
+def create_table_for_upgrade(Path, Upgrade_Name, Cost, Part, Time):
+	#Used to create or connect to SQLite Database
+	connection - create_connection(Path)
+	
+	#Used to create a cursor within the table
+	cursor = connection.cursor()
+	
+	Table_Name = f'Create table '{Upgrade_Name}' (Cost, Part, time)"
+	cursor.execute(Table_Name)
+	
+	Table_Values = f'INSERT INTO '{Upgrade_Name}' VALUES('{Cost}', '{Part}', '{Time}')"
+	cursor.execute(Table_Values)
+	connection.commmit()
+	
+```
+
+Code Block 2: Code Snippet for Creating the Available Upgrade Portion of the SQL Database
 
 The figure below is a code snippet showing how the portion of the SQL database is created for storing the data for what upgrades have been installed on the tools already. This code snippet is important and key to the application because it allows for the other half of the data of the application to be stored in an efficient and reliable way for the user to reference at a moment’s notice. In addition, it shows how easily this SQL database can be modified to allow for more data to be stored within this database. For example, another data field for how much money has been spent on installing the upgrades could be added if there was a need for this data to be tracked. 
+
+```Python 
+# Creates the Initial SQL Database for the Installed Upgrades
+def create_table_for_tool(Path, Tool_Name, List_of_Upgrades):
+	# Used to create or connect to SQLite Database	
+	connection = create_connection(Path)
+	
+	#Used to create a cusor within the table
+	cursor = connection.cursor()
+	
+	Table_Name = f"Create Table '{Tool_Name}' (List_of_Upgrades)"
+	cursor.execute(Table_Name)
+	
+	Table_Values = f"INSERT INTO '{Tool_Name}' VALUES('{List_of_Upgrades}')
+	cursor.execute(Tables_Values)
+	connection.commit()
+	
+```
+
+Code Block 3: Code Snippet for Creating the Installed Upgrades SQL Database
 
 ### Summary of Solution
 
@@ -219,17 +277,22 @@ The following solution described above meets the objective of this project becau
 
 ## Project Controls
 
-# Risk Management Table Goes Here
+| Event Risk  | Risk Probability | Risk Impact | Risk Mitigation | Contingency Plan |
+| :---------: | :--------------: | :---------: |  :------------: |  :-------------: |
+| Not being able to connect to the SQL Database. | Low |Users will not be able to access the database and interact with the data stored in the database. | To have the application be  designed to reconnect to the databases every time a user does anything with the databases. | First, verify that the database exists on the computer being used. Next, to verify that the database is located in the correct folder on the computer. Last, is to restart the application to reset all the functions and features of the application. |
+| The wrong button being selected on the Graphical User Interface for which database the user wants to interact with. | Medium | The user selects an incorrect database to add, view, edit, or delete data from. | Modify the Graphical User Interface to have a cancel button on the menu pop up where the user inputs the data. This will allow for the user to cancel the task and restart  the process to select the correct database. | The user pressing the cancel button will cancel the task selected and allow for no data to be harmed in the database. Reducing the impact of this scenario to zero. |
+| Graphical User Interface freezing or lagging due to the task being executed. | High | Making the application not as user-friendly due to the Graphical User Interface slowing the application down. | Designing the tasks that the Graphical User Interface uses as simple as possible. Doing this allows for a lowered possibility of the Graphical User Interface from freezing or lagging until a task is completed. | First, to wait and allow the task to finish its processing. If this does not work, then close and restart the application to allow the application to reinitialize. |
+| The need for the Graphical User Interface to have more functions and features. | Low | The application not being as custom to the user’s needs. Making the application not as useful for the user. | To talk with as many Equipment Engineers to determine what the most needed functions and features that the application will need. Add more specific functions and features later on. | To have the Equipment Engineers use the application as is until the lead designer can add the needed functions or features to the application. Then, once the needed function or feature is developed it can be deployed for use in the application. |
 
-| Stakeholder Name | Role | Responsiblities |
-| :----------------: | :------: | :----: |
-| Bryce Vegh | Lead Designer | To draft and finalize all documents pertaining to the project. While also designing all the code for the project |
+<p align="center">Table 4: Risk Management
 
 # Issues Log Table Goes Here
 
-| Stakeholder Name | Role | Responsiblities |
-| :----------------: | :------: | :----: |
-| Bryce Vegh | Lead Designer | To draft and finalize all documents pertaining to the project. While also designing all the code for the project |
+| ID    | Description | Project Impact | Action Plan/Resolution | Owner  | Importance | Date Entered | Date to Review | Date Resolved |
+| :---: | :---------: | :------------: |  :-------------------: |  :---: | :--------: | :----------: | :------------: | :-----------: |
+| 1 | SQL Database not connecting to add, edit, delete, or view data. | Increase development time due to making changes to the code of the application.  | To change the code to have the application reestablish connection to the SQL Database every time a task is done that involves the SQL Databases. | Bryce Vegh | High | 11/7/22 | 11/9/22 | 11/11/22 |
+
+<p align="center">Table 5: Issues Log 
 
 # Change Control Log Table Goes Here
 
@@ -255,7 +318,15 @@ The project did not require any materials or elements to be purchased to develop
 
 # Figure 8 Goes Here
 
+![Figure 5](https://github.com/brycevegh/sdd680/blob/main/Milestone%201%20Figures/Figure%203.png)
+
+Figure 5: Gantt Chart of Scheduling of Completion of Project
+
 # Figure 9 Goes Here
+
+![Figure 6](https://github.com/brycevegh/sdd680/blob/main/Milestone%201%20Figures/Figure%203.png)
+
+Figure 6: Work Breakdown Structure with Cost Estimates
 
 ## Appendix A - References
 
