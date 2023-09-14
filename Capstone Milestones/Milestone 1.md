@@ -83,9 +83,19 @@ Out of Scope Features:
 
 # Project Completion Criterian Table Goes Here 
 
-| Stakeholder Name | Role | Responsiblities |
-| :----------------: | :------: | :----: |
-| Bryce Vegh | Lead Designer | To draft and finalize all documents pertaining to the project. While also designing all the code for the project |
+| ID    | Task  | Dependencies | Status | Effort Hours | Start Datae | Planned Completion | Estimate to Complete | Actual Completion |
+| :---: | :---: | :----------: |:-----: | :----------: | :---------: |:-----------------: | :------------------: | :---------------: | 
+| 1     | Create the first portion of the functions and methods used to pull data from SQL Database. |     N/A      |  N.C.  |      12      |   5/5/2023  |      5/8/2023      |       1.5 Days       |         -         |
+| 2     | Tests the first portion of the functions and methods used to pull data from SQL Database for initial bugs. |     1        |  N.C.  |      4       |   5/8/2023  |      5/8/2023      |       0.5 Days       |         -         |
+| 3     | Create the second portion of the functions and methods used to pull data from SQL Database. |     2        |  N.C.  |      12      |   5/9/2023  |      5/10/2023     |       1.5 Days       |         -         |
+| 4     |Tests the second portion of the functions and methods used to pull data from SQL Database for initial bugs.|     3        |  N.C.  |      4       |   5/10/2023 |      5/10/2023     |       0.5 Days       |         -         |
+| 5     | Create Simple GUI with basic uses and permission levels to get a feel for designing GUIs. |     4        |  N.C.  |      80      |   5/11/2023 |      5/23/2023     |       10 Days        |         -         |
+| 6     | Test GUI that was designed for functionality. |     5        |  N.C.  |      24      |   5/24/2023 |      5/26/2023     |       3 Days         |         -         |
+| 7     | Add features to GUI for adding, removing, and editing data with the different SQL Databases. |     6        |  N.C.  |      64      |   5/29/2023 |      6/7/2023      |       8 Days         |         -         |
+| 8     |Test the new features added to the GUI for correct functionality. |     7        |  N.C.  |      24      |   6/8/2023  |      6/12/2023     |       3 Days         |         -         |
+| 9     | Add feature to the GUI so that the user can see the data in a window for the different databases. |     8        |  N.C.  |      64      |   6/13/2023 |      6/22/2023     |       8 Days         |         -         |
+| 10    |Test the new feature added to the GUI for correct functionality. |     9        |  N.C.  |      24      |   6/23/2023 |      6/27/2023     |       3 Days         |         -         |
+| 11    | Final look through the code and functionality of application. |     10       |  N.C.  |      80      |   6/28/2023 |      7/11/2023     |       10 Days        |         -         |
 
 # Assumptions and Contraints Table Goes Here 
 
