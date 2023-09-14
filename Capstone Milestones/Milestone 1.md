@@ -93,15 +93,19 @@ Out of Scope Features:
 
 ## Project Success Measures
 
-| :-------------------------- |
-| 1. Application is developed within the deadline of October 25, 2023 |
-| 2. Meets the desired performance of the client |
-| 3. The SQL Database can retrieve, add, and delete the different data that is stored within the different databases depending on what the user chooses. |
-| 4. GUI allows the user a way to interact with the data that is stored in both of the databses. |
-| 5. Application has an uptime of at least 85%. |
-| 6. The GUI has a simple design that tries to have minimal number of buttions, tab selection bars, etc. |
+**Project Completeion Criteria**
 
-<p align="center">Table 3: Project Completion Criteria
+1. Application is developed within the deadline of October 25, 2023 
+
+2. Meets the desired performance of the client.
+
+3. The SQL Database can retrieve, add, and delete the different data that is stored within the different databases depending on what the user chooses. 
+
+4. GUI allows the user a way to interact with the data that is stored in both of the databses. 
+
+5. Application has an uptime of at least 85%. 
+
+6. The GUI has a simple design that tries to have minimal number of buttions, tab selection bars, etc. 
 
 # Assumptions and Contraints Table Goes Here 
 
