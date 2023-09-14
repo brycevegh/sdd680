@@ -75,6 +75,8 @@ Out of Scope Features:
 
 # Work Breakdown Structure Table Goes Here 
 
+** <p align="center">Stakeholder Information **
+
 | Stakeholder Name | Role | Responsiblities |
 | :----------------: | :------: | :----: |
 | Bryce Vegh | Lead Designer | To draft and finalize all documents pertaining to the project. While also designing all the code for the project |
