@@ -93,8 +93,6 @@ Out of Scope Features:
 
 ## Project Success Measures
 
-| Project Completeion Criteria |
-| :-------------------------- |
 | 1. Application is developed within the deadline of October 25, 2023 |
 | 2. Meets the desired performance of the client |
 | 3. The SQL Database can retrieve, add, and delete the different data that is stored within the different databases depending on what the user chooses. |
