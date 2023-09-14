@@ -316,13 +316,9 @@ The project did not require any materials or elements to be purchased to develop
 | :----------------: | :------: | :----: |
 | Bryce Vegh | Lead Designer | To draft and finalize all documents pertaining to the project. While also designing all the code for the project |
 
-# Figure 8 Goes Here
-
 ![Figure 5](https://github.com/brycevegh/sdd680/blob/main/Milestone%201%20Figures/Figure%205.png)
 
 Figure 5: Gantt Chart of Scheduling of Completion of Project
-
-# Figure 9 Goes Here
 
 ![Figure 6](https://github.com/brycevegh/sdd680/blob/main/Milestone%201%20Figures/Figure%206.png)
 
