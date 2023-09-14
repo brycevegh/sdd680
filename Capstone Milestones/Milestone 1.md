@@ -76,7 +76,7 @@ Out of Scope Features:
 <p align="center">Table 1: Stakeholder Information
 
 | ID    | Task  | Dependencies | Status | Effort Hours | Start Datae | Planned Completion | Estimate to Complete | Actual Completion |
-| :---: | :--- | :----------: |:-----: | :----------: | :---------: |:-----------------: | :------------------: | :---------------: | 
+| :---: | :---: | :----------: |:-----: | :----------: | :---------: |:-----------------: | :------------------: | :---------------: | 
 | 1     | Create the first portion of the functions and methods used to pull data from SQL Database. |     N/A      |  N.C.  |      12      |   5/5/2023  |      5/8/2023      |       1.5 Days       |         -         |
 | 2     | Tests the first portion of the functions and methods used to pull data from SQL Database for initial bugs. |     1        |  N.C.  |      4       |   5/8/2023  |      5/8/2023      |       0.5 Days       |         -         |
 | 3     | Create the second portion of the functions and methods used to pull data from SQL Database. |     2        |  N.C.  |      12      |   5/9/2023  |      5/10/2023     |       1.5 Days       |         -         |
