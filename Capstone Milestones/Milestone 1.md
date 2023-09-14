@@ -70,13 +70,13 @@ Out of Scope Features:
 - Design the application to accept qualification data from the tool’s qualifications so that trends can be made, and tool efficiency can be determined. 
 
 | Stakeholder Name | Role | Responsiblities |
-| :----------------: | :------: | :----: |
+| :----------------: | :------: | :---- |
 | Bryce Vegh | Lead Designer | To draft and finalize all documents pertaining to the project. While also designing all the code for the project |
 
 <p align="center">Table 1: Stakeholder Information
 
 | ID    | Task  | Dependencies | Status | Effort Hours | Start Datae | Planned Completion | Estimate to Complete | Actual Completion |
-| :---: | :---: | :----------: |:-----: | :----------: | :---------: |:-----------------: | :------------------: | :---------------: | 
+| :---: | :--- | :----------: |:-----: | :----------: | :---------: |:-----------------: | :------------------: | :---------------: | 
 | 1     | Create the first portion of the functions and methods used to pull data from SQL Database. |     N/A      |  N.C.  |      12      |   5/5/2023  |      5/8/2023      |       1.5 Days       |         -         |
 | 2     | Tests the first portion of the functions and methods used to pull data from SQL Database for initial bugs. |     1        |  N.C.  |      4       |   5/8/2023  |      5/8/2023      |       0.5 Days       |         -         |
 | 3     | Create the second portion of the functions and methods used to pull data from SQL Database. |     2        |  N.C.  |      12      |   5/9/2023  |      5/10/2023     |       1.5 Days       |         -         |
@@ -94,7 +94,7 @@ Out of Scope Features:
 ## Project Success Measures
 
 | Project Completeion Criteria |
-| :--------------------------: |
+| :-------------------------- |
 | 1. Application is developed within the deadline of October 25, 2023 |
 | 2. Meets the desired performance of the client |
 | 3. The SQL Database can retrieve, add, and delete the different data that is stored within the different databases depending on what the user chooses. |
