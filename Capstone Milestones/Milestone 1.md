@@ -75,7 +75,7 @@ Out of Scope Features:
 
 # Work Breakdown Structure Table Goes Here 
 
-**<p align="center">Stakeholder Information**
+**(<p align="center">)Stakeholder Information**
 
 | Stakeholder Name | Role | Responsiblities |
 | :----------------: | :------: | :----: |
