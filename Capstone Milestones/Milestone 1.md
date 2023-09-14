@@ -73,17 +73,9 @@ Out of Scope Features:
 | :----------------: | :------: | :----: |
 | Bryce Vegh | Lead Designer | To draft and finalize all documents pertaining to the project. While also designing all the code for the project |
 
-# Work Breakdown Structure Table Goes Here 
-
-| Stakeholder Name | Role | Responsiblities |
-| :----------------: | :------: | :----: |
-| Bryce Vegh | Lead Designer | To draft and finalize all documents pertaining to the project. While also designing all the code for the project |
-
 <p align="center">Table 1:Stakeholder Information
 
-## Project Success Measures
-
-# Project Completion Criterian Table Goes Here 
+# Work Breakdown Structure Table Goes Here 
 
 | ID    | Task  | Dependencies | Status | Effort Hours | Start Datae | Planned Completion | Estimate to Complete | Actual Completion |
 | :---: | :---: | :----------: |:-----: | :----------: | :---------: |:-----------------: | :------------------: | :---------------: | 
@@ -98,6 +90,14 @@ Out of Scope Features:
 | 9     | Add feature to the GUI so that the user can see the data in a window for the different databases. |     8        |  N.C.  |      64      |   6/13/2023 |      6/22/2023     |       8 Days         |         -         |
 | 10    |Test the new feature added to the GUI for correct functionality. |     9        |  N.C.  |      24      |   6/23/2023 |      6/27/2023     |       3 Days         |         -         |
 | 11    | Final look through the code and functionality of application. |     10       |  N.C.  |      80      |   6/28/2023 |      7/11/2023     |       10 Days        |         -         |
+
+<p align="center">Table 2: Work Breakdown Stucture
+
+## Project Success Measures
+
+# Project Completion Criterian Table Goes Here 
+
+
 
 # Assumptions and Contraints Table Goes Here 
 
