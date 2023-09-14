@@ -75,8 +75,6 @@ Out of Scope Features:
 
 <p align="center">Table 1:Stakeholder Information
 
-# Work Breakdown Structure Table Goes Here 
-
 | ID    | Task  | Dependencies | Status | Effort Hours | Start Datae | Planned Completion | Estimate to Complete | Actual Completion |
 | :---: | :---: | :----------: |:-----: | :----------: | :---------: |:-----------------: | :------------------: | :---------------: | 
 | 1     | Create the first portion of the functions and methods used to pull data from SQL Database. |     N/A      |  N.C.  |      12      |   5/5/2023  |      5/8/2023      |       1.5 Days       |         -         |
@@ -91,7 +89,7 @@ Out of Scope Features:
 | 10    |Test the new feature added to the GUI for correct functionality. |     9        |  N.C.  |      24      |   6/23/2023 |      6/27/2023     |       3 Days         |         -         |
 | 11    | Final look through the code and functionality of application. |     10       |  N.C.  |      80      |   6/28/2023 |      7/11/2023     |       10 Days        |         -         |
 
-<p align="center">Table 2: Work Breakdown Stucture
+<p align="center">Table 2: Work Breakdown Structure
 
 ## Project Success Measures
 
