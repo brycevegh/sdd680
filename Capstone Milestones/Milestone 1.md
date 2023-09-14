@@ -107,11 +107,14 @@ Out of Scope Features:
 
 6. The GUI has a simple design that tries to have minimal number of buttions, tab selection bars, etc. 
 
-# Assumptions and Contraints Table Goes Here 
+| ID | Description | Commet | Type  | Date Entered |
+| :----------------: | :------: | :----: | |  |
+| 1 | That the application will have level of permissions given to the different users.  | Believe that this is possible but will need to research how to make a project have the capability.  | Assumption | 11/23/2022 |
+| 2 | That Python will have the capability to have the SQL database open and running the GUI for the user simultaneously.  | I have not researched that this is possible. But, from my knowledge and prototyping I do not see where this could be an issue.  | Assumption | 11/23/2022 |
+| 3 | A name for an upgrade can only be used once.  | This is due to how the SQL database can only have a single per name. Otherwise, two data sets will be linked and causes issues within the SQL database.  | Constraint | 11/23/2022 |
+| 4 | A name for a tool can only be used once. | This is due to how the SQL database can only have a single per name. Otherwise, two data sets will be linked and causes issues within the SQL database.  | Constraint | 11/23/2022 |
 
-| Stakeholder Name | Role | Responsiblities |
-| :----------------: | :------: | :----: |
-| Bryce Vegh | Lead Designer | To draft and finalize all documents pertaining to the project. While also designing all the code for the project |
+<p align="center">Table 3: Assumptions and Constraints
 
 ## Tool Upgrade Tracking Applicaiton High-Level Solution
 
