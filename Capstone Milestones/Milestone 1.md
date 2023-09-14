@@ -73,7 +73,7 @@ Out of Scope Features:
 | :----------------: | :------: | :----: |
 | Bryce Vegh | Lead Designer | To draft and finalize all documents pertaining to the project. While also designing all the code for the project |
 
-<p align="center">Table 1:Stakeholder Information
+<p align="center">Table 1: Stakeholder Information
 
 | ID    | Task  | Dependencies | Status | Effort Hours | Start Datae | Planned Completion | Estimate to Complete | Actual Completion |
 | :---: | :---: | :----------: |:-----: | :----------: | :---------: |:-----------------: | :------------------: | :---------------: | 
@@ -93,9 +93,16 @@ Out of Scope Features:
 
 ## Project Success Measures
 
-# Project Completion Criterian Table Goes Here 
+| Project Completeion Criteria |
+| :--------------------------: |
+| 1. Application is developed within the deadline of October 25, 2023 |
+| 2. Meets the desired performance of the client |
+| 3. The SQL Database can retrieve, add, and delete the different data that is stored within the different databases depending on what the user chooses. |
+| 4. GUI allows the user a way to interact with the data that is stored in both of the databses. |
+| 5. Application has an uptime of at least 85%. |
+| 6. The GUI has a simple design that tries to have minimal number of buttions, tab selection bars, etc. |
 
-
+<p align="center">Table 3: Project Completion Criteria
 
 # Assumptions and Contraints Table Goes Here 
 
