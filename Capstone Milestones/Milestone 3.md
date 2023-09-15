@@ -112,3 +112,216 @@ The general approach to developing this application is to develop the SQL databa
 | Available Upgrade - Cost | The total cost of purchasing the upgrade that is being tracked by the application. | Float | No | No |
 | Available Upgrade - Part | A list of all needed parts to complete the upgrade on the tool. | String | No | No |
 | Available Upgrade -  Time | Amount of time it will take to fully install the upgrade onto a tool. | Float | No | No |
+
+<p align="center">Table 2: Database Dictionary for Tool Upgrade Tracking Business Application
+
+## FlowChats/Process Flows 
+
+<p align="center">
+  <img src="https://github.com/brycevegh/sdd680/blob/main/Milestone%203%20Figures/Figure%205.png" />
+</p>
+
+<p align="center">Figure 5: Application Screen Flow Diagram of the Upgrade Tracking Application
+
+## Sitemap Diagram
+
+<p align="center">
+  <img src="https://github.com/brycevegh/sdd680/blob/main/Milestone%203%20Figures/Figure%206.png" />
+</p>
+
+<p align="center">Figure 6: Initial Sitemap of the Upgrade Tracking Application
+
+## User Interface Diagrams
+
+## Installed UPgrade User Interface Wireframe Diagrams
+
+<p align="center">
+  <img src="https://github.com/brycevegh/sdd680/blob/main/Milestone%202%20Figures/Figure%204.png" />
+</p>
+
+<p align="center">Figure 7: User Interface Wireframe Diagram for Tool Comparison
+
+<p align="center">
+  <img src="https://github.com/brycevegh/sdd680/blob/main/Milestone%202%20Figures/Figure%205.png" />
+</p>
+
+<p align="center">Figure 8: User Interface Wireframe Diagram for Time Installing
+
+<p align="center">
+  <img src="https://github.com/brycevegh/sdd680/blob/main/Milestone%202%20Figures/Figure%206.png" />
+</p>
+
+<p align="center">Figure 9: User Interface Wireframe Diagram for Amount Invested
+
+<p align="center">
+  <img src="https://github.com/brycevegh/sdd680/blob/main/Milestone%202%20Figures/Figure%207.png" />
+</p>
+
+<p align="center">Figure 10: User Interface Wireframe Diagram for View Installed Upgrade
+
+<p align="center">
+  <img src="https://github.com/brycevegh/sdd680/blob/main/Milestone%202%20Figures/Figure%208.png" />
+</p>
+
+<p align="center">Figure 11: User Interface Wireframe Diagram for Add Installed Upgrade
+
+<p align="center">
+  <img src="https://github.com/brycevegh/sdd680/blob/main/Milestone%202%20Figures/Figure%209.png" />
+</p>
+
+<p align="center">Figure 12: User Interface Wireframe Diagram for Edit Installed Upgrade
+
+<p align="center">
+  <img src="https://github.com/brycevegh/sdd680/blob/main/Milestone%202%20Figures/Figure%2010.png" />
+</p>
+
+<p align="center">Figure 13: User Interface Wireframe Diagram for Delete Installed Upgrade
+
+## Available Upgrade User Interfaces Wireframe Diagrams
+
+<p align="center">
+  <img src="https://github.com/brycevegh/sdd680/blob/main/Milestone%202%20Figures/Figure%2011.png" />
+</p>
+
+<p align="center">Figure 14: User Interface Wireframe Diagram for Add Available Upgrade
+
+<p align="center">
+  <img src="https://github.com/brycevegh/sdd680/blob/main/Milestone%202%20Figures/Figure%2012.png" />
+</p>
+
+<p align="center">Figure 15: User Interface Wireframe Diagram for Edit Available Upgrade
+
+<p align="center">
+  <img src="https://github.com/brycevegh/sdd680/blob/main/Milestone%202%20Figures/Figure%2013.png" />
+</p>
+
+<p align="center">Figure 16: User Interface Wireframe Diagram for Delete Available Upgrade
+
+<p align="center">
+  <img src="https://github.com/brycevegh/sdd680/blob/main/Milestone%202%20Figures/Figure%2014.png" />
+</p>
+
+<p align="center">Figure 17: User Interface Wireframe Diagram for View Available Upgrade
+
+<p align="center">
+  <img src="https://github.com/brycevegh/sdd680/blob/main/Milestone%202%20Figures/Figure%2015.png" />
+</p>
+
+<p align="center">Figure 18: User Interface Wireframe Diagram for Low-Cost Upgrade
+
+<p align="center">
+  <img src="https://github.com/brycevegh/sdd680/blob/main/Milestone%202%20Figures/Figure%2016.png" />
+</p>
+
+<p align="center">Figure 19: User Interface Wireframe Diagram for Low Install Time
+
+<p align="center">
+  <img src="https://github.com/brycevegh/sdd680/blob/main/Milestone%202%20Figures/Figure%2017.png" />
+</p>
+
+<p align="center">Figure 20: User Interface Wireframe Diagram for Tool Comparison
+
+<p align="center">
+  <img src="https://github.com/brycevegh/sdd680/blob/main/Milestone%202%20Figures/Figure%2018.png" />
+</p>
+
+<p align="center">Figure 21: User Interface Wireframe Diagram for Needed Investment
+
+## UML Diagrams
+
+<p align="center">
+  <img src="https://github.com/brycevegh/sdd680/blob/main/Milestone%203%20Figures/Figure%2022.png" />
+</p>
+
+<p align="center">Figure 22: UML Class Diagram of the SQL Database for Upgrades Available to Install
+
+<p align="center">
+  <img src="https://github.com/brycevegh/sdd680/blob/main/Milestone%203%20Figures/Figure%2023.png" />
+</p>
+
+<p align="center">Figure 23 : UML Class Diagram of the SQL Database for Upgrades Installed
+
+<p align="center">
+  <img src="https://github.com/brycevegh/sdd680/blob/main/Milestone%203%20Figures/Figure%2023.png" />
+</p>
+
+<p align="center">Figure 24: UML Class Diagram for Graphical User Interface (GUI)
+
+## Non-Functional Requirements
+
+| Non-Functional Requirements | Feature | Justification |
+| :-------------------------: | :------:| :-----------: |
+| NFR-1 | Data Integrity | 1) Provide the user will verification that the data the change in the data has been completed to the correct data. 2) To show the user after they have interacted with the data what changes were made. |
+| NFR-2 | Durability | 1) Perform extensive testing on all the features that will be implemented in the application. |
+| NFR-3 | Efficiency | 1) Design the methods for pulling data from the database in the most efficient way. 2) Perform testing on the different methods for pulling data from the database. |
+| NFR-4 | Maintainability | 1) Provide comments for all code that has been written so any developer can understand what each portion of code is supposed to be doing. 2) Provide documentation that helps with what to look at when troubleshooting issues within the application. |
+| NFR-5 | Performance | 1) Design code to break up tasks so that one function is not performing multiple tasks that have the possiblity to slow down the application. 2) Perform testing on all functions to verify they are creating lagging of the application. |
+| NFR-6 | Testability | 1) Designing test cases for when testing is being performed to help the developers understand what needs to be tested. 2) Provides tools that will help with testing of the application. |
+
+<p align="center">Table 3: Non-Functional Requirements Justification
+
+## Security 
+
+The one security issue that will be relevant to the Tool Upgrade Tacking application is the level of permission each of the users will have within the application. This is a security issue because you do not want all users to have the same permissions because not all users need to have the ability to modify or add new data to the database. This issue is handled by adding in a user login that will have different levels of permissions depending on what username and password you enter into the login. Meaning that this solves the issues of all users having the same permissions because you will just give the correct login and password to the users depending on what level of permissions you want them to have. 
+
+# Appendix A – Technical Issue and Risk Log
+
+| ID    | Description | Project Impact | Action Plan/Resolution | Owner | Importance | Date to Review | Date Resolved | 
+| :---: | :---------: | :------------: | :--------------------: | :---: | :--------: | :------------: | :-----------: |
+| 1 | SQL Database not connecting to add, edit, delete, or view data. | Increase development time due to making changes to the code of the application. | To change the code to have the application reestablish connection to the SQL Database every time a task is done that involves the SQL Databases. | Bryce Vegh | High | 11/9/22 | 11/11/22 |
+| 2 | The wrong button being selected on the Graphical User Interface for which database the user wants to interact with. | The user selects an incorrect database to add, view, edit, or delete data from. | Designing the tasks that the Graphical User Interface uses as simple as possible. Doing this allows for a lowered possibility of the Graphical User Interface from freezing or lagging until a task is completed. | Bryce Vegh | Medium | 1/9/23 | 1/13/23 |
+| 3 | The need for the Graphical User Interface to have more functions and features. | The application not being as custom to the user’s needs. Making the application not as useful for the user. | To talk with as many Equipment Engineers to determine what the most needed functions and features that the application will need. Add more specific functions and features later on. | Bryce Vegh | Low | 3/6/23 | 3/10/23 |
+
+<p align="center">Table 4: Technical Issue and Risk Log
+
+# Appendix B – References
+
+JetBrains. (2019). PyCharm: The Python IDE for Professional Developers. JetBrains.com; JetBrains. https://www.jetbrains.com/pycharm/
+
+Pycharm. (2022, December 22). Create and run your first Python project - Help | PyCharm. PyCharmHelp.com; Pycharm. https://www.jetbrains.com/help/pycharm/ creating-and-running-your-first-python-project.html
+
+PySimpleGUI. (2022). Cookbook - PySimpleGUI. Pysimplegui.org; PySimpleGUI. https://www.pysimplegui.org/en/latest/cookbook/
+
+PySimpleGUI. (2021). PySimpleGUI. Www.pysimplegui.org; PySimpleGUI. https://www.pysimplegui.org/en/latest/
+
+Python Software Foundation. (2019, May 29). Welcome to Python.org. Python.org; Python Software Foundation. https://www.python.org/
+
+SQLite. (2022, December 14). Appropriate Uses for SQLite. Sqlite.org. https://www.sqlite.org/whentouse.html#:~:text=SQLite%20is%20often%20used%20as
+
+SQLite Tutorial. (2022). SQLite Tutorial - An Easy Way to Master SQLite Fast. SQLiteTutorial.com; SQLite Tutorial. https://www.sqlitetutorial.net/
+
+SQLite Tutorial. (2018). SQLite Python. SQLiteTutorial.com; SQLite Tutorial. https://www.sqlitetutorial.net/sqlite-python/
+
+# Appendix C – Copyright Compliance 
+
+## Description of PySimpleGUI Library
+
+The PySimpleGUI library was used to develop the GUI of the business application, which allows the users to interact with the SQL databases to either view, edit, add, or remove data from the databases. Next, this library was not adapted at all for this application, it was just used in a custom way to add the different features that were needed for this application to allow the most functionality for the end users. Plus, there were no modification done to the library because the library already provided all the needed functions in its original state. The development team decided to use this library and not develop our own because developing this library would take a considerable amount of time and significantly increase the development cost due to engineering time. Lastly, a library is used/required because if it is not used then the development team is spending valuable time developing these features from scratch leading to this time being wasted that could have been used to improve the system. 
+
+**PySimpleGUI Library Copyright Reference**
+
+Free Software Foundation, Inc. (2007, June 29). PySimpleGUI License. GitHub.com. https://github.com/PySimpleGUI/PySimpleGUI/blob/master/license.txt
+
+## Description of PyCharm Python IDE Compiler
+
+JetBrains is the developer for PyCharm that was used in the development process, which PyCharm is a Python IDE compiler that was used to compile and run the Python code that was developed for the application. Next, PyCharm was not adapted for this application because it provides the application with a place to write, test, and compile all the code for the project like it would for any other software development project. Lastly, PyCharm was not modified in any way because the compiler provided all the needed resources for developing the application so there was no need to modify the compiler to add more features. In addition, the development team decided to use the IDE compiler instead of developing our own because this would create a whole second project that would require massive amounts of engineering and testing time that would cost a significant amount of money. 
+
+**PyCharm Copyright Reference**
+
+JetBrains. (2020, October 27). Terms of Use. JetBrains.com. https://www.jetbrains.com/ legal/docs/company/useterms/
+
+## Description of Python Language 
+
+Python was the language that was used to develop the application due to the ease of use that the language provides to the developers. Plus, the Python language is one of the easiest languages to learn due to the number of resources that can be found on the internet. Next, the Python language was adapted by adding two different libraries to it that allowed for more capabilities of the language like creating SQL databases and GUIs. Lastly, the Python language was not modified by anyone on the development team because the language with the libraries added was everything that was needed to develop the application. In addition, the development team did not try to write our own language due to the limited amount of time that was given, and all the time would be used just to develop the new language. 
+
+**Python Copyright Reference**
+
+Python Software Foundation. (2022). Python Copyright Policy. Python.org. https://www.python.org/doc/copyright/#:~:text=A%20few%20files%20have%20a
+
+## Description of SQLite Library
+
+The SQLite library was used in this capstone project to allow for the databases where all the data was stored to be developed. Meaning the addition of this library added the features that allowed for the developer to design and build the SQL databases. Next, the SQL library was not adapted at all because the library already provided all the needed functionality to design and build different SQL databases for the application. In addition, there was no modifications done to the library due to all the functionality that the library already provided to the development team. This library was used instead of designing our own because the work involved with building this library would have taken away valuable time from developing and refining the application. Lastly, libraries are used/required because it allows for added functionality to be included within the coding language that is being used allowing for more complex and useful software system to be developed at a faster rate. 
+
+**SQLite Library Copyright Reference**
+
+SQLite. (2021, November 10). SQLite Copyright. Sqlite.org. https://www.sqlite.org/copyrigh .html#:~:text=SQLite%20Is%20Public%20Domain&text=Anyone%20is%20free%20to%20copy

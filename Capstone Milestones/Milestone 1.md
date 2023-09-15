@@ -360,7 +360,7 @@ SQLite Tutorial. (2018). SQLite Python. SQLiteTutorial.com; SQLite Tutorial. htt
 
 ## Aprendix A - Copyright Compliance
 
-**Description of PySimpleGUI Library**
+### Description of PySimpleGUI Library
 
 The PySimpleGUI library was used to develop the GUI of the business application, which allows the users to interact with the SQL databases to either view, edit, add, or remove data from the databases. Next, this library was not adapted at all for this application, it was just used in a custom way to add the different features that were needed for this application to allow the most functionality for the end users. Plus, there were no modification done to the library because the library already provided all the needed functions in its original state. The development team decided to use this library and not develop our own because developing this library would take a considerable amount of time and significantly increase the development cost due to engineering time. Lastly, a library is used/required because if it is not used then the development team is spending valuable time developing these features from scratch leading to this time being wasted that could have been used to improve the system. 
 
@@ -368,7 +368,7 @@ The PySimpleGUI library was used to develop the GUI of the business application,
 
 Free Software Foundation, Inc. (2007, June 29). PySimpleGUI License. GitHub.com. https://github.com/PySimpleGUI/PySimpleGUI/blob/master/license.txt
 
-**Description of PyCharm Python IDE Compiler**
+### Description of PyCharm Python IDE Compiler
 
 JetBrains is the developer for PyCharm that was used in the development process, which PyCharm is a Python IDE compiler that was used to compile and run the Python code that was developed for the application. Next, PyCharm was not adapted for this application because it provides the application with a place to write, test, and compile all the code for the project like it would for any other software development project. Lastly, PyCharm was not modified in any way because the compiler provided all the needed resources for developing the application so there was no need to modify the compiler to add more features. In addition, the development team decided to use the IDE compiler instead of developing our own because this would create a whole second project that would require massive amounts of engineering and testing time that would cost a significant amount of money. 
 
@@ -376,7 +376,7 @@ JetBrains is the developer for PyCharm that was used in the development process,
 
 JetBrains. (2020, October 27). Terms of Use. JetBrains.com. https://www.jetbrains.com/ legal/docs/company/useterms/
 
-**Description of Python Language**
+### Description of Python Language
 
 Python was the language that was used to develop the application due to the ease of use that the language provides to the developers. Plus, the Python language is one of the easiest languages to learn due to the number of resources that can be found on the internet. Next, the Python language was adapted by adding two different libraries to it that allowed for more capabilities of the language like creating SQL databases and GUIs. Lastly, the Python language was not modified by anyone on the development team because the language with the libraries added was everything that was needed to develop the application. In addition, the development team did not try to write our own language due to the limited amount of time that was given, and all the time would be used just to develop the new language. 
 
@@ -384,7 +384,7 @@ Python was the language that was used to develop the application due to the ease
 
 Python Software Foundation. (2022). Python Copyright Policy. Python.org. https://www.python.org/doc/copyright/#:~:text=A%20few%20files%20have%20a
 
-**Description of SQLite Library**
+### Description of SQLite Library
 
 The SQLite library was used in this capstone project to allow for the databases where all the data was stored to be developed. Meaning the addition of this library added the features that allowed for the developer to design and build the SQL databases. Next, the SQL library was not adapted at all because the library already provided all the needed functionality to design and build different SQL databases for the application. In addition, there was no modifications done to the library due to all the functionality that the library already provided to the development team. This library was used instead of designing our own because the work involved with building this library would have taken away valuable time from developing and refining the application. Lastly, libraries are used/required because it allows for added functionality to be included within the coding language that is being used allowing for more complex and useful software system to be developed at a faster rate. 
 
