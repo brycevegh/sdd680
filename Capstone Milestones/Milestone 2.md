@@ -92,43 +92,43 @@ The accomplishment of this application is to create a user-friendly application 
 ## Installed UPgrade User Interface Wireframe Diagrams
 
 <p align="center">
-  <img src="https://github.com/brycevegh/sdd680/blob/main/Milestone%202%20Figures/Figure%203.png" />
+  <img src="https://github.com/brycevegh/sdd680/blob/main/Milestone%202%20Figures/Figure%204.png" />
 </p>
 
 <p align="center">Figure 4: User Interface Wireframe Diagram for Tool Comparison
 
 <p align="center">
-  <img src="https://github.com/brycevegh/sdd680/blob/main/Milestone%202%20Figures/Figure%203.png" />
+  <img src="https://github.com/brycevegh/sdd680/blob/main/Milestone%202%20Figures/Figure%205.png" />
 </p>
 
 <p align="center">Figure 5: User Interface Wireframe Diagram for Time Installing
 
 <p align="center">
-  <img src="https://github.com/brycevegh/sdd680/blob/main/Milestone%202%20Figures/Figure%203.png" />
+  <img src="https://github.com/brycevegh/sdd680/blob/main/Milestone%202%20Figures/Figure%206.png" />
 </p>
 
 <p align="center">Figure 6: User Interface Wireframe Diagram for Amount Invested
 
 <p align="center">
-  <img src="https://github.com/brycevegh/sdd680/blob/main/Milestone%202%20Figures/Figure%203.png" />
+  <img src="https://github.com/brycevegh/sdd680/blob/main/Milestone%202%20Figures/Figure%207.png" />
 </p>
 
 <p align="center">Figure 7: User Interface Wireframe Diagram for View Installed Upgrade
 
 <p align="center">
-  <img src="https://github.com/brycevegh/sdd680/blob/main/Milestone%202%20Figures/Figure%203.png" />
+  <img src="https://github.com/brycevegh/sdd680/blob/main/Milestone%202%20Figures/Figure%208.png" />
 </p>
 
 <p align="center">Figure 8: User Interface Wireframe Diagram for Add Installed Upgrade
 
 <p align="center">
-  <img src="https://github.com/brycevegh/sdd680/blob/main/Milestone%202%20Figures/Figure%203.png" />
+  <img src="https://github.com/brycevegh/sdd680/blob/main/Milestone%202%20Figures/Figure%209.png" />
 </p>
 
 <p align="center">Figure 9: User Interface Wireframe Diagram for Edit Installed Upgrade
 
 <p align="center">
-  <img src="https://github.com/brycevegh/sdd680/blob/main/Milestone%202%20Figures/Figure%203.png" />
+  <img src="https://github.com/brycevegh/sdd680/blob/main/Milestone%202%20Figures/Figure%2010.png" />
 </p>
 
 <p align="center">Figure 10: User Interface Wireframe Diagram for Delete Installed Upgrade
