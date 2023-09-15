@@ -161,7 +161,7 @@ The first portion of the SQL database will be used to take in and store the data
   <img src="https://github.com/brycevegh/sdd680/blob/main/Milestone%201%20Figures/Figure%201.png" />
 </p>
 
-Figure 1: UML Class Diagram of the SQL Database for Upgrades Available to Install
+<p align="center">Figure 1: UML Class Diagram of the SQL Database for Upgrades Available to Install
 
 The second portion of the SQL database will be used to take in and store the data that relates to what upgrades have been installed on each of the different tools that the Equipment Engineers is responsible for. The data that will be stored in this portion of the SQL database will be the name of the tool and a running list of the upgrades that have been installed on the tool already, with the tool name being used to sort and filter the data within the SQL database. The SQL database will have a function built in that will allow the GUI to search and retrieve specific installed upgrade data from a tool name within the database. In addition, The SQL database will have a function built in that the GUI will use that allows for the running list of upgrades to be updated and a new upgrade added to the list. Lastly, the SQL database will have a function that the GUI will use to delete a user selected tool name completely from the SQL database. A Class diagram for the second SQL databases is provided below for reference. 
 
