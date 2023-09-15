@@ -225,7 +225,7 @@ def create_connection(path):
 	
 ```
 
-Code Block 1: Code Snippet for Connecting to the SQL Databases
+<p align="center">Code Block 1: Code Snippet for Connecting to the SQL Databases
 
 In code block 2 it shows the code snippet for how the SQL database is created for storing the available upgrades to install on the tools. This portion of code is important and key to the application because it allows for the SQL database to be created allowing the user to store all the data on available upgrades for their tools. In addition, without this snippet of code the application would not be able to meet the objective of storing this data in an efficient and easily reference able manner. 
 
@@ -247,7 +247,7 @@ def create_table_for_upgrade(Path, Upgrade_Name, Cost, Part, Time):
 	
 ```
 
-Code Block 2: Code Snippet for Creating the Available Upgrade Portion of the SQL Database
+<p align="center">Code Block 2: Code Snippet for Creating the Available Upgrade Portion of the SQL Database
 
 The figure below is a code snippet showing how the portion of the SQL database is created for storing the data for what upgrades have been installed on the tools already. This code snippet is important and key to the application because it allows for the other half of the data of the application to be stored in an efficient and reliable way for the user to reference at a moment’s notice. In addition, it shows how easily this SQL database can be modified to allow for more data to be stored within this database. For example, another data field for how much money has been spent on installing the upgrades could be added if there was a need for this data to be tracked. 
 
@@ -269,7 +269,7 @@ def create_table_for_tool(Path, Tool_Name, List_of_Upgrades):
 	
 ```
 
-Code Block 3: Code Snippet for Creating the Installed Upgrades SQL Database
+<p align="center">Code Block 3: Code Snippet for Creating the Installed Upgrades SQL Database
 
 ### Summary of Solution
 
