@@ -5,6 +5,7 @@
 <p align="center">Master of Science in Software Development Capstone Requirements Specification
 
 <p align="center">Grand Canyon University
+
 <p align="center"Professor Ali Wahid
 
 <p align="center">Revision: B
@@ -34,41 +35,52 @@ The accomplishment of this application is to create a user-friendly application 
 | US-9 | Time Spent Installing | As an Equipment Engineer, I want the ability to determine how much time has been spent on upgrade the tool. | 1) Ability to determine the amount of time that has been spent installing upgrades. 2) Option to compare the amount of time that has been spent installing upgrades to the different tools. | 1/27/2023 |
 | US-10 | Investment | As an Equipment Engineer, I want to have the ability to pull the running list of installed upgrades to determine how much money has already been invested into the tool. | 1) Ability to pull all the upgrades that have been installed on a tool. 2) Totalize the amount of money that has been spent on upgrading the tool from the list that was pulled. | 1/27/2023 |
 
-<p align="center">Table 1: Stakeholder Information
+<p align="center">Table 1: Functional Requirements - User Stories
 
 # Non-Functional Requirements 
 
+| User Story ID | Feature  | User Story | Acceptance Criteria | Approval Date |
+| :-----------: | :------: | :--------: | :-----------------: | :-----------: |
+| US-1 | Data Integrity | As an Equipment Engineer, I want to make sure that the application will provide data integrity. This is so that I do not have to worry that the data that I am pulling from the application being incorrect or corrupted. | 1) Provide the user will verification that the data the change in the data has been completed to the correct data. 2) To show the user after they have interacted with the data what changes were made.| 1/27/2023 | 
+| US-2 | Durability | As an Equipment Engineer, I want the application to be durable meaning that the application does not require maintenance all the time. | 1) Perform extensive testing on all the features that will be implemented in the application. | 1/27/2023 | 
+| US-3 | Efficiency | As an Equipment Engineer, the application should be able to pull data quickly and at a moments notice. This application is supposed to allow us to pull data quickly to solve our current methods that take time. | 1) Design the methods for pulling data from the database in the most efficient way. 2) Perform testing on the different methods for pulling data from the database. | 1/27/2023 | 
+| US-4 | Maintainability | As an Equipment Engineer, I want the application to be easily maintainable so that when there is an issue the application is down for a minimal amount of time. | 1) Provide comments for all code that has been written so any developer can understand what each portion of code is supposed to be doing. 2) Provide documentation that helps with what to look at when troubleshooting issues within the application. | 1/27/2023 | 
+| US-5 | Performance | As an Equipment Engineer, I want the application to perform well so that I do not have to be waiting for each of the task I want performed to complete. | 1) Design code to break up tasks so that one function is not performing multiple tasks that have the possiblity to slow down the application. 2) Perform testing on all functions to verify they are creating lagging of the application. | 1/27/2023 | 
+| US-6 | Testability | As an Equipment Engineer, the application needs to be easy to test to find the issues that are being experience. Meaning that the application needs to be designed to add testing features. | 1) Designing test cases for when testing is being performed to help the developers understand what needs to be tested. 2) Provides tools that will help with testing of the application. | 1/27/2023 |
 
-
-# Non-Functional Requirements Table Goes Here
-
-
+<p align="center">Table 2: Non-Functional Requirements - User Stories
 
 # Technical Requirements
 
+| Technology or Tool | Approval Date | Justification |
+| :----------------: | :-----------: | :-----------: |
+| PySimpleGUI Library for Python (Version 4.60.4) | 1/10/2023 | Needed so that the graphical user interface can be designed for the application. |
+| PyCharm Python IDE Complier (Version 2022.3.2)| 1/10/2023 | Where all the software will be written and tested in. Gives developer a place to run and compile the code that is written. |
+| Python Programming Language (Version 3.11.2)| 1/10/2023 | The programming language that is used for the application. |
+| SQLite Library for Python (Version 3.41.0) | 1/10/2023 | Needed so that the SQL databases can be designed and built for the application. |
 
-
-# Technical Requirements Table Goes Here
-
-
+<p align="center">Table 3: Technical Requirements
 
 # Logical System Design
 
+<p align="center">
+  <img src="https://github.com/brycevegh/sdd680/blob/main/Milestone%201%20Figures/Figure%201.png" />
+</p>
 
-
-# Figure 1 Goes Here
-
-
+<p align="center">Figure 1: Logical Architecture Diagram of Upgrade Tracking Application
 
 # User Interface Design
 
+<p align="center">
+  <img src="https://github.com/brycevegh/sdd680/blob/main/Milestone%201%20Figures/Figure%201.png" />
+</p>
 
+<p align="center">Figure 2: Initial Sitemap of the Upgrade Tracking Application 
 
-# Figure 2 Goes Here
+<p align="center">
+  <img src="https://github.com/brycevegh/sdd680/blob/main/Milestone%201%20Figures/Figure%201.png" />
+</p>
 
-
-
-# Figure 3 Goes Here
-
+<p align="center">Figure 3: Application Screen Flow Diagram of the Upgrade Tracking Application
 
 
