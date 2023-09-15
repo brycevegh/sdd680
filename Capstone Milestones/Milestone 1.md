@@ -286,8 +286,6 @@ The following solution described above meets the objective of this project becau
 
 <p align="center">Table 4: Risk Management
 
-# Issues Log Table Goes Here
-
 | ID    | Description | Project Impact | Action Plan/Resolution | Owner  | Importance | Date Entered | Date to Review | Date Resolved |
 | :---: | :---------: | :------------: |  :-------------------: |  :---: | :--------: | :----------: | :------------: | :-----------: |
 | 1 | SQL Database not connecting to add, edit, delete, or view data. | Increase development time due to making changes to the code of the application.  | To change the code to have the application reestablish connection to the SQL Database every time a task is done that involves the SQL Databases. | Bryce Vegh | High | 11/7/22 | 11/9/22 | 11/11/22 |
