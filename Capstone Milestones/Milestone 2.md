@@ -83,12 +83,6 @@ The accomplishment of this application is to create a user-friendly application 
 
 <p align="center">Figure 3: Application Screen Flow Diagram of the Upgrade Tracking Application
 
-
-
-
-
-
-
 ## Installed UPgrade User Interface Wireframe Diagrams
 
 <p align="center">
@@ -133,8 +127,52 @@ The accomplishment of this application is to create a user-friendly application 
 
 <p align="center">Figure 10: User Interface Wireframe Diagram for Delete Installed Upgrade
 
-
-
 ## Available Upgrade User Interfaces Wireframe Diagrams
 
+<p align="center">
+  <img src="https://github.com/brycevegh/sdd680/blob/main/Milestone%202%20Figures/Figure%2011.png" />
+</p>
 
+<p align="center">Figure 11: User Interface Wireframe Diagram for Add Available Upgrade
+
+<p align="center">
+  <img src="https://github.com/brycevegh/sdd680/blob/main/Milestone%202%20Figures/Figure%2012.png" />
+</p>
+
+<p align="center">Figure 12: User Interface Wireframe Diagram for Edit Available Upgrade
+
+<p align="center">
+  <img src="https://github.com/brycevegh/sdd680/blob/main/Milestone%202%20Figures/Figure%2013.png" />
+</p>
+
+<p align="center">Figure 13: User Interface Wireframe Diagram for Delete Available Upgrade
+
+<p align="center">
+  <img src="https://github.com/brycevegh/sdd680/blob/main/Milestone%202%20Figures/Figure%2014.png" />
+</p>
+
+<p align="center">Figure 14: User Interface Wireframe Diagram for View Available Upgrade
+
+<p align="center">
+  <img src="https://github.com/brycevegh/sdd680/blob/main/Milestone%202%20Figures/Figure%2015.png" />
+</p>
+
+<p align="center">Figure 15: User Interface Wireframe Diagram for Low-Cost Upgrade
+
+<p align="center">
+  <img src="https://github.com/brycevegh/sdd680/blob/main/Milestone%202%20Figures/Figure%2016.png" />
+</p>
+
+<p align="center">Figure 16: User Interface Wireframe Diagram for Low Install Time
+
+<p align="center">
+  <img src="https://github.com/brycevegh/sdd680/blob/main/Milestone%202%20Figures/Figure%2017.png" />
+</p>
+
+<p align="center">Figure 17: User Interface Wireframe Diagram for Tool Comparison
+
+<p align="center">
+  <img src="https://github.com/brycevegh/sdd680/blob/main/Milestone%202%20Figures/Figure%2018.png" />
+</p>
+
+<p align="center">Figure 18: User Interface Wireframe Diagram for Needed Investment
