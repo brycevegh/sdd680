@@ -77,17 +77,17 @@ Out of Scope Features:
 
 | ID    | Task  | Dependencies | Status | Effort Hours | Start Datae | Planned Completion | Estimate to Complete | Actual Completion |
 | :---: | :---: | :----------: |:-----: | :----------: | :---------: |:-----------------: | :------------------: | :---------------: | 
-| 1     | Create the first portion of the functions and methods used to pull data from SQL Database. |     N/A      |  N.C.  |      12      |   5/5/2023  |      5/8/2023      |       1.5 Days       |         -         |
-| 2     | Tests the first portion of the functions and methods used to pull data from SQL Database for initial bugs. |     1        |  N.C.  |      4       |   5/8/2023  |      5/8/2023      |       0.5 Days       |         -         |
-| 3     | Create the second portion of the functions and methods used to pull data from SQL Database. |     2        |  N.C.  |      12      |   5/9/2023  |      5/10/2023     |       1.5 Days       |         -         |
-| 4     |Tests the second portion of the functions and methods used to pull data from SQL Database for initial bugs.|     3        |  N.C.  |      4       |   5/10/2023 |      5/10/2023     |       0.5 Days       |         -         |
-| 5     | Create Simple GUI with basic uses and permission levels to get a feel for designing GUIs. |     4        |  N.C.  |      80      |   5/11/2023 |      5/23/2023     |       10 Days        |         -         |
-| 6     | Test GUI that was designed for functionality. |     5        |  N.C.  |      24      |   5/24/2023 |      5/26/2023     |       3 Days         |         -         |
-| 7     | Add features to GUI for adding, removing, and editing data with the different SQL Databases. |     6        |  N.C.  |      64      |   5/29/2023 |      6/7/2023      |       8 Days         |         -         |
-| 8     |Test the new features added to the GUI for correct functionality. |     7        |  N.C.  |      24      |   6/8/2023  |      6/12/2023     |       3 Days         |         -         |
-| 9     | Add feature to the GUI so that the user can see the data in a window for the different databases. |     8        |  N.C.  |      64      |   6/13/2023 |      6/22/2023     |       8 Days         |         -         |
-| 10    |Test the new feature added to the GUI for correct functionality. |     9        |  N.C.  |      24      |   6/23/2023 |      6/27/2023     |       3 Days         |         -         |
-| 11    | Final look through the code and functionality of application. |     10       |  N.C.  |      80      |   6/28/2023 |      7/11/2023     |       10 Days        |         -         |
+| 1     | Create the first portion of the functions and methods used to pull data from SQL Database. |     N/A      | Complete | 12 | 5/5/2023 | 5/8/2023 | 1.5 Days | 2 Days |
+| 2     | Tests the first portion of the functions and methods used to pull data from SQL Database for initial bugs. | 1 | Complete | 4 | 5/8/2023 | 5/8/2023 | 0.5 Days | 0.5 Days |
+| 3     | Create the second portion of the functions and methods used to pull data from SQL Database. | 2 | Complete | 12 | 5/9/2023 | 5/10/2023 | 1.5 Days | 1 Day |
+| 4     |Tests the second portion of the functions and methods used to pull data from SQL Database for initial bugs.| 3 | Complete | 4 | 5/10/2023 | 5/10/2023 | 0.5 Days | 0.5 Days |
+| 5     | Create Simple GUI with basic uses and permission levels to get a feel for designing GUIs. | 4 | Complete | 80 | 5/11/2023 | 5/23/2023 | 10 Days | 12 Days |
+| 6     | Test GUI that was designed for functionality. | 5 | Complete | 24 | 5/24/2023 | 5/26/2023 | 3 Days | 2.5 Days |
+| 7     | Add features to GUI for adding, removing, and editing data with the different SQL Databases. | 6 | Complete | 64 | 5/29/2023 | 6/7/2023 | 8 Days | 7.5 Days |
+| 8     |Test the new features added to the GUI for correct functionality. | 7 | Complete | 24 | 6/8/2023 | 6/12/2023 | 3 Days | 2 Days |
+| 9     | Add feature to the GUI so that the user can see the data in a window for the different databases. | 8 | Complete | 64 | 6/13/2023 | 6/22/2023 | 8 Days | 6 Days |
+| 10    |Test the new feature added to the GUI for correct functionality. | 9 | Complete | 24 | 6/23/2023 | 6/27/2023 | 3 Days | 1.5 Days |
+| 11    | Final look through the code and functionality of application. | 10 | Complete | 80 | 6/28/2023 | 7/11/2023 | 10 Days | 7 Days |
 
 <p align="center">Table 2: Work Breakdown Structure
 
@@ -295,22 +295,22 @@ The following solution described above meets the objective of this project becau
 
 | ID    | Description | Project Impact | Action Plan/Resolution | Owner  | Importance | Date Entered | Date to Review | Date Resolved |
 | :---: | :---------: | :------------: |  :-------------------: |  :---: | :--------: | :----------: | :------------: | :-----------: |
-| 1 | SQL Database not connecting to add, edit, delete, or view data. | Increase development time due to making changes to the code of the application.  | To change the code to have the application reestablish connection to the SQL Database every time a task is done that involves the SQL Databases. | Bryce Vegh | High | 11/7/22 | 11/9/22 | 11/11/22 |
+| 1     | SQL Database not connecting to add, edit, delete, or view data. | Increase development time due to making changes to the code of the application. | To change the code to have the application reestablish connection to the SQL Database every time a task is done that involves the SQL Databases. | Bryce Vegh | High | 11/7/22 | 11/9/22 | 11/11/22 |
 
 <p align="center">Table 5: Issues Log 
 
 | ID    | Change Description | Priority | Originator | Date Entered | Date Assigned | Evaluator | Status | Date of Decision | Included in Rev. # |
-| :---: | :----------------: | :------: | :--------: | :----------: | :-----------: | :-------: | :----: | :--------------: | :----------------: |
-| 1 | Change the code of the application to reconnect to the SQL database every time a task is performed that involves the SQL database.  | High | Bryce Vegh | 11/7/22 | 11/9/22 | Bryce Vegh | Done | 11/7/22 | A |
-| 2 | Changing how the features of the Graphical User Interface are laid out. | Low | Bryce Vegh | 12/1/22 | TBD | Bryce Vegh | Not Started | 12/1/22 | TBD |
-| 3 | Adding more information to be stored in the SQL database where the information about tool upgrades are stored. | Medium | Bryce Vegh | 12/7/22 | TBD | Bryce Vegh | Not Started | 12/7/22 | TBD |
-| 4 | Adding the ability to track the upgrades on specific chambers on tools that have different chambers.  | Medium | Bryce Vegh | 12/14/22 | TBD | Bryce Vegh | Not Started | 12/14/22 | TBD |
+| :---: | :---------------------------: | :--------: | :----------: | :-----------: | :-------: | :--------: | :----: | :--------------: | :----------------: |
+| 1     | Change the code of the application to reconnect to the SQL database every time a task is performed that involves the SQL database. | High | Bryce Vegh | 11/7/22 | 11/9/22 | Bryce Vegh | Done | 11/7/22 | A |
+| 2     | Changing how the features of the Graphical User Interface are laid out. | Low | Bryce Vegh | 12/1/22 | 4/3/23 | Bryce Vegh | Done   | 12/1/22          | A |
+| 3     | Adding more information to be stored in the SQL database where the information about tool upgrades are stored. | Medium | Bryce Vegh | 12/7/22 | 4/27/23 | Bryce Vegh | Done | 12/7/22 | A |
+| 4     | Adding the ability to track the upgrades on specific chambers on tools that have different chambers. | Medium | Bryce Vegh | 12/14/22 | 5/8/23 | Bryce Vegh | Done | 12/14/22 | A |
 
 <p align="center">Table 6: Change Control Log
 
-|  Name              | Team        | Project Role                     | Responsibility                                                                                                                                                                               |
-| :----------------: | :---------: | :------------------------------: | :------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------: |
-| Sean Kudel         | Development | Adviser                          | Meeting with end user to help understand what other features of the system will be useful to other Equipment Engineers.                                                                      |
+|  Name | Team  | Project Role | Responsibility |
+| :---: | :---: | :----------: | :------------: |
+| Sean Kudel | Development | Adviser | Meeting with end user to help understand what other features of the system will be useful to other Equipment Engineers. |
 | Patrick Montgomery | Development | Graphical User Interface Adviser | Meeting with end user to understand how to  better develop the Graphical User Interface for the system. End user has years of experience designing and developing Graphical User Interfaces. |
 
 <p align="center">Table 7: Roles and Responsibilities of End Users
@@ -319,11 +319,11 @@ The following solution described above meets the objective of this project becau
 
 The project did not require any materials or elements to be purchased to develop the project effectively. This is due to all the materials and elements that are used within the project are free to use for public and/or commercial use. The only cost of the project was developing and testing the project which will be included within the programming work breakdown portion of this section. The cost for engineering time was set at 100 dollars per hour and the cost for testing time was set at 65 dollars per hour. 
 
-| ID    | Material or Element | Description                                                                                                   |
-| :---: | :-----------------: | :-----------------------------------------------------------------------------------------------------------: |
-| 1     | Python              | The coding language that the application will be developed in.                                                |
-| 2     | JetBrains’ PyCharm  | The IDE Compiler that will be used to write, debug, and test the code.                                        |
-| 3     | SQLite Library      | The library that will be used to develop the two SQL databases for the application.                           |
+| ID    | Material or Element | Description |
+| :---: | :-----------------: | :---------: |
+| 1     | Python | The coding language that the application will be developed in. |
+| 2     | JetBrains’ PyCharm | The IDE Compiler that will be used to write, debug, and test the code. |
+| 3     | SQLite Library | The library that will be used to develop the two SQL databases for the application. |
 | 4     | PySimpleGUI Library | The library that will be used to develop the GUI that the end user will use to interact with the application. |
 
 <p align="center">Table 8: Materials and Elements of Project
