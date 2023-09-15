@@ -10,7 +10,7 @@
 
 <p align="center">Revision: B
 
-<p align="center">January 11,2023
+<p align="center">January 11, 2023
 
 # Abstract
 The Tool Upgrade Tracking Business Application is an application that is being designed to give Equipment Engineers the ability to track upgrades on the semiconductor tools that they work on that are used to build the different layers of a microchip. This application will give the ability for the engineers to track what upgrades are available to install on their tools while also giving them the ability to track the upgrades that have already been installed on their tools. The idea of creating this application came from studying how younger and older (more experienced) Equipment Engineers work to track the different upgrades of the tools they work on. From the study it showed that the younger less experienced Equipment Engineers struggled to track the different upgrades that they installed or have available to them to install on their different tools. But the studied showed the main cause of this issue was that the younger engineers just did not have the years under their belt of working on their tools and knowing the tools like the back of their hand. So, creating an application like this has the possibility to bring the younger engineers up to speed by allowing them to get a better feel for their tools and have a resource they can go to when needed. 
@@ -308,9 +308,9 @@ The following solution described above meets the objective of this project becau
 
 <p align="center">Table 6: Change Control Log
 
-|  Name | Team  | Project Role | Responsibility |
-| :---: | :---: | :----------: | :------------: |
-| Sean Kudel  |  Development | Adviser | Meeting with end user to help understand what other features of the system will be useful to other Equipment Engineers. |
+|  Name              | Team        | Project Role                     | Responsibility                                                                                                                                                                               |
+| :----------------: | :---------: | :------------------------------: | :------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------: |
+| Sean Kudel         | Development | Adviser                          | Meeting with end user to help understand what other features of the system will be useful to other Equipment Engineers.                                                                      |
 | Patrick Montgomery | Development | Graphical User Interface Adviser | Meeting with end user to understand how to  better develop the Graphical User Interface for the system. End user has years of experience designing and developing Graphical User Interfaces. |
 
 <p align="center">Table 7: Roles and Responsibilities of End Users
@@ -319,12 +319,12 @@ The following solution described above meets the objective of this project becau
 
 The project did not require any materials or elements to be purchased to develop the project effectively. This is due to all the materials and elements that are used within the project are free to use for public and/or commercial use. The only cost of the project was developing and testing the project which will be included within the programming work breakdown portion of this section. The cost for engineering time was set at 100 dollars per hour and the cost for testing time was set at 65 dollars per hour. 
 
-| ID    | Material or Element | Description |
-| :---: | :-----------------: | :---------: |
-| 1 | Python | The coding language that the application will be developed in. |
-| 2 | JetBrains’ PyCharm  | The IDE Compiler that will be used to write, debug, and test the code. |
-| 3 | SQLite Library | The library that will be used to develop the two SQL databases for the application. |
-| 4 | PySimpleGUI Library | The library that will be used to develop the GUI that the end user will use to interact with the application. |
+| ID    | Material or Element | Description                                                                                                   |
+| :---: | :-----------------: | :-----------------------------------------------------------------------------------------------------------: |
+| 1     | Python              | The coding language that the application will be developed in.                                                |
+| 2     | JetBrains’ PyCharm  | The IDE Compiler that will be used to write, debug, and test the code.                                        |
+| 3     | SQLite Library      | The library that will be used to develop the two SQL databases for the application.                           |
+| 4     | PySimpleGUI Library | The library that will be used to develop the GUI that the end user will use to interact with the application. |
 
 <p align="center">Table 8: Materials and Elements of Project
 
