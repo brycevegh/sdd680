@@ -64,7 +64,7 @@ The accomplishment of this application is to create a user-friendly application 
 # Logical System Design
 
 <p align="center">
-  <img src="https://github.com/brycevegh/sdd680/blob/main/Milestone%201%20Figures/Figure%201.png" />
+  <img src="https://github.com/brycevegh/sdd680/blob/main/Milestone%202%20Figures/Figure%201.png" />
 </p>
 
 <p align="center">Figure 1: Logical Architecture Diagram of Upgrade Tracking Application
@@ -72,13 +72,13 @@ The accomplishment of this application is to create a user-friendly application 
 # User Interface Design
 
 <p align="center">
-  <img src="https://github.com/brycevegh/sdd680/blob/main/Milestone%201%20Figures/Figure%201.png" />
+  <img src="https://github.com/brycevegh/sdd680/blob/main/Milestone%202%20Figures/Figure%202.png" />
 </p>
 
 <p align="center">Figure 2: Initial Sitemap of the Upgrade Tracking Application 
 
 <p align="center">
-  <img src="https://github.com/brycevegh/sdd680/blob/main/Milestone%201%20Figures/Figure%201.png" />
+  <img src="https://github.com/brycevegh/sdd680/blob/main/Milestone%202%20Figures/Figure%203.png" />
 </p>
 
 <p align="center">Figure 3: Application Screen Flow Diagram of the Upgrade Tracking Application
