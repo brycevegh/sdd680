@@ -70,7 +70,7 @@ Out of Scope Features:
 - Design the application to accept qualification data from the tool’s qualifications so that trends can be made, and tool efficiency can be determined. 
 
 | Stakeholder Name | Role | Responsiblities |
-| :----------------: | :------: | :---- |
+| :----------------: | :------: | :----: |
 | Bryce Vegh | Lead Designer | To draft and finalize all documents pertaining to the project. While also designing all the code for the project |
 
 <p align="center">Table 1: Stakeholder Information
