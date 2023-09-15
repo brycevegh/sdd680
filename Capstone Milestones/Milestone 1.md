@@ -161,21 +161,23 @@ The first portion of the SQL database will be used to take in and store the data
   <img src="https://github.com/brycevegh/sdd680/blob/main/Milestone%201%20Figures/Figure%201.png" />
 </p>
 
-![Figure 1](https://github.com/brycevegh/sdd680/blob/main/Milestone%201%20Figures/Figure%201.png)
-
 Figure 1: UML Class Diagram of the SQL Database for Upgrades Available to Install
 
 The second portion of the SQL database will be used to take in and store the data that relates to what upgrades have been installed on each of the different tools that the Equipment Engineers is responsible for. The data that will be stored in this portion of the SQL database will be the name of the tool and a running list of the upgrades that have been installed on the tool already, with the tool name being used to sort and filter the data within the SQL database. The SQL database will have a function built in that will allow the GUI to search and retrieve specific installed upgrade data from a tool name within the database. In addition, The SQL database will have a function built in that the GUI will use that allows for the running list of upgrades to be updated and a new upgrade added to the list. Lastly, the SQL database will have a function that the GUI will use to delete a user selected tool name completely from the SQL database. A Class diagram for the second SQL databases is provided below for reference. 
 
-![Figure 2](https://github.com/brycevegh/sdd680/blob/main/Milestone%201%20Figures/Figure%202.png)
+<p align="center">
+  <img src="https://github.com/brycevegh/sdd680/blob/main/Milestone%201%20Figures/Figure%202.png" />
+</p>
 
-Figure 2: UML Class Diagram of the SQL Database for Upgrades Installed
+<p align="center">Figure 2: UML Class Diagram of the SQL Database for Upgrades Installed
 
 The GUI or Graphical User Interface will be the main component of the application that the user will interact with directly. Meaning that this is where the user will have the ability to input new data, edit data, or delete data from the SQL database talked about above. The main function of this component is to allow the user to view and change the data that is stored the SQL database, which means that the GUI will have a connection to the SQL database. With this, the GUI will have five buttons designed for the user to click which will allow them to interact with the SQL database, one button that will be designed to close the application, and one button designed to restart the application. The five buttons will be designed to allow the application to select which portion of the database the user wants to view, search and output data to the user, view data from either portions of the database in a popup window, edit data in either portion of the database that the user wants, and for the user to delete data from either portions of the database. Each of the five buttons will have a functions tied to them that will allow the task to be executed when the button is clicked by the user. With this, a class diagram has been provided below for the Graphical User Interface for reference. 
 
-![Figure 3](https://github.com/brycevegh/sdd680/blob/main/Milestone%201%20Figures/Figure%203.png)
+<p align="center">
+  <img src="https://github.com/brycevegh/sdd680/blob/main/Milestone%201%20Figures/Figure%203.png" />
+</p>
 
-Figure 3: UML Class Diagram for Graphical User Interface (GUI)
+<p align="center">Figure 3: UML Class Diagram for Graphical User Interface (GUI)
 
 ### Architecture Diagram of the Application
 
@@ -199,9 +201,11 @@ In the figure below, component #3 is the Python IDE Shell/ Compiler. The functio
 
 In the figure below, component #4 is windows computer. The function of this component is to give the application all the needed storage and hardware to allow the application to be run so that the Equipment Engineers can use the application. 
 
-![Figure 4](https://github.com/brycevegh/sdd680/blob/main/Milestone%201%20Figures/Figure%204.png)
+<p align="center">
+  <img src="https://github.com/brycevegh/sdd680/blob/main/Milestone%201%20Figures/Figure%204.png" />
+</p>
 
-Figure 4: Architecture Diagram of the Tool Upgrade Tacking Application
+<p align="center">Figure 4: Architecture Diagram of the Tool Upgrade Tacking Application
 
 ### Inputs to the Application
 
@@ -324,13 +328,17 @@ The project did not require any materials or elements to be purchased to develop
 
 <p align="center">Table 8: Materials and Elements of Project
 
-![Figure 5](https://github.com/brycevegh/sdd680/blob/main/Milestone%201%20Figures/Figure%205.png)
+<p align="center">
+  <img src="https://github.com/brycevegh/sdd680/blob/main/Milestone%201%20Figures/Figure%205.png" />
+</p>
 
-Figure 5: Gantt Chart of Scheduling of Completion of Project
+<p align="center">Figure 5: Gantt Chart of Scheduling of Completion of Project
 
-![Figure 6](https://github.com/brycevegh/sdd680/blob/main/Milestone%201%20Figures/Figure%206.png)
+<p align="center">
+  <img src="https://github.com/brycevegh/sdd680/blob/main/Milestone%201%20Figures/Figure%206.png" />
+</p>
 
-Figure 6: Work Breakdown Structure with Cost Estimates
+<p align="center">Figure 6: Work Breakdown Structure with Cost Estimates
 
 ## Appendix A - References
 
