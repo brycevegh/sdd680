@@ -294,27 +294,34 @@ The following solution described above meets the objective of this project becau
 
 <p align="center">Table 5: Issues Log 
 
-# Change Control Log Table Goes Here
+| ID    | Change Description | Priority | Originator | Date Entered | Date Assigned | Evaluator | Status | Date of Decision | Included in Rev. # |
+| :---: | :----------------: | :------: | :--------: | :----------: | :-----------: | :-------: | :----: | :--------------: | :----------------: |
+| 1 | Change the code of the application to reconnect to the SQL database every time a task is performed that involves the SQL database.  | High | Bryce Vegh | 11/7/22 | 11/9/22 | Bryce Vegh | Done | 11/7/22 | A |
+| 2 | Changing how the features of the Graphical User Interface are laid out. | Low | Bryce Vegh | 12/1/22 | TBD | Bryce Vegh | Not Started | 12/1/22 | TBD |
+| 3 | Adding more information to be stored in the SQL database where the information about tool upgrades are stored. | Medium | Bryce Vegh | 12/7/22 | TBD | Bryce Vegh | Not Started | 12/7/22 | TBD |
+| 4 | Adding the ability to track the upgrades on specific chambers on tools that have different chambers.  | Medium | Bryce Vegh | 12/14/22 | TBD | Bryce Vegh | Not Started | 12/14/22 | TBD |
 
-| Stakeholder Name | Role | Responsiblities |
-| :----------------: | :------: | :----: |
-| Bryce Vegh | Lead Designer | To draft and finalize all documents pertaining to the project. While also designing all the code for the project |
+<p align="center">Table 6: Change Control Log
 
-# Role and Responsibilites of End Users Table Goes Here
+|  Name | Team  | Project Role | Responsibility |
+| :---: | :---: | :----------: | :------------: |
+| Sean Kudel  |  Development | Adviser | Meeting with end user to help understand what other features of the system will be useful to other Equipment Engineers. |
+| Patrick Montgomery | Development | Graphical User Interface Adviser | Meeting with end user to understand how to  better develop the Graphical User Interface for the system. End user has years of experience designing and developing Graphical User Interfaces. |
 
-| Stakeholder Name | Role | Responsiblities |
-| :----------------: | :------: | :----: |
-| Bryce Vegh | Lead Designer | To draft and finalize all documents pertaining to the project. While also designing all the code for the project |
+<p align="center">Table 7: Roles and Responsibilities of End Users
 
 ## Project Cost and Schedule
 
 The project did not require any materials or elements to be purchased to develop the project effectively. This is due to all the materials and elements that are used within the project are free to use for public and/or commercial use. The only cost of the project was developing and testing the project which will be included within the programming work breakdown portion of this section. The cost for engineering time was set at 100 dollars per hour and the cost for testing time was set at 65 dollars per hour. 
 
-# Materials and Elements of Project Table Goes Here
+| ID    | Material or Element | Description |
+| :---: | :-----------------: | :---------: |
+| 1 | Python | The coding language that the application will be developed in. |
+| 2 | JetBrains’ PyCharm  | The IDE Compiler that will be used to write, debug, and test the code. |
+| 3 | SQLite Library | The library that will be used to develop the two SQL databases for the application. |
+| 4 | PySimpleGUI Library | The library that will be used to develop the GUI that the end user will use to interact with the application. |
 
-| Stakeholder Name | Role | Responsiblities |
-| :----------------: | :------: | :----: |
-| Bryce Vegh | Lead Designer | To draft and finalize all documents pertaining to the project. While also designing all the code for the project |
+<p align="center">Table 8: Materials and Elements of Project
 
 ![Figure 5](https://github.com/brycevegh/sdd680/blob/main/Milestone%201%20Figures/Figure%205.png)
 
