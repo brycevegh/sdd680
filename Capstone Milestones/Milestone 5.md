@@ -22,7 +22,7 @@ The accomplishment of this application is to create a user-friendly application 
 
 # Implementation Plan - Second Iteration
 
-<mark style="background-color: #FFFF00">New Implementation Plan needs to be developed for the changes that I will be making for the second iteration of the application.</mark> 
+<mark style="background-color: #FFFF00"> New Implementation Plan needs to be developed for the changes that I will be making for the second iteration of the application. </mark> 
 
 <p align="center">Table 1: Implementation Plan for First Iteration
 
