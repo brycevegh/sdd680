@@ -22,7 +22,9 @@ The accomplishment of this application is to create a user-friendly application 
 
 # Implementation Plan - Second Iteration
 
-==New Implementation Plan needs to be developed for the changes that I will be making for the second iteration of the application.== 
+```
+New Implementation Plan needs to be developed for the changes that I will be making for the second iteration of the application.
+```
 
 <p align="center">Table 1: Implementation Plan for First Iteration
 
@@ -45,7 +47,7 @@ The accomplishment of this application is to create a user-friendly application 
 
 # Source Code Listing
 
-``Waiting to input code snippets until after all the code changes have been made``
+```Waiting to input code snippets until after all the code changes have been made```
 
 ## SQL Database Components
 
