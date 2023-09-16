@@ -60,6 +60,7 @@ The project is to design a business application that Equipment Engineers will us
 
 ## Hardware and Software Technologies
 
+### Hardware and Software Technologies List
 1. Python 3.11.1
 2. SQLite Python Library
 3. PySimpleGUI Python Library
