@@ -45,7 +45,7 @@ The accomplishment of this application is to create a user-friendly application 
 
 # Source Code Listing
 
-<span style="background-color: #FFFF00">Waiting to input code snippets until after all the code changes have been made</span>
+``Waiting to input code snippets until after all the code changes have been made``
 
 ## SQL Database Components
 
