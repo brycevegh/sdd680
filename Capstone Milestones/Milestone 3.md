@@ -134,7 +134,7 @@ The general approach to developing this application is to develop the SQL databa
 
 ## User Interface Diagrams
 
-## Installed UPgrade User Interface Wireframe Diagrams
+### Installed UPgrade User Interface Wireframe Diagrams
 
 <p align="center">
   <img src="https://github.com/brycevegh/sdd680/blob/main/Milestone%202%20Figures/Figure%204.png" />
@@ -178,7 +178,7 @@ The general approach to developing this application is to develop the SQL databa
 
 <p align="center">Figure 13: User Interface Wireframe Diagram for Delete Installed Upgrade
 
-## Available Upgrade User Interfaces Wireframe Diagrams
+### Available Upgrade User Interfaces Wireframe Diagrams
 
 <p align="center">
   <img src="https://github.com/brycevegh/sdd680/blob/main/Milestone%202%20Figures/Figure%2011.png" />
