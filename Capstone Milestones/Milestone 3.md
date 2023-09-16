@@ -134,7 +134,7 @@ The general approach to developing this application is to develop the SQL databa
 
 ## User Interface Diagrams
 
-### Installed UPgrade User Interface Wireframe Diagrams
+### Installed Upgrade User Interface Wireframe Diagrams
 
 <p align="center">
   <img src="https://github.com/brycevegh/sdd680/blob/main/Milestone%202%20Figures/Figure%204.png" />
