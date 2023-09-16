@@ -131,7 +131,7 @@ def get_Part(Path, Upgrade_name):
 The function above allows for the Part of an available upgrade to be pulled from the SQL database, so that this code does not have to be constant written throughout the source code rather the function can be used. 
 
 ```python
-#Gets the Time of whatever dat table that is called for
+#Gets the Time of whatever data table that is called for
 def get_Time(Path, Upgrade_name):
     #Used to create or connect to SQLite Database
     connection = create_connection(Path)
@@ -1039,10 +1039,11 @@ The code above is what is used to find out what upgrades have not been installed
 
 # Test Plan and Cases
 **Test Case Name:** TC-1
+
 **Module:** GUI Buttons for Add, Edit, and Delete of Available Upgrades
+
 **Test Objective:** To verify the functionality of adding, editing, and deleting Available Upgrades data from the SQL database.
 
-#Test Case 1 Goes Here
 | Step  | Test Name | Test Steps | Test Data | Results | Pass/Fail |
 | :---: | :-------: | :--------: | :-------: | :-----: | :-------: |
 | 1 | Log in to Engineering Mode. | Enter the username and password of the Engineering Mode. | Username: Engineering Password: EM141852 | Successful Login | Pass |
@@ -1051,18 +1052,19 @@ The code above is what is used to find out what upgrades have not been installed
 | 4 | Still being logged into Engineering mode, test the edit functionality of the Available Upgrades | Being at the homepage with all the buttons you will click on the Edit Available Upgrades buttons. This will bring up a GUI and you will enter the upgrade name, what data of the upgrade to edit, and enter the new data value for the upgrade edit. To test this functionality you will need to repeat this step three times, once for cost, once for parts, and once for time. | Upgrade Name: Power Valve Cost: 10,000 Parts: Face Plate Time: 4 | Three Successfully Edited Data Messages | Pass |
 | 5 | View data in database to verify the data was edited correctly. | Open the SQL database using the DB Browser for SQLite, and verify that the Available Upgrade was edited in the database. | N/A | Successfully found Data | Pass |
 | 6 | Still being logged into Engineering mode, view data by using the view button. | Being at the homepage with all the buttons you will click on the View Available Upgrades button. This will bring up a GUI and you will enter the name of the Available Upgrade. Once you hit submit, you will see text generate in the box below. | Upgrade Name: Power Valve | Successfully Viewed Data | Pass |
-| 7 | Still being logged into Engineering mode, Delete data by using the delete button. | Being at the homepage with all the buttons you will click on the Delete Available Upgrades button. This will bring up a GUI and you will enter the name of the Available Upgrade. Once you hit submit, you will get a message saying the data was been deleted. | Upgrade Name:  Power Valve | Sucessfully Deleted Data | Pass |
+| 7 | Still being logged into Engineering mode, Delete data by using the delete button. | Being at the homepage with all the buttons you will click on the Delete Available Upgrades button. This will bring up a GUI and you will enter the name of the Available Upgrade. Once you hit submit, you will get a message saying the data was been deleted. | Upgrade Name:  Power Valve | Successfully Deleted Data | Pass |
 | 8 | View data in database to verify the data was deleted correctly. | Open the SQL database using the DB Browser for SQLite, and verify that the Available Upgrade was deleted in the database. | N/A | Successfully found Data | Pass |
 | 9 | Exit out of the application so that you can log in to Viewing Mode. | Enter the username and password of the Viewing Mode. | Username: Viewing Password: VM181604| Successful Login | Pass |
 | 10 | Check the Add, Edit, and Delete Buttons for Viewing Mode. | Click on each of the buttons to verify they bring up a popup GUI that says this feature is not available. | N/A | Successful popup GUI | Pass |
 
 <p align="center">Table 3: Test Case for Tool Upgrade Tracking Application
 
-Test Case Name: TC-2
-Module: GUI Buttons for Add, Edit, and Delete of Installed Upgrades
-Test Objective: To verify the functionality of adding, editing, and deleting Installed Upgrades data from the SQL database.
+**Test Case Name:** TC-2
 
-# Test Case 2 Goes Here
+**Module:** GUI Buttons for Add, Edit, and Delete of Installed Upgrades
+
+**Test Objective:** To verify the functionality of adding, editing, and deleting Installed Upgrades data from the SQL database.
+
 | Step  | Test Name | Test Steps | Test Data | Results | Pass/Fail |
 | :---: | :-------: | :--------: | :-------: | :-----: | :-------: |
 | 1 | Log in to Engineering Mode. | Enter the username and password of the Engineering Mode. | Username: Engineering Password: EM141852 | Successful Login | Pass |
@@ -1071,143 +1073,151 @@ Test Objective: To verify the functionality of adding, editing, and deleting Ins
 | 4 | Still being logged into Engineering mode, test the edit functionality of the Installed Upgrades | Being at the homepage with all the buttons you will click on the Edit Installed Upgrades buttons. This will bring up a GUI and you will enter the tool name and what upgrade is being added to the tool. Once you hit submit, the text box at the bottom will give you a message saying it is complete. | Tool Name: CFM T1 Upgrade Being Added: Rapitran | Successfully Edited Data Messages | Pass |
 | 5 | View data in database to verify the data was edited correctly. | Open the SQL database using the DB Browser for SQLite, and verify that the Installed Upgrade was edited in the database. | N/A | Successfully found Data | Pass |
 | 6 | Still being logged into Engineering mode, view data by using the view button. | Being at the homepage with all the buttons you will click on the View Installed Upgrades button. This will bring up a GUI and you will enter the name of the tool. Once you hit submit, you will see text generate in the box below. | Tool Name: CFM T1 | Successfully Viewed Data | Pass |
-| 7 | Still being logged into Engineering mode, Delete data by using the delete button. | Being at the homepage with all the buttons you will click on the Delete Installed Upgrades button. This will bring up a GUI and you will enter the name of the tool to delete. Once you hit submit, you will get a message saying the data was been deleted. | Upgrade Name:  Power Valve | Sucessfully Deleted Data | Pass |
+| 7 | Still being logged into Engineering mode, Delete data by using the delete button. | Being at the homepage with all the buttons you will click on the Delete Installed Upgrades button. This will bring up a GUI and you will enter the name of the tool to delete. Once you hit submit, you will get a message saying the data was been deleted. | Upgrade Name:  Power Valve | Successfully Deleted Data | Pass |
 | 8 | View data in database to verify the data was deleted correctly. | Open the SQL database using the DB Browser for SQLite, and verify that the Installed Upgrade was deleted in the database. | N/A | Successfully found Data | Pass |
 | 9 | Exit out of the application so that you can log in to Viewing Mode. | Enter the username and password of the Viewing Mode. | Username: Viewing Password: VM181604 | Successful Login | Pass |
 | 10 | Check the Add, Edit, and Delete Buttons for Viewing Mode. | Click on each of the buttons to verify they bring up a popup GUI that says this feature is not available. | N/A | Successful popup GUI | Pass |
 
 <p align="center">Table 4: Test Case for Tool Upgrade Tracking Application
 
-Test Case Name: TC-3
-Module: SQL Database Functions
-Test Objective: To verify the functionality of the SQL functions that were developed to support the Upgrade Tracking Application. 
+**Test Case Name:** TC-3
 
-# Test Case 3 Goes Here
+**Module:** SQL Database Functions
+
+**Test Objective:** To verify the functionality of the SQL functions that were developed to support the Upgrade Tracking Application. 
+
 | Step  | Test Name | Test Steps | Test Data | Results | Pass/Fail |
 | :---: | :-------: | :--------: | :-------: | :-----: | :-------: |
-| 1 | | | | | |
-| 2 | | | | | |
-| 3 | | | | | |
-| 4 | | | | | |
-| 5 | | | | | |
-| 6 | | | | | |
-| 7 | | | | | |
-| 8 | | | | | |
-| 9 | | | | | |
-| 10 | | | | | |
-| 11 | | | | | |
+| 1 | Test the function for creating SQL tables. | Call the function to create SQL databases for both Available Upgrades and Installed Upgrades in Python script. | Upgrade Name: Power Valve Cost: 8,000 Parts: Card, Airline, Screws Time: 7 Tool Name: CFM T1 List of Upgrades: Power Valve, Computer, Software Update | Successfully Creating the SQL Database Files | Pass |
+| 2 | Test the function for getting the Cost of an available Upgrade. | Call the function to get the cost data from the SQL database and verify the data with what was entered in the database. | Upgrade Name: Power Valve | Successfully get the Cost Data | Pass |
+| 3 | Test the function for getting the Part of an available Upgrade. | Call the function to get the part data from the SQL database and verify the data with what was entered in the database. | Upgrade Name: Power Valve | Successfully get the Part Data | Pass |
+| 4 | Test the function for getting the Time of an available Upgrade. | Call the function to get the time data from the SQL database and verify the data with what was entered in the database. | Upgrade Name: Power Valve | Successfully get the Time Data | Pass |
+| 5 | Test the function for getting the Upgrades of an Installed Upgrade. | Call the function to get the installed upgrade data from the SQL database and verify the data with what was entered in the database. | Tool Name: CFM T1 | Successfully get  Installed Upgrade Data | Pass |
+| 6 | Test the function for Updating the Cost of an Available Upgrade. | Call the function to update the cost data and input the data from the test data column. Verify that the cost was updated by using the DB Browser Application. | Upgrade Name: Power Valve Cost: 10,000 | Successfully Updated Data | Pass |
+| 7 | Test the function for Updating the Parts of an Available Upgrade. | Call the function to update the part data and input the data from the test data column. Verify that the part was updated by using the DB Browser Application. | Upgrade Name: Power Valve Parts: Face Plate | Successfully Updated Data | Pass |
+| 8 | Test the function for Updating the Time of an Available Upgrade. | Call the function to update the time data and input the data from the test data column. Verify that the time was updated by using the DB Browser Application. | Upgrade Name: Power Valve  Time: 4 | Successfully Updated Data | Pass |
+| 9 | Test the function for adding an upgrades to the list of Installed Upgrade. | Call the function to update the installed upgrades data and input the data from the test data column. Verify that the installed upgrade was updated by using the DB Browser Application. | Tool Name: CFM T1               List of Upgrades: Rapitran | Successfully Updated Data | Pass |
+| 10 | Test the function for deleting of an Available Upgrade. | Call the function to delete the Available Upgrade from the data base. Verify that the upgrade was deleted by using the DB Browser Application. | Upgrade Name: Power Valve | Successfully Deleted Data | Pass |
+| 11 | Test the function for deleting of an Installed Upgrade. | Call the function to delete the Installed Upgrade from the data base. Verify that the upgrade was deleted by using the DB Browser Application. | Tool Name: CFM T1 | Successfully Deleted Data | Pass |
 
 <p align="center">Table 5: Test Case for Tool Upgrade Tracking Application
 
-Test Case Name: TC-4
-Module: GUI Button for Low Cost Upgrade
-Test Objective: To verify that the application feature of finding a low cost upgrade for the Available upgrades is working correctly. 
+**Test Case Name:** TC-4
 
-# Test Case 4 Goes Here
+**Module:** GUI Button for Low Cost Upgrade
+
+**Test Objective:** To verify that the application feature of finding a low cost upgrade for the Available upgrades is working correctly. 
+
 | Step  | Test Name | Test Steps | Test Data | Results | Pass/Fail |
 | :---: | :-------: | :--------: | :-------: | :-----: | :-------: |
-| 1 | | | | | |
-| 2 | | | | | |
-| 3 | | | | | |
-| 4 | | | | | |
-| 5 | | | | | |
-| 6 | | | | | |
-| 7 | | | | | |
+| 1 | Log in to Engineering Mode. | Enter the username and password of the engineering mode. | Username: Engineering Password: EM141852 | Successful Login | Pass |
+| 2 | Add an Available Upgrade that is less than $10,000. | Use the Add Available Upgrade button, add the upgrade. | Upgrade Name: Power Valve Cost: 10,000 Parts: Face Plate Time: 4 | Successfully added the upgrade | Pass |
+| 3 | Add an Available Upgrade that is between $10,000 and $25,000. | Use the Add Available Upgrade button, add the upgrade. | Upgrade Name: Computer Cost: 18,000 Parts: Monitor, Cables Time: 12 | Successfully added the upgrade | Pass |
+| 4 | Add an Available Upgrade that is over $25,000. | Use the Add Available Upgrade button, add the upgrade. | Upgrade Name: Rapitran Cost: 75,000 Parts: Rapitran, Mounting Plate Time: 48 | Successfully added the upgrade | Pass |
+| 5 | Test the functionality of the Low Cost Upgrade. | From the homepage, click on the Low Cost Upgrade button. This will open up GUI and all that will need to be done is hit the submit button. Hitting the submit will cause the three text boxes to be updated. Verify that the Power Valve upgrade is in the left most box, the computer upgrade is in the middle box, and the Raptiran is in the right most box. | N/A | Successfully sorted the Upgrades | Pass |
+| 6 | Log out by exiting the application, and log back in in the viewing mode. | Enter the username and password of the viewing mode. | Username: Viewing Password: VM181604 | Successful Login | Pass |
+| 7 | Repeat test step 5 for the viewing mode. | Read the test steps in step 5 to redo this test for the viewing mode. | N/A | Successfully sorted the Upgrades | Pass |
 
 <p align="center">Table 6: Test Case for Tool Upgrade Tracking Application
 
-Test Case Name: TC-5
-Module: GUI Button for Low Install Time
-Test Objective: To verify that the method of sorting the Available Upgrades by their install time is working correctly.
+**Test Case Name:** TC-5
 
-# Test Case 5 Goes Here
+**Module:** GUI Button for Low Install Time
+
+**Test Objective:** To verify that the method of sorting the Available Upgrades by their install time is working correctly.
+
 | Step  | Test Name | Test Steps | Test Data | Results | Pass/Fail |
 | :---: | :-------: | :--------: | :-------: | :-----: | :-------: |
-| 1 | | | | | |
-| 2 | | | | | |
-| 3 | | | | | |
-| 4 | | | | | |
-| 5 | | | | | |
+| 1 | Log in to Engineering Mode. | Enter the username and password of the engineering mode. | Username: Engineering Password: EM141852 | Successful Login | Pass |
+| 2 | Add an Available Upgrades. | Once Logged in, click on the Add Available Upgrade button. This will bring up another GUI that will allow you to enter in the information for an Available Upgrade. | Upgrade Name: Power Valve Cost: 8,000 Parts: Card, Airline, Screws Time: 7 | Successful Adding of Data Message | Pass |
+| 3 | Add an Available Upgrades. | Once Logged in, click on the Add Available Upgrade button. This will bring up another GUI that will allow you to enter in the information for an Available Upgrade. | Upgrade Name: Computer Cost: 18,000 Parts: Monitor, Cables Time: 12 | Successful Adding of Data Message | Pass |
+| 4 | Add an Available Upgrades. | Once Logged in, click on the Add Available Upgrade button. This will bring up another GUI that will allow you to enter in the information for an Available Upgrade. | Upgrade Name: Rapitran Cost: 75,000 Parts: Rapitran, Mounting Plate Time: 48 | Successful Adding of Data Message | Pass |
+| 5 | Verify that the Available Upgrades are sorted correctly by their time. | Once the three upgrades are added to the application. You will click the Low Install Time button. Then, when the next window opens you will click submit. This will allow the sorting of the upgrades to be done, verify that all the upgrades are in the correct group. | N/A | Successfully grouped the Upgrades | Pass |
 
 <p align="center">Table 7: Test Case for Tool Upgrade Tracking Application
 
-Test Case Name: TC-6
-Module: GUI Button for Tool Comparison Installed Upgrades
-Test Objective: To verify that the tool comparison method of the application is correctly pulling the Installed Upgrade data for both of the tools and displaying it for the user.
+**Test Case Name:** TC-6
 
-# Test Case 6 Goes Here
+**Module:** GUI Button for Tool Comparison Installed Upgrades
+
+**Test Objective:** To verify that the tool comparison method of the application is correctly pulling the Installed Upgrade data for both of the tools and displaying it for the user.
+
 | Step  | Test Name | Test Steps | Test Data | Results | Pass/Fail |
 | :---: | :-------: | :--------: | :-------: | :-----: | :-------: |
-| 1 | | | | | |
-| 2 | | | | | |
-| 3 | | | | | |
-| 4 | | | | | |
-| 5 | | | | | |
+| 1 | Log in to Engineering Mode. | Enter the username and password of the engineering mode. | Username: Engineering Password: EM141852 | Successful Login | Pass |
+| 2 | Add an Installed Upgrades. | Once Logged in, click on the Add Installed Upgrade button. This will bring up another GUI that will allow you to enter in the information for an Installed Upgrade. | Tool Name: CFM T1 List of Upgrades: Power Valve, Computer, Software Update | Successful Adding of Data Message | Pass |
+| 3 | Add an Installed Upgrades. | Once Logged in, click on the Add Installed Upgrade button. This will bring up another GUI that will allow you to enter in the information for an Installed Upgrade. | Tool Name: CFM T3 List of Upgrades: UPS, Injection Rack, Rapitran | Successful Adding of Data Message | Pass |
+| 4 | Choose the name of the tool you want to compare. | Once the Installed Upgrades are added to the application, you will navigate to the home page and click the Tool Comparison Installed Upgrades button. This will open another window where you will enter in the two names of the tools you want to compare. | Tool Name #1: CFM T1 Tool Name #2: CFM T2 | Successful pulling of Tools Installed Upgrade Data | Pass |
+| 5 | Verify that the data that was pulled for both of the Installed Upgrades is correct. | After the submit button is clicked, the text box in the window will be updated with the Installed Upgrade data. Verify that the data is correct for each of the tools. | N/A | Successful Comparison of the Installed Upgrades | Pass |
 
 <p align="center">Table 8: Test Case for Tool Upgrade Tracking Application
 
-Test Case Name: TC-7
-Module: GUI Button for Tool Comparison Available Upgrades
-Test Objective: To verify that the upgrade comparison method of the application is correctly pulling the Available Upgrade data for both of the upgrades and displaying it for the user.
+**Test Case Name:** TC-7
 
-# Test Case 7 Goes Here
+**Module:** GUI Button for Tool Comparison Available Upgrades
+
+**Test Objective:** To verify that the upgrade comparison method of the application is correctly pulling the Available Upgrade data for both of the upgrades and displaying it for the user.
+
 | Step  | Test Name | Test Steps | Test Data | Results | Pass/Fail |
 | :---: | :-------: | :--------: | :-------: | :-----: | :-------: |
-| 1 | | | | | |
-| 2 | | | | | |
-| 3 | | | | | |
-| 4 | | | | | |
-| 5 | | | | | |
+| 1 | Log in to Engineering Mode. | Enter the username and password of the engineering mode. | Username: Engineering Password: EM141852 | Successful Login | Pass |
+| 2 | Add an Available Upgrades. | Once Logged in, click on the Add Available Upgrade button. This will bring up another GUI that will allow you to enter in the information for an Available Upgrade. | Upgrade Name: Power Valve Cost: 8,000 Parts: Card, Airline, Screws Time: 7 | Successful Adding of Data Message | Pass |
+| 3 | Add an Available Upgrades. | Once Logged in, click on the Add Available Upgrade button. This will bring up another GUI that will allow you to enter in the information for an Available Upgrade. | Upgrade Name: Computer Cost: 18,000 Parts: Monitor, Cables Time: 12 | Successful Adding of Data Message | Pass |
+| 4 | Choose the name of the upgrades you want to compare. | Once the Available Upgrades are added to the application, you will naviagate to the home page and click the Upgrade Comparison button. This will open another window where you will enter in the two names of the upgrades you want to compare. | Upgrade Name #1: Power Valve Upgrade Name #2: Computer | Successful pulling of Available Upgrade Data | Pass |
+| 5 | Verify that the data that was pulled for both of the Available Upgrades is correct. | After the submit button is clicked, the text box in the window will be updated with the Available Upgrade data. Verify that the data is correct for each of the upgrades. | N/A | Successful Comparison of the Available Upgrades | Pass |
 
 <p align="center">Table 9: Test Case for Tool Upgrade Tracking Application
 
-Test Case Name: TC-8
-Module: GUI Button for Needed Investment
-Test Objective: To verify that the needed investment method of the application is correctly pulling the upgrades that the tool needs and correctly finding the cost of these needed upgrades.
+**Test Case Name:** TC-8
 
-# Test Case 8 Goes Here
+**Module:** GUI Button for Needed Investment
+
+**Test Objective:** To verify that the needed investment method of the application is correctly pulling the upgrades that the tool needs and correctly finding the cost of these needed upgrades.
+
 | Step  | Test Name | Test Steps | Test Data | Results | Pass/Fail |
 | :---: | :-------: | :--------: | :-------: | :-----: | :-------: |
-| 1 | | | | | |
-| 2 | | | | | |
-| 3 | | | | | |
-| 4 | | | | | |
-| 5 | | | | | |
-| 6 | | | | | |
-| 7 | | | | | |
+| 1 | Log in to Engineering Mode. | Enter the username and password of the engineering mode. | Username: Engineering Password: EM141852 | Successful Login | Pass |
+| 2 | Add an Available Upgrades. | Once Logged in, click on the Add Available Upgrade button. This will bring up another GUI that will allow you to enter in the information for an Available Upgrade. | Upgrade Name: UPS Cost: 8,500 Parts: Rack, Batteries Time: 4 | Successful Adding of Data Message | Pass |
+| 3 | Add an Available Upgrades. | Once Logged in, click on the Add Available Upgrade button. This will bring up another GUI that will allow you to enter in the information for an Available Upgrade. | Upgrade Name: Injection Rack Cost: 20,000 Parts: Rack, Airline Time: 16 | Successful Adding of Data Message | Pass |
+| 4 | Add an Available Upgrades. | Once Logged in, click on the Add Available Upgrade button. This will bring up another GUI that will allow you to enter in the information for an Available Upgrade. | Upgrade Name: Rapitran Cost: 75,000 Parts: Rapitran, Mounting Plate Time: 48 | Successful Adding of Data Message | Pass |
+| 5 | Add an Available Upgrades. | Once Logged in, click on the Add Available Upgrade button. This will bring up another GUI that will allow you to enter in the information for an Available Upgrade. | Upgrade Name: Power Valve Cost: 8,000 Parts: Card, Airline, Screws Time: 7 | Successful Adding of Data Message | Pass |
+| 6 | Add an Installed Upgrades. | Once Logged in, click on the Add Installed Upgrade button. This will bring up another GUI that will allow you to enter in the information for an Installed Upgrade. | Tool Name: CFM T2 List of Upgrades: UPS, Injection Rack, Rapitran | Successful Adding of Data Message | Pass |
+| 7 | Verifiy that the Needed Investment methods of the application are working correctly. | Once all the upgrades are added and the tool is added, naviagate back to the home page and click on the needed investment button. Another window will pop when the button is clicked, here you will input the Tool Name. Hit submit, this will update the text box within the window with the needed upgrades and the cost of all the upgrades. Verify this information so that the needed upgardes is Power Valve and the total  investment about is $8,000. | Tool Name: CFM T2 | Successful output of needed upgrades and investment | Pass |
 
 <p align="center">Table 10: Test Case for Tool Upgrade Tracking Application
 
-Test Case Name: TC-9
-Module: GUI Button for Time Installing
-Test Objective: To verify that the time installing method of the application is correctly pulling the hours spent installing upgrades onto the specific tool entered by the user.
+**Test Case Name:** TC-9
 
-# Test Case 9 Goes Here
+**Module:** GUI Button for Time Installing
+
+**Test Objective:** To verify that the time installing method of the application is correctly pulling the hours spent installing upgrades onto the specific tool entered by the user.
+
 | Step  | Test Name | Test Steps | Test Data | Results | Pass/Fail |
 | :---: | :-------: | :--------: | :-------: | :-----: | :-------: |
-| 1 | | | | | |
-| 2 | | | | | |
-| 3 | | | | | |
-| 4 | | | | | |
-| 5 | | | | | |
-| 6 | | | | | |
+| 1 | Log in to Engineering Mode. | Enter the username and password of the engineering mode. | Username: Engineering Password: EM141852 | Successful Login | Pass |
+| 2 | Add an Available Upgrades. | Once Logged in, click on the Add Available Upgrade button. This will bring up another GUI that will allow you to enter in the information for an Available Upgrade. | Upgrade Name: UPS Cost: 8,500 Parts: Rack, Batteries Time: 4 | Successful Adding of Data Message | Pass |
+| 3 | Add an Available Upgrades. | Once Logged in, click on the Add Available Upgrade button. This will bring up another GUI that will allow you to enter in the information for an Available Upgrade. | Upgrade Name: Injection Rack Cost: 20,000 Parts: Rack, Airline Time: 16 | Successful Adding of Data Message | Pass |
+| 4 | Add an Available Upgrades. | Once Logged in, click on the Add Available Upgrade button. This will bring up another GUI that will allow you to enter in the information for an Available Upgrade. | Upgrade Name: Rapitran Cost: 75,000 Parts: Rapitran, Mounting Plate Time: 48 | Successful Adding of Data Message | Pass |
+| 5 | Add an Installed Upgrades. | Once Logged in, click on the Add Installed Upgrade button. This will bring up another GUI that will allow you to enter in the information for an Installed Upgrade. | Tool Name: CFM T2 List of Upgrades: UPS, Injection Rack, Rapitran | Successful Adding of Data Message | Pass |
+| 6 | Verify the method of finding the time spent installing upgrades on the tool. | Once the upgrages and tool has been added to the application. Navigate to the home page and click on the button Time Installing. Then, enter the tool name and hit submit. This will update the text box within the window with the amount of hours that have been spent installing upgrades. Verify that the hours being display in the text box are 68 hours in total. | Tool Name: CFM T2 | Successful on finding the time spent installing upgrades | Pass |
 
 <p align="center">Table 11: Test Case for Tool Upgrade Tracking Application
 
-Test Case Name: TC-10
-Module: GUI Button for Amount Invested
-Test Objective: To verify that the amount invested method of the application is correctly pulling the upgrades that the tool has and correctly finding the cost of these upgrades.
+**Test Case Name:** TC-10
 
-# Test Case 10 Goes Here
+**Module:** GUI Button for Amount Invested
+
+**Test Objective:** To verify that the amount invested method of the application is correctly pulling the upgrades that the tool has and correctly finding the cost of these upgrades.
+
 | Step  | Test Name | Test Steps | Test Data | Results | Pass/Fail |
 | :---: | :-------: | :--------: | :-------: | :-----: | :-------: |
-| 1 | | | | | |
-| 2 | | | | | |
-| 3 | | | | | |
-| 4 | | | | | |
-| 5 | | | | | |
-| 6 | | | | | |
-| 7 | | | | | |
+| 1 | Log in to Engineering Mode. | Enter the username and password of the engineering mode. | Username: Engineering Password: EM141852 | Successful Login | Pass |
+| 2 | Add an Available Upgrades. | Once Logged in, click on the Add Available Upgrade button. This will bring up another GUI that will allow you to enter in the information for an Available Upgrade. | Upgrade Name: UPS Cost: 8,500 Parts: Rack, Batteries Time: 4 | Successful Adding of Data Message | Pass |
+| 3 | Add an Available Upgrades. | Once Logged in, click on the Add Available Upgrade button. This will bring up another GUI that will allow you to enter in the information for an Available Upgrade. | Upgrade Name: Injection Rack Cost: 20,000 Parts: Rack, Airline Time: 16 | Successful Adding of Data Message | Pass |
+| 4 | Add an Available Upgrades. | Once Logged in, click on the Add Available Upgrade button. This will bring up another GUI that will allow you to enter in the information for an Available Upgrade. | Upgrade Name: Rapitran Cost: 75,000 Parts: Rapitran, Mounting Plate Time: 48 | Successful Adding of Data Message | Pass |
+| 5 | Add an Available Upgrades. | Once Logged in, click on the Add Available Upgrade button. This will bring up another GUI that will allow you to enter in the information for an Available Upgrade. | Upgrade Name: Power Valve Cost: 8,000 Parts: Card, Airline, Screws Time: 7 | Successful Adding of Data Message | Pass |
+| 6 | Add an Installed Upgrades. | Once Logged in, click on the Add Installed Upgrade button. This will bring up another GUI that will allow you to enter in the information for an Installed Upgrade. | Tool Name: CFM T2 List of Upgrades: UPS, Injection Rack, Rapitran | Successful Adding of Data Message | Pass |
+| 7 | Verify that the Needed Investment methods of the application are working correctly. | Once all the upgrades are added and the tool is added, navigate back to the home page and click on the amount invested button. Another window will pop when the button is clicked, here you will input the Tool Name. Hit submit, this will update the text box within the window with the amount of money that has been invested into the tool. Verify this information so that the total invested is $103,500. | Tool Name: CFM T2 | Successful output of the amount invested | Pass |
 
 <p align="center">Table 12: Test Case for Tool Upgrade Tracking Application
 
