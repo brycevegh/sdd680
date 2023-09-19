@@ -22,9 +22,9 @@ The accomplishment of this application is to create a user-friendly application 
 
 # Implementation Plan - Second Iteration
 
-```
-New Implementation Plan needs to be developed for the changes that I will be making for the second iteration of the application.
-```
+
+**New Implementation Plan will be developed once I know everything that I will be changing in the code of the application**
+
 
 <p align="center">Table 1: Implementation Plan for First Iteration
 
@@ -47,14 +47,68 @@ New Implementation Plan needs to be developed for the changes that I will be mak
 
 # Source Code Listing
 
-```
-Waiting to input code snippets until after all the code changes have been made
+
+**Waiting to input code snippets that are being modifed during this iteration, so some of the code snippets will be blank**
+
+## Import Statement and Variable definitions
+
+```python
+#Allows pysimplegui library to be used
+import PySimpleGUI as sg
+
+import sqlite3
+from sqlite3 import Error
+
+#Determines the color of GUI
+sg.theme('DarkGrey5')
+
+#Used to determine what mode the application is in
+Engineer_Mode = False
+Viewer_Mode = False
 ```
 
 ## SQL Database Components
 
 ``` python
+#SQL Database components   
+def create_connection(path):
+    connection = None
+    try:
+        connection = sqlite3.connect(path)
+    except Error as e:
+        print(f"The error '{e}' occurred")
 
+    return connection
+
+#SQL Database components
+def create_table_for_upgrade(Path, Upgrade_name, Cost, Part, Time):
+    #Used to create or connect to SQLite Database
+    connection = create_connection(Path)
+
+    #Used to create a cursor within the table
+    cursor = connection.cursor()
+
+    Table_Name = f"Create table '{Upgrade_name}' (Cost, part, time)"
+    cursor.execute(Table_Name)
+
+    Table_Values = f"INSERT INTO '{Upgrade_name}' VALUES('{Cost}','{Part}','{Time}')"
+    cursor.execute(Table_Values)
+    connection.commit()
+
+#SQL Database components
+def create_table_for_tool(Path, Tool_Name, List_of_Upgrades):
+    #Used to create or connect to SQLite Database
+    connection = create_connection(Path)
+
+    #Used to create a cursor within the table
+    cursor = connection.cursor()
+
+    Table_Name = f"Create table '{Tool_Name}' (List_of_Upgrades)"
+    cursor.execute(Table_Name)
+
+    Table_Values = f"INSERT INTO  '{Tool_Name}' VALUES('{List_of_Upgrades}')"
+    cursor.execute(Table_Values)
+    connection.commit()
 ```
 
 The above code snippets are used to allow the connection and creation of the SQL database that the Tool Upgrade Tracking Application use. 
@@ -62,62 +116,170 @@ The above code snippets are used to allow the connection and creation of the SQL
 ## SQL Database Functions
 
 ```python
-   
+#Gets the cost of whatever data table that is called for
+def get_Cost(Path, Upgrade_name):
+    #Used to create or connect to SQLite Database
+    connection = create_connection(Path)
+
+    cursor = connection.cursor()
+    Cursor_Name = f"SELECT Cost FROM '{Upgrade_name}' tasks"
+
+    #Selects what table to pull the cost data from
+    cost_data = cursor.execute(Cursor_Name)
+    
+    #Gets the data from the database
+    cost_data = cursor.fetchall()
+    return cost_data  
 ```
 
 The function above allows for the cost of an available upgrade to be pulled from the SQL database, so that this code does not have to be constant written throughout the source code rather the function can be used. 
 
 ```python
+#Gets the Part of whatever data table that is called for
+def get_Part(Path, Upgrade_name):
+    #Used to create or connect to SQLite Database
+    connection = create_connection(Path)
 
+    cursor = connection.cursor()
+    Cursor_Name = f"SELECT Part FROM '{Upgrade_name}' tasks"
+
+    #Selects what table to pull the cost data from
+    part_data = cursor.execute(Cursor_Name)
+
+    #Gets the data from the database
+    part_data = cursor.fetchall()
+    return part_data
 ```
 
 The function above allows for the Part of an available upgrade to be pulled from the SQL database, so that this code does not have to be constant written throughout the source code rather the function can be used. 
 
 ```python
+#Gets the Time of whatever dat table that is called for
+def get_Time(Path, Upgrade_name):
+    #Used to create or connect to SQLite Database
+    connection = create_connection(Path)
 
+    cursor = connection.cursor()
+    Cursor_Name = f"SELECT Time FROM '{Upgrade_name}' tasks"
+
+    #Selects what table to pull the cost data from
+    cursor.execute(Cursor_Name)
+
+    #Gets the data from the database
+    time_data = cursor.fetchall()
+    return time_data
 ```
 
 The function above allows for the Time of an available upgrade to be pulled from the SQL database, so that this code does not have to be constant written throughout the source code rather the function can be used. 
 
 ```python
+#Gets the Upgrades of whatever Tool's data table that is called for
+def get_Upgrades(Path, Tool_Name):
+    #Used to create or connect to SQLite Database
+    connection = create_connection(Path)
 
+    cursor = connection.cursor()
+    Cursor_Name = f"SELECT List_of_Upgrades FROM '{Tool_Name}' tasks"
+
+    #Selects what table to pull the cost data from
+    cursor.execute(Cursor_Name)
+
+    #Gets the data from the database
+    upgrade_data = cursor.fetchall()
+    return upgrade_data
 ```
 
 The function above allows for the upgrades of an installed upgrade to be pulled from the SQL database, so that this code does not have to be constant written throughout the source code rather the function can be used. 
 
 ```python
+#Update the value store in table for Cost
+def update_cost(Path, Upgrade_name, Update_Value_For_Cost):
+    #Used to create or connect to SQLite Database
+    connection = create_connection(Path)
 
+    cursor = connection.cursor()
+    Update_Cost = f"UPDATE '{Upgrade_name}' SET Cost = '{Update_Value_For_Cost}'"
+    cursor.execute(Update_Cost)
+    connection.commit()
 ```
 
 The function above updates the data for cost of the available upgrade in the SQL database, so that this code does not have to be constant written throughout the source code rather the function can be used. 
 
 ```python
+#Update the value store in table for Part
+def update_part(Path, Upgrade_name, Update_Value_For_Part):
+    #Used to create or connect to SQLite Database
+    connection = create_connection(Path)
 
+    cursor = connection.cursor()
+    Update_Part = f"UPDATE '{Upgrade_name}' SET part = '{Update_Value_For_Part}'"
+    cursor.execute(Update_Part)
+    connection.commit()
 ```
 
 The function above updates the data for part of the available upgrade in the SQL database, so that this code does not have to be constant written throughout the source code rather the function can be used. 
 
 ```python
+#Update the value store in table for Part
+def update_time(Path, Upgrade_name, Update_Value_For_Time):
+    #Used to create or connect to SQLite Database
+    connection = create_connection(Path)
+    cursor = connection.cursor()
 
+    Update_Time = f"UPDATE '{Upgrade_name}' SET Time = '{Update_Value_For_Time}'"
+    cursor.execute(Update_Time)
+    connection.commit()
 ```
 
 The function above updates the data for time of the available upgrade in the SQL database, so that this code does not have to be constant written throughout the source code rather the function can be used. 
 
 ```python
+#Update the Upgrade data of a tool
+def add_upgrade(Path, Tool_Names, Update_Value_For_List):
+    #Used to create or connect to SQLite Database
+    connection = create_connection(Path)
 
+    #Sets the connection to the database
+    cursor = connection.cursor()
+    Cursor_Name = f"SELECT List_of_Upgrades FROM '{Tool_Names}' tasks"
+
+    #Selects what table to pull the cost data from
+    upgrade_data = cursor.execute(Cursor_Name)
+    Update_Value_For_List_of_Upgrades = str(upgrade_data.fetchall())[
+                                        3:(len(upgrade_data.fetchall()) - 4)] + ", " + Update_Value_For_List
+
+    Update_Upgrade = f"UPDATE '{Tool_Names}' SET List_of_Upgrades = '{Update_Value_For_List_of_Upgrades}'"
+    cursor.execute(Update_Upgrade)
+    connection.commit()
 ```
 
 The function above adds an update to a tool to track the installed upgrades in the SQL database, so that this code does not have to be constant written throughout the source code rather the function can be used. 
 
 ```python
+#Deletes the Upgrade from database
+def delete_upgrade(path, Upgrade_name):
+    #Used to create or connect to SQLite Database
+    connection = create_connection(path)
 
+    cursor = connection.cursor()
+    cursor_name = f"DROP TABLE '{Upgrade_name}'"
+    cursor.execute(cursor_name)
+    connection.commit()
 ```
 
 The function above deletes an available upgrade in the SQL database, so that this code does not have to be constant written throughout the source code rather the function can be used. 
 
 
 ```python
+#Deletes the tool from the database
+def delete_tool(path, Tool_name):
+    #Used to create or connect to SQLite Database
+    connection = create_connection(path)
 
+    cursor = connection.cursor()
+    cursor_name = f"DROP TABLE '{Tool_name}'"
+    cursor.execute(cursor_name)
+    connection.commit()
 ```
 
 The function above delete the list of installed upgrade for a tool in the SQL database, so that this code does not have to be constant written throughout the source code rather the function can be used. 
@@ -125,13 +287,109 @@ The function above delete the list of installed upgrade for a tool in the SQL da
 ## GUI Functions
 
 ```python
+#Login Layout for GUI
+layout_Login = [
+    [sg.Text('Please enter your Username and Password')],
+    [sg.Text('Username', size=(15, 1), justification = 'center'), sg.InputText(size = (30,1), do_not_clear=False)],
+    [sg.Text('Password', size=(15, 1), justification = 'center'), sg.InputText(size = (30,1), do_not_clear=False, password_char='*')],
+    [sg.Submit(), sg.Exit(key = '-EXIT-')]
+]
 
+#Opens up the GUI window
+window_Login = sg.Window('Login', layout_Login, enable_close_attempted_event = True)
+
+# This is an Event Loop
+while True:  
+    event, values = window_Login.read()
+
+    #Allows the Application to get into Engineering Mode
+    if values[0] == "Engineering" and values[1] == "EM141852":
+        Engineer_Mode = True
+        break
+
+    #Allows the Application to get into Manager Mode    
+    if values[0] == "Viewing" and values[1] == "VM181604":
+        Viewer_Mode = True
+        break
+
+    #Closes the GUI
+    if (event == sg.WINDOW_CLOSE_ATTEMPTED_EVENT or event == '-EXIT-') and sg.popup_yes_no('Do you really want to exit?', no_titlebar = True, background_color = "Grey", text_color = "Black", button_color = ("Black", "Grey")) == 'Yes':
+        break
+
+#Closes the GUI
+window_Login.close()
 ```
 
-The code above is what is used to create the GUI for the user to login to the application, so that the application knows if a viewer or engineer is logging in. 
+The code above is what is used to create the GUI for the user to login to the application, so that the application knows if a viewer or engineer is logging in. The changes that were made to this portion of the code from the first iteration was the adding of the password_char = '*'. This was changed because it allows the password to be hidden when it is typed in, so it adds another layer of protection for the user's password. 
 
 ```python
-
+#Opens up the Engineer GUIs
+if Engineer_Mode == True:
+    #Layout for the Engineer Mode
+    layout_Enginer = [
+        [sg.Stretch(), sg.Text('Installed Upgrade'), sg.Stretch(), sg.Text('Available Upgrades'), sg.Stretch()],
+        [sg.Stretch(), sg.Button('Tool Comparison Installed Upgrade', size = (20,2)), sg.Button('Add Installed Upgrade',  size = (20,2)), sg.Stretch(), sg.Button('Add Available Upgrade',  size = (20,2)),sg.Button('Low Cost Upgrade',  size = (20,2)), sg.Stretch()],
+        [sg.Stretch(), sg.Button('Time Installing', size = (20,2)), sg.Button('Edit Installed Upgrade',  size = (20,2)), sg.Stretch(), sg.Button('Edit Available Upgrade',  size = (20,2)),sg.Button('Low Install Time',  size = (20,2)), sg.Stretch()],
+        [sg.Stretch(), sg.Button('Amount Invested', size = (20,2)), sg.Button('Delete Installed Upgrade',  size = (20,2)), sg.Stretch(), sg.Button('Delete Available Upgrade',  size = (20,2)),sg.Button('Tool Comparison Available Upgrade',  size = (20,2)), sg.Stretch()],
+        [sg.Stretch(), sg.Text('                   '), sg.Button('View Installed Upgrade', size = (20,2)), sg.Stretch(), sg.Text('                   '), sg.Button('View Available Upgrade',  size = (20,2)),sg.Button('Needed Investment',  size = (20,2)), sg.Stretch()] ]
+    
+    #Opens the Engineer Mode GUI
+    window_Engineer = sg.Window('Upgrade Tracking Application - Engineering Mode', layout_Enginer, enable_close_attempted_event = True) 
+    
+    # This is an Event Loop
+    while True:  
+        event, values = window_Engineer.read()
+        
+        #Closes the GUI
+        if (event == sg.WINDOW_CLOSE_ATTEMPTED_EVENT or event == '-EXIT-') and sg.popup_yes_no('Do you really want to exit?', no_titlebar = True, background_color = "Grey", text_color = "Black", button_color = ("Black", "Grey")) == 'Yes':
+            break
+        #Tool comparison Button pushed
+        if event in "Tool Comparison Installed Upgrade":
+        
+        #Add Installed Upgrade Button pushed
+        if event in "Add Installed Upgrade":
+        
+        #Add Available Upgrade Button pushed
+        if event in "Add Available Upgrade":
+        
+        #Low Cost Upgrade Button pushed
+        if event in "Low Cost Upgrade":
+        
+        #Time Installing Button pushed
+        if event in "Time Installing":
+        
+        #Edit Installed Upgrade Button pushed
+        if event in "Edit Installed Upgrade":
+        
+        #Edit Available Upgrade Button pushed
+        if event in "Edit Available Upgrade":
+        
+        #Low Install Time Button pushed
+        if event in "Low Install Time":        
+        
+        #Amount Invested Button pushed
+        if event in "Amount Invested":
+        
+        #Delete Installed Upgrade pushed
+        if event in "Delete Installed Upgrade":
+        
+        #Delete Available Upgrade pushed
+        if event in "Delete Available Upgrade":
+        
+        #Tool Comparison pushed
+        if event in "Tool Comparison Available Upgrade":
+        
+        #View Installed Upgrade pushed
+        if event in "View Installed Upgrade":
+        
+        #View Available Upgrade pushed
+        if event in "View Available Upgrade":
+        
+        #Needed Investment pushed
+        if event in "Needed Investment":
+    
+    #Closes the GUI
+    window_Engineer.close()
 ```
 
 The code above is what is used to create the GUI for the home page of the application, this home page is the same for both the viewer and engineer mode. The different is that in the viewer mode, the users do not have access to certain features that would allow them to add, edit, or delete data from the database. 
@@ -148,7 +406,45 @@ The code above is the GUI that pops up when a user in the viewer mode tries to a
 **Tool Comparison Installed Upgrade**
 
 ```python
+#Setup for the Tool Comparison GUI
+            layout_Tool_Comparison_Installed_Upgrade = [
+                [sg.Text('Tool Name #1', size=(17, 1), justification = 'center'), sg.InputText(size = (30,1), do_not_clear=False)],
+                [sg.Text('Tool Name #2', size=(17, 1), justification = 'center'), sg.InputText(size = (30,1), do_not_clear=False)],
+                [sg.Stretch(), sg.Submit(), sg.Exit(key = '-EXIT-'), sg.Stretch()],
+                [sg.Stretch(), sg.Text('Tool Comparison Data'), sg.Stretch()],                
+                [sg.Stretch(), sg.Multiline('', key = '-MULTILINE KEY-', size=(50,5)), sg.Stretch()]
+            ]
 
+            #Opens the Tool Comparison Installed Upgrade GUI
+            window_Tool_Comparison_Installed_Upgrade = sg.Window('Tool Comparison Installed Upgrade', layout_Tool_Comparison_Installed_Upgrade, enable_close_attempted_event = True) 
+
+            # This is an Event Loop
+            while True:  
+                event, values = window_Tool_Comparison_Installed_Upgrade.read()
+
+                #Closes the GUI
+                if (event == sg.WINDOW_CLOSE_ATTEMPTED_EVENT or event == '-EXIT-') and sg.popup_yes_no('Do you really want to exit?', no_titlebar = True, background_color = "Grey", text_color = "Black", button_color = ("Black", "Grey")) == 'Yes':
+                    break
+
+                #Starts the Tool Comparison
+                if event in "Submit":
+                    #Gets the first tool data
+                    Tool_1 = str(get_Upgrades("Tools", values[0]))
+                    Tool_1 = Tool_1[3:len(Tool_1)-4]
+
+                    #Gets the second tool data
+                    Tool_2 = str(get_Upgrades("Tools", values[1]))
+                    Tool_2 = Tool_2[3:len(Tool_2)-4]
+                    
+                    #Used to update the text box with Tool comparisons 
+                    window_Tool_Comparison_Installed_Upgrade['-MULTILINE KEY-'].print('Tool 1 Installed Upgrade Data', justification = 'center', font=('Arial', 10, 'bold'))
+                    window_Tool_Comparison_Installed_Upgrade['-MULTILINE KEY-'].print(f"{Tool_1}", justification = 'center')
+
+                    window_Tool_Comparison_Installed_Upgrade['-MULTILINE KEY-'].print('Tool 2 Installed Upgrade Data', justification = 'center', font=('Arial', 10, 'bold'))
+                    window_Tool_Comparison_Installed_Upgrade['-MULTILINE KEY-'].print(f"{Tool_2}", justification = 'center')
+
+            #Closes the GUI
+            window_Tool_Comparison_Installed_Upgrade.close()
 ```
 
 The code above is what is used to pull data on two separate tools and output them to the user in a window so that the user can compare what upgrades are installed on the tools. 

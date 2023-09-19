@@ -57,6 +57,23 @@ The accomplishment of this application is to create a user-friendly application 
 
 # Source Code Listing
 
+## Import Statement and Variable definitions
+
+```python
+#Allows pysimplegui library to be used
+import PySimpleGUI as sg
+
+import sqlite3
+from sqlite3 import Error
+
+#Determines the color of GUI
+sg.theme('DarkGrey5')
+
+#Used to determine what mode the application is in
+Engineer_Mode = False
+Viewer_Mode = False
+```
+
 ## SQL Database Components
 
 ``` python
@@ -233,7 +250,6 @@ def delete_upgrade(path, Upgrade_name):
 
 The function above deletes an available upgrade in the SQL database, so that this code does not have to be constant written throughout the source code rather the function can be used. 
 
-
 ```python
 #Deletes the tool from the database
 def delete_tool(path, Tool_name):
@@ -288,44 +304,63 @@ if Engineer_Mode == True:
         [sg.Stretch(), sg.Button('Time Installing', size = (20,2)), sg.Button('Edit Installed Upgrade',  size = (20,2)), sg.Stretch(), sg.Button('Edit Available Upgrade',  size = (20,2)),sg.Button('Low Install Time',  size = (20,2)), sg.Stretch()],
         [sg.Stretch(), sg.Button('Amount Invested', size = (20,2)), sg.Button('Delete Installed Upgrade',  size = (20,2)), sg.Stretch(), sg.Button('Delete Available Upgrade',  size = (20,2)),sg.Button('Tool Comparison Available Upgrade',  size = (20,2)), sg.Stretch()],
         [sg.Stretch(), sg.Text('                   '), sg.Button('View Installed Upgrade', size = (20,2)), sg.Stretch(), sg.Text('                   '), sg.Button('View Available Upgrade',  size = (20,2)),sg.Button('Needed Investment',  size = (20,2)), sg.Stretch()] ]
+    
     #Opens the Engineer Mode GUI
     window_Engineer = sg.Window('Upgrade Tracking Application - Engineering Mode', layout_Enginer, enable_close_attempted_event = True) 
+    
     # This is an Event Loop
     while True:  
         event, values = window_Engineer.read()
+        
         #Closes the GUI
         if (event == sg.WINDOW_CLOSE_ATTEMPTED_EVENT or event == '-EXIT-') and sg.popup_yes_no('Do you really want to exit?', no_titlebar = True, background_color = "Grey", text_color = "Black", button_color = ("Black", "Grey")) == 'Yes':
             break
+     
         #Tool comparison Button pushed
         if event in "Tool Comparison Installed Upgrade":
+     
         #Add Installed Upgrade Button pushed
         if event in "Add Installed Upgrade":
+     
         #Add Available Upgrade Button pushed
         if event in "Add Available Upgrade":
+     
         #Low Cost Upgrade Button pushed
         if event in "Low Cost Upgrade":
+     
         #Time Installing Button pushed
         if event in "Time Installing":
+     
         #Edit Installed Upgrade Button pushed
         if event in "Edit Installed Upgrade":
+     
         #Edit Available Upgrade Button pushed
         if event in "Edit Available Upgrade":
+     
         #Low Install Time Button pushed
         if event in "Low Install Time":        
+     
         #Amount Invested Button pushed
         if event in "Amount Invested":
+     
         #Delete Installed Upgrade pushed
         if event in "Delete Installed Upgrade":
+     
         #Delete Available Upgrade pushed
         if event in "Delete Available Upgrade":
+     
         #Tool Comparison pushed
         if event in "Tool Comparison Available Upgrade":
+     
         #View Installed Upgrade pushed
         if event in "View Installed Upgrade":
-       #View Available Upgrade pushed
+        
+        #View Available Upgrade pushed
         if event in "View Available Upgrade":
+        
         #Needed Investment pushed
         if event in "Needed Investment":
+    
     #Closes the GUI
     window_Engineer.close()
 ```
