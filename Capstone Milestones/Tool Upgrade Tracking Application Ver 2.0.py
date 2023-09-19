@@ -1,5 +1,3 @@
-#Added this as a test to make sure the files updated
-
 #Allows pysimplegui library to be used
 import PySimpleGUI as sg
 
@@ -218,15 +216,20 @@ window_Login.close()
 if Engineer_Mode == True:
     #Layout for the Engineer Mode
     layout_Enginer = [
-        [sg.Stretch(), sg.Text('Installed Upgrade           '), sg.Stretch(), sg.Text('             Available Upgrades'), sg.Stretch()],
-        [sg.Stretch(), sg.Button('Tool Comparison Installed Upgrade', size = (20,2)), sg.Button('Add Installed Upgrade',  size = (20,2)), sg.Stretch(), sg.Button('Add Available Upgrade',  size = (20,2)),sg.Button('Low Cost Upgrade',  size = (20,2)), sg.Stretch()],
-        [sg.Stretch(), sg.Button('Time Installing', size = (20,2)), sg.Button('Edit Installed Upgrade',  size = (20,2)), sg.Stretch(), sg.Button('Edit Available Upgrade',  size = (20,2)),sg.Button('Low Install Time',  size = (20,2)), sg.Stretch()],
-        [sg.Stretch(), sg.Button('Amount Invested', size = (20,2)), sg.Button('Delete Installed Upgrade',  size = (20,2)), sg.Stretch(), sg.Button('Delete Available Upgrade',  size = (20,2)),sg.Button('Upgrade Comparison',  size = (20,2)), sg.Stretch()],
-        [sg.Stretch(), sg.Text('                   '), sg.Button('View Installed Upgrade', size = (20,2)), sg.Stretch(), sg.Text('                   '), sg.Button('View Available Upgrade',  size = (20,2)),sg.Button('Needed Investment',  size = (20,2)), sg.Stretch()]
+        [sg.Stretch(), sg.Text('Installed Upgrade'), sg.Stretch()],
+        [sg.Stretch(), sg.Button('Tool Comparison Installed Upgrade', size = (20,2)), sg.Stretch(), sg.Button('Add Installed Upgrade',  size = (20,2)), sg.Stretch()],
+        [sg.Stretch(), sg.Button('Time Installing', size = (20,2)), sg.Stretch(), sg.Button('Edit Installed Upgrade',  size = (20,2)), sg.Stretch()],
+        [sg.Stretch(), sg.Button('Amount Invested', size = (20,2)), sg.Stretch(), sg.Button('Delete Installed Upgrade',  size = (20,2)), sg.Stretch()],
+        [sg.Stretch(), sg.Button('View Installed Upgrade', size = (20,2)), sg.Stretch()],
+        [sg.Stretch(), sg.Text('Available Upgrades'), sg.Stretch()],
+        [sg.Stretch(), sg.Button('Add Available Upgrade',  size = (20,2)), sg.Stretch(), sg.Button('Low Cost Upgrade',  size = (20,2)), sg.Stretch()],
+        [sg.Stretch(), sg.Button('Edit Available Upgrade',  size = (20,2)), sg.Stretch(), sg.Button('Low Install Time',  size = (20,2)), sg.Stretch()],        
+        [sg.Stretch(), sg.Button('Delete Available Upgrade',  size = (20,2)), sg.Stretch(), sg.Button('Upgrade Comparison',  size = (20,2)), sg.Stretch()],
+        [sg.Stretch(), sg.Button('View Available Upgrade',  size = (20,2)), sg.Stretch(), sg.Button('Needed Investment',  size = (20,2)), sg.Stretch()]
     ]
     
     #Opens the Engineer Mode GUI
-    window_Engineer = sg.Window('Upgrade Tracking Application - Engineering Mode', layout_Enginer, enable_close_attempted_event = True) 
+    window_Engineer = sg.Window('Engineering Mode', layout_Enginer, enable_close_attempted_event = True) 
 
     # This is an Event Loop
     while True:  
@@ -1053,15 +1056,20 @@ if Engineer_Mode == True:
 if Viewer_Mode == True:
     #Layout for the Engineer Mode
     layout_Viewer = [
-        [sg.Stretch(), sg.Text('Installed Upgrade           '), sg.Stretch(), sg.Text('             Available Upgrades'), sg.Stretch()],
-        [sg.Stretch(), sg.Button('Tool Comparison Installed Upgrade', size = (20,2)), sg.Button('Add Installed Upgrade',  size = (20,2)), sg.Stretch(), sg.Button('Add Available Upgrade',  size = (20,2)),sg.Button('Low Cost Upgrade',  size = (20,2)), sg.Stretch()],
-        [sg.Stretch(), sg.Button('Time Installing', size = (20,2)), sg.Button('Edit Installed Upgrade',  size = (20,2)), sg.Stretch(), sg.Button('Edit Available Upgrade',  size = (20,2)),sg.Button('Low Install Time',  size = (20,2)), sg.Stretch()],
-        [sg.Stretch(), sg.Button('Amount Invested', size = (20,2)), sg.Button('Delete Installed Upgrade',  size = (20,2)), sg.Stretch(), sg.Button('Delete Available Upgrade',  size = (20,2)),sg.Button('Upgrade Comparison',  size = (20,2)), sg.Stretch()],
-        [sg.Stretch(), sg.Text('                   '), sg.Button('View Installed Upgrade', size = (20,2)), sg.Stretch(), sg.Text('                   '), sg.Button('View Available Upgrade',  size = (20,2)),sg.Button('Needed Investment',  size = (20,2)), sg.Stretch()]
-    ]
+        [sg.Stretch(), sg.Text('Installed Upgrade'), sg.Stretch()],
+        [sg.Stretch(), sg.Button('Tool Comparison Installed Upgrade', size = (20,2)), sg.Stretch(), sg.Button('Add Installed Upgrade',  size = (20,2)), sg.Stretch()],
+        [sg.Stretch(), sg.Button('Time Installing', size = (20,2)), sg.Stretch(), sg.Button('Edit Installed Upgrade',  size = (20,2)), sg.Stretch()],
+        [sg.Stretch(), sg.Button('Amount Invested', size = (20,2)), sg.Stretch(), sg.Button('Delete Installed Upgrade',  size = (20,2)), sg.Stretch()],
+        [sg.Stretch(), sg.Button('View Installed Upgrade', size = (20,2)), sg.Stretch()],
+        [sg.Stretch(), sg.Text('Available Upgrades'), sg.Stretch()],
+        [sg.Stretch(), sg.Button('Add Available Upgrade',  size = (20,2)), sg.Stretch(), sg.Button('Low Cost Upgrade',  size = (20,2)), sg.Stretch()],
+        [sg.Stretch(), sg.Button('Edit Available Upgrade',  size = (20,2)), sg.Stretch(), sg.Button('Low Install Time',  size = (20,2)), sg.Stretch()],        
+        [sg.Stretch(), sg.Button('Delete Available Upgrade',  size = (20,2)), sg.Stretch(), sg.Button('Upgrade Comparison',  size = (20,2)), sg.Stretch()],
+        [sg.Stretch(), sg.Button('View Available Upgrade',  size = (20,2)), sg.Stretch(), sg.Button('Needed Investment',  size = (20,2)), sg.Stretch()]
+        ]
     
     #Opens the Engineer Mode GUI
-    window_Viewer = sg.Window('Upgrade Tracking Application - Viewer Mode', layout_Viewer, enable_close_attempted_event = True) 
+    window_Viewer = sg.Window('Viewer Mode', layout_Viewer, enable_close_attempted_event = True) 
 
     # This is an Event Loop
     while True:  
