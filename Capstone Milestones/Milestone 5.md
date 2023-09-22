@@ -59,6 +59,9 @@ import PySimpleGUI as sg
 import sqlite3
 from sqlite3 import Error
 
+#Allows for dollar values to be shown correctly
+import locale
+
 #Determines the color of GUI
 sg.theme('DarkGrey5')
 
@@ -328,7 +331,7 @@ if Engineer_Mode == True:
     #Layout for the Engineer Mode
     layout_Enginer = [
                [sg.Stretch(), sg.Text('Installed Upgrade'), sg.Stretch()],
-        [sg.Stretch(), sg.Button('Tool Comparison Installed Upgrade', size = (20,2)), sg.Stretch(), sg.Button('Add Installed Upgrade',  size = (20,2)), sg.Stretch()],
+        [sg.Stretch(), sg.Button('Tool Comparison', size = (20,2)), sg.Stretch(), sg.Button('Add Installed Upgrade',  size = (20,2)), sg.Stretch()],
         [sg.Stretch(), sg.Button('Time Installing', size = (20,2)), sg.Stretch(), sg.Button('Edit Installed Upgrade',  size = (20,2)), sg.Stretch()],
         [sg.Stretch(), sg.Button('Amount Invested', size = (20,2)), sg.Stretch(), sg.Button('Delete Installed Upgrade',  size = (20,2)), sg.Stretch()],
         [sg.Stretch(), sg.Button('View Installed Upgrade', size = (20,2)), sg.Stretch()],
@@ -350,7 +353,7 @@ if Engineer_Mode == True:
         if (event == sg.WINDOW_CLOSE_ATTEMPTED_EVENT or event == '-EXIT-') and sg.popup_yes_no('Do you really want to exit?', no_titlebar = True, background_color = "Grey", text_color = "Black", button_color = ("Black", "Grey")) == 'Yes':
             break
         #Tool comparison Button pushed
-        if event in "Tool Comparison Installed Upgrade":
+        if event in "Tool Comparison":
         
         #Add Installed Upgrade Button pushed
         if event in "Add Installed Upgrade":
@@ -409,7 +412,7 @@ The code above is the GUI that pops up when a user in the viewer mode tries to a
 
 ## Features of the Application
 
-**Tool Comparison Installed Upgrade**
+**Tool Comparison**
 
 ```python
 #Setup for the Tool Comparison GUI
@@ -435,11 +438,11 @@ The code above is the GUI that pops up when a user in the viewer mode tries to a
                 #Starts the Tool Comparison
                 if event in "Submit":
                     #Gets the first tool data
-                    Tool_1 = str(get_Upgrades("Tools", values[0]))
+                    Tool_1 = str(get_Upgrades("Tools", values[0].upper()))
                     Tool_1 = Tool_1[3:len(Tool_1)-4]
 
                     #Gets the second tool data
-                    Tool_2 = str(get_Upgrades("Tools", values[1]))
+                    Tool_2 = str(get_Upgrades("Tools", values[1].upper()))
                     Tool_2 = Tool_2[3:len(Tool_2)-4]
                     
                     #Used to update the text box with Tool comparisons 
@@ -481,12 +484,12 @@ The code above is what is used to pull data on two separate tools and output the
                 #Starts the Add Installed Upgrade
                 if event in "Submit":
                     #stuff to add the installed upgrade
-                    create_table_for_tool("Tools", values[0] , values[1])
+                    create_table_for_tool("Tools", values[0].upper() , values[1].upper())
                     #Used to update the text box to say it has been completed 
                     window_Tool_Comparison_Installed_Upgrade['-MULTILINE KEY-'].print('New Installed Upgrade has been Added', justification = 'center')
 
             #Closes the GUI
-            window_Tool_Comparison_Installed_Upgrade.close() 
+            window_Tool_Comparison_Installed_Upgrade.close()
 ```
 
 The code above is what is used to add new data to the SQL database for what upgrades are installed on a tool. This always proves the user with confirmation that the data was successfully added to the database. 
@@ -519,13 +522,13 @@ The code above is what is used to add new data to the SQL database for what upgr
                 #Starts the Add Available Upgrade
                 if event in "Submit":
                     #stuff to add the installed upgrade
-                    create_table_for_upgrade("Tool Upgrades", values[0], values[1], values[2], values[3])
+                    create_table_for_upgrade("Tool Upgrades", values[0].upper(), values[1].upper(), values[2].upper(), values[3].upper())
                     
                     #Used to update the text box to say it has been completed 
                     window_Tool_Add_Available_Upgrade['-MULTILINE KEY-'].print('New Available Upgrade has been Added', justification = 'center')
 
             #Closes the GUI
-            window_Tool_Add_Available_Upgrade.close() 
+            window_Tool_Add_Available_Upgrade.close()
 ```
 
 The code above is what is used to add new data to the SQL database for what upgrades are available to install on a tool. This always proves the user with confirmation that the data was successfully added to the database. 
@@ -535,7 +538,7 @@ The code above is what is used to add new data to the SQL database for what upgr
 ```python
 #Setup for the Low Cost Upgrade GUI
             layout_Low_Cost_Upgrade = [
-                [sg.Stretch(), sg.Text('Under $10k                    ', justification = 'center'), sg.Stretch(), sg.Text('Under $25k', justification = 'center'), sg.Stretch(), sg.Text('                    Over $25k', justification = 'center'), sg.Stretch()],
+                [sg.Stretch(), sg.Text('Under $10k', justification = 'center'),sg.Text('                    '), sg.Stretch(), sg.Text('Under $25k', justification = 'center'), sg.Stretch(), sg.Text('                    '), sg.Text('Over $25k', justification = 'center'), sg.Stretch()],
                 [sg.Stretch(), sg.Multiline('', key = '-Under $10k KEY-', size=(30,10)), sg.Stretch(), sg.Multiline('', key = '-Under $25k KEY-', size=(30,10)), sg.Stretch(), sg.Multiline('', key = '-Over $25k KEY-', size=(30,10))],
                 [sg.Stretch(), sg.Submit(), sg.Exit(key = '-EXIT-'), sg.Stretch()],
             ]
@@ -634,15 +637,61 @@ The code above is what is used to add new data to the SQL database for what upgr
             window_Low_Cost_Upgrade.close()
 ```
 
-The code above is what takes all the available upgrades that are stored in the SQL database, once it has all the upgrades it puts them into groups. These groups are if the upgrade is less than $10,000, between $10,000 and $25,000, and if they are greater than $25,000. Next, the code goes through and outputs these groups to the user to see so that they can choose an upgrade that is based on how much they cost. 
+The code above is what takes all the available upgrades that are stored in the SQL database, once it has all the upgrades it puts them into groups. These groups are if the upgrade is less than $10,000, between $10,000 and $25,000, and if they are greater than $25,000. Next, the code goes through and outputs these groups to the user to see so that they can choose an upgrade that is based on how much they cost. Changed up how the GUI window layout is defined from the first iteration of the software. Removed the spaces that were added behind the under $10k and Over $25k title blocks to make the GUI window layout code line look a bit more neat. Added two separate sg.Text() functions with the needed spacing to align the title blocks in their correct position instead of just having the spaces after the title block names in their respective sg.Text() function. 
 
 **Time Installing**
 
 ```python
+#Setup for the Time Installing GUI
+            layout_Time_Installing = [
+                [sg.Text('Tool Name', size=(17, 1), justification = 'center'), sg.InputText(size = (35,1), do_not_clear=False)],
+                [sg.Stretch(), sg.Submit(), sg.Exit(key = '-EXIT-'), sg.Stretch()],
+                [sg.Stretch(), sg.Text('Time Installed Data', justification = 'center'), sg.Stretch()],
+                [sg.Stretch(), sg.Multiline('', key = '-MULTILINE KEY-', size=(50,5)), sg.Stretch()]                
+            ]
 
+            #Opens the Time Installing GUI
+            window_Time_Installing = sg.Window('Time Installing', layout_Time_Installing, enable_close_attempted_event = True) 
+
+            # This is an Event Loop
+            while True:  
+                event, values = window_Time_Installing.read()
+
+                #Closes the GUI
+                if (event == sg.WINDOW_CLOSE_ATTEMPTED_EVENT or event == '-EXIT-') and sg.popup_yes_no('Do you really want to exit?', no_titlebar = True, background_color = "Grey", text_color = "Black", button_color = ("Black", "Grey")) == 'Yes':
+                    break
+
+                #Starts the Time Install
+                if event in "Submit":
+                    #Used to get the list of upgrades from tool
+                    List_of_Upgrades = str(get_Upgrades("Tools", values[0].upper()))
+                    List_of_Upgrades = List_of_Upgrades[3:len(List_of_Upgrades)-4]
+                    List_of_Upgrades = List_of_Upgrades.split(", ")
+
+                    #String used to print output
+                    Total_Time_Installing = "The total amount of time installing: "
+                    Total_Time = 0.00
+
+                    #Used to find the install time of each upgrade
+                    for i in range(len(List_of_Upgrades)):
+                        #Used to find the Cost of the upgrade
+                        Install_Time = str(get_Time("Tool Upgrades", List_of_Upgrades[i]))
+                        Install_Time = Install_Time[3:len(Install_Time)-4]
+                        Install_Time = float(Install_Time)
+                        Total_Time = Total_Time + Install_Time
+                        Total_Time = round(Total_Time, 2)
+
+                    #Used to get final text ready to output
+                    Total_Time_Installing = Total_Time_Installing + str(Total_Time) + " hours for " + str(values[0].upper())
+                    
+                    #Used to update the text for Time Installed Data
+                    window_Time_Installing['-MULTILINE KEY-'].print(Total_Time_Installing, justification = 'center')
+
+            #Closes the GUI
+            window_Time_Installing.close()
 ```
 
-The code above is what is used to find out how much time has been spent on upgrading a specific tool. Meaning that this code will find all the upgrades that have been installed and cross-reference them with the available upgrades to find out what their install times are and add them all up to get the correct amount of time that has been spent upgrading the tool.
+The code above is what is used to find out how much time has been spent on upgrading a specific tool. Meaning that this code will find all the upgrades that have been installed and cross-reference them with the available upgrades to find out what their install times are and add them all up to get the correct amount of time that has been spent upgrading the tool. The changes that were made to this portion of the code were the adding of the rounding function when find the total time spent installing upgrades on the tool. This round function will allow for the output to be more visually appealing to the user and be in a format that the user is more use to. This was a small change, but it makes the application more user friendly due to the output of this portion being what the user is use to. 
 
 **Edit Installed Upgrade**
 
@@ -670,7 +719,7 @@ The code above is what is used to find out how much time has been spent on upgra
                 #Starts the Edit Installed Upgrade
                 if event in "Submit":
                     #stuff to Edit Installed Upgrade
-                    add_upgrade("Tools", values[0], values[1])
+                    add_upgrade("Tools", values[0].upper(), values[1].upper())
                     
                     #Used to update the text box for under $10k 
                     window_Edit_Installed_Upgrade['-MULTILINE KEY-'].print('New Upgrade added to Tool', justification = 'center')
@@ -709,21 +758,21 @@ The code above is what is used to make edits to installed upgrades on tools that
                 if event in "Submit":                    
                     #If the Cost Checkbox is checked 
                     if values[1] == True:
-                        update_cost("Tool Upgrades", values[0], values[4])
+                        update_cost("Tool Upgrades", values[0].upper(), values[4].upper())
 
                     #If the Parts Checkbox is checked
                     if values[2] == True:
-                        update_part("Tool Upgrades", values[0], values[4])
+                        update_part("Tool Upgrades", values[0].upper(), values[4].upper())
 
                     #If the Times Checkbox is checked
                     if values[3] == True:
-                        update_time("Tool Upgrades", values[0], values[4])
+                        update_time("Tool Upgrades", values[0].upper(), values[4].upper())
                     
                     #Used to update the text box for the edited Available Upgrade
                     window_Edit_Available_Upgrade['-MULTILINE KEY-'].print('New Upgrade added to Tool', justification = 'center')
 
             #Closes the GUI
-            window_Edit_Available_Upgrade.close() 
+            window_Edit_Available_Upgrade.close()
 ```
 
 The code above is what is used to make edits to available upgrades that can be installed on tools and that are already stored within the SQL database. This allows for engineers to modify either the cost, part(s), or time of the available upgrade. 
@@ -731,9 +780,9 @@ The code above is what is used to make edits to available upgrades that can be i
 **Low Install Time**
 
 ```python
-#Setup for the Low Install Upgrade GUI
+ #Setup for the Low Install Upgrade GUI
             layout_Low_Install_Upgrade = [
-                [sg.Stretch(), sg.Text('Less Than 8 Hours               ', justification = 'center'), sg.Stretch(), sg.Text('Less Than 24 Hours', justification = 'center'), sg.Stretch(), sg.Text('               Over 24 Hours', justification = 'center'), sg.Stretch()],
+                [sg.Stretch(), sg.Text('Less Than 8 Hours', justification = 'center'), sg.Text('               '), sg.Stretch(), sg.Text('Less Than 24 Hours', justification = 'center'), sg.Stretch(), sg.Text('               '), sg.Text('Over 24 Hours', justification = 'center'), sg.Stretch()],
                 [sg.Stretch(), sg.Multiline('', key = '-Less Than 8 Hours KEY-', size=(30,10)), sg.Stretch(), sg.Multiline('', key = '-Less Than 24 Hours KEY-', size=(30,10)), sg.Stretch(), sg.Multiline('', key = '-Over 24 Hours KEY-', size=(30,10))],
                 [sg.Stretch(), sg.Submit(), sg.Exit(key = '-EXIT-'), sg.Stretch()],
             ]
@@ -829,18 +878,70 @@ The code above is what is used to make edits to available upgrades that can be i
                     window_Low_Install_Upgrade['-Over 24 Hours KEY-'].print(Over_24hr_str, justification = 'center')
 
             #Closes the GUI
-            window_Low_Install_Upgrade.close()  
+            window_Low_Install_Upgrade.close() 
 ```
 
-The code above is what takes all the available upgrades that are stored in the SQL database, once it has all the upgrades it puts them into groups. These groups are if the upgrade takes less than 8 hours to install, between 8 and 24 hours, and it takes longer than 24 hours to install. Next, the code goes through and outputs these groups to the user to see so that they can choose an upgrade that is based on how long it will take to install. 
+The code above is what takes all the available upgrades that are stored in the SQL database, once it has all the upgrades it puts them into groups. These groups are if the upgrade takes less than 8 hours to install, between 8 and 24 hours, and it takes longer than 24 hours to install. Next, the code goes through and outputs these groups to the user to see so that they can choose an upgrade that is based on how long it will take to install. Changed up how the GUI window layout is defined from the first iteration of the software. Removed the spaces that were added behind the Less Than 8 Hours and Over 24 Hours title blocks to make the GUI window layout code line look a bit more neat. Added two separate sg.Text() functions with the needed spacing to align the title blocks in their correct position instead of just having the spaces after the title block names in their respective sg.Text() function. 
 
 **Amount Invested**
 
 ```python
+#Setup for the Amount Invested GUI
+            layout_Amount_Invested = [
+                [sg.Text('Tool Name', size=(17, 1), justification = 'center'), sg.InputText(size = (30,1), do_not_clear=False)],
+                [sg.Stretch(), sg.Submit(), sg.Exit(key = '-EXIT-'), sg.Stretch()],
+                [sg.Stretch(), sg.Text('Amount Invested Data', justification = 'center'), sg.Stretch()],
+                [sg.Stretch(), sg.Multiline('', key = '-MULTILINE KEY-', size=(50,5)), sg.Stretch()]                
+            ]
 
+            #Opens the Amount Invested GUI
+            window_Edit_Available_Upgrade = sg.Window('Amount Invested', layout_Amount_Invested, enable_close_attempted_event = True) 
+
+            # This is an Event Loop
+            while True:  
+                event, values = window_Edit_Available_Upgrade.read()
+
+                #Closes the GUI
+                if (event == sg.WINDOW_CLOSE_ATTEMPTED_EVENT or event == '-EXIT-') and sg.popup_yes_no('Do you really want to exit?', no_titlebar = True, background_color = "Grey", text_color = "Black", button_color = ("Black", "Grey")) == 'Yes':
+                    break
+
+                #Starts the Amount Invested
+                if event in "Submit":
+                    #Used to get the list of upgrades
+                    List_of_Upgrades = str(get_Upgrades("Tools", values[0].upper()))
+                    List_of_Upgrades = List_of_Upgrades[3:len(List_of_Upgrades)-4]
+                    List_of_Upgrades = List_of_Upgrades.split(", ")
+
+                    #String used to print output
+                    Total_Amount_Invested_str = "The total amount Invested: "
+                    Total_Amount_Invested = 0.00                    
+
+                    #To determine how many upgrades are in the database
+                    Number_of_Upgrades = len(List_of_Upgrades)
+
+                    #Used to find the amount invested
+                    for i in range(Number_of_Upgrades):
+                        #Used to find the total cost of investment
+                        Amount_Invested = str(get_Cost("Tool Upgrades", List_of_Upgrades[i]))
+                        Amount_Invested = Amount_Invested[3:len(Amount_Invested)-4]
+                        Amount_Invested = float(Amount_Invested)
+                        Total_Amount_Invested = Total_Amount_Invested + Amount_Invested
+
+                    #Converts the total amount to be displayed as money would
+                    locale.setlocale( locale.LC_ALL, 'English_United States.1252' )
+                    Total_Amount_Invested = locale.currency( Total_Amount_Invested, grouping = True )
+
+                    #Used to get final text ready to output
+                    Total_Amount_Invested_str = Total_Amount_Invested_str + str(Total_Amount_Invested) + " for " + str(values[0].upper())
+                    
+                    #Used to update the text box for the Amount Invested
+                    window_Edit_Available_Upgrade['-MULTILINE KEY-'].print(Total_Amount_Invested_str, justification = 'center')
+
+            #Closes the GUI
+            window_Edit_Available_Upgrade.close()
 ```
 
-The code above is what is used to find out what upgrades have been installed onto a tool. Then, take that list of upgrades and find how much money has been spent on purchasing those upgrades by using the available upgrade data to determine the cost of each upgrade installed on the tool. 
+The code above is what is used to find out what upgrades have been installed onto a tool. Then, take that list of upgrades and find how much money has been spent on purchasing those upgrades by using the available upgrade data to determine the cost of each upgrade installed on the tool. The changes that were made were to add a way to make the amount of money spent upgrading the tool to be display how money should be displayed. This was done by importing the locale library, and setting the locale currency to dollars. Then, passing the total amount invested into the locale.currency function to allow the function to covert the output to be viewed how dollars should be. 
 
 **Delete Installed Upgrade**
 
@@ -867,7 +968,7 @@ The code above is what is used to find out what upgrades have been installed ont
                 #Starts the Delete Installed Upgrade
                 if event in "Submit":
                     #stuff to Delete Installed Upgrade
-                    delete_tool("Tools", values[0])
+                    delete_tool("Tools", values[0].upper())
                     
                     #Used to update the text box for the Deleted Installed Upgrade
                     window_Delete_Installed_Upgrade['-MULTILINE KEY-'].print('Installed Upgrade has been Deleted Sucessfully', justification = 'center')
@@ -903,7 +1004,7 @@ The code above is what is used to delete all the data that was stored in the SQL
                 #Starts the Delete Available Upgrade
                 if event in "Submit":
                     #stuff to find Delete Available Upgrade
-                    delete_upgrade("Tool Upgrades", values[0])
+                    delete_upgrade("Tool Upgrades", values[0].upper())
                     
                     #Used to update the text box for the Deleted Available Upgrade
                     window_Delete_Available_Upgrade['-MULTILINE KEY-'].print('Available Upgrade has been Deleted Sucessfully', justification = 'center')
@@ -917,7 +1018,74 @@ The code above is what is used to delete all the data that was stored in the SQL
 **Upgrade Comparison**
 
 ```python
+#Setup for the Upgrade Comparison GUI
+            layout_Upgrade_Comparison = [
+                [sg.Text('Upgrade Name #1', size=(17, 1), justification = 'center'), sg.InputText(size = (30,1), do_not_clear=False)],
+                [sg.Text('Upgrade Name #2', size=(17, 1), justification = 'center'), sg.InputText(size = (30,1), do_not_clear=False)],
+                [sg.Stretch(), sg.Submit(), sg.Exit(key = '-EXIT-'), sg.Stretch()],
+                [sg.Stretch(), sg.Text('Upgrade Comparison Data'), sg.Stretch()],                
+                [sg.Stretch(), sg.Multiline('', key = '-MULTILINE KEY-', size=(50,5)), sg.Stretch()]
+            ]
 
+            #Opens the Tool Comparison Installed Upgrade GUI
+            window_Upgrade_Comparison = sg.Window('Upgrade Comparison', layout_Upgrade_Comparison, enable_close_attempted_event = True) 
+
+            # This is an Event Loop
+            while True:  
+                event, values = window_Upgrade_Comparison.read()
+
+                #Closes the GUI
+                if (event == sg.WINDOW_CLOSE_ATTEMPTED_EVENT or event == '-EXIT-') and sg.popup_yes_no('Do you really want to exit?', no_titlebar = True, background_color = "Grey", text_color = "Black", button_color = ("Black", "Grey")) == 'Yes':
+                    break
+
+                #Starts the Tool Comparison
+                if event in "Submit":
+                    #Sets the upgarde names 
+                    Upgrade_1 = values[0].upper()
+                    Upgrade_2 = values[1].upper()
+
+                    #Gets the first upgrade cost data
+                    Upgrade_Cost_1 = str(get_Cost("Tool Upgrades", Upgrade_1))
+
+                    #Gets the first upgrade part data
+                    Upgrade_Part_1 = str(get_Part("Tool Upgrades", Upgrade_1))
+
+                    #Gets the first upgrade time data
+                    Upgrade_Time_1 = str(get_Time("Tool Upgrades", Upgrade_1))
+
+                    #Gets the second upgrade cost data
+                    Upgrade_Cost_2 = str(get_Cost("Tool Upgrades", Upgrade_2))
+
+                    #Gets the second upgrade part data
+                    Upgrade_Part_2 = str(get_Part("Tool Upgrades", Upgrade_2))
+
+                    #Gets the second upgrade time data
+                    Upgrade_Time_2 = str(get_Time("Tool Upgrades", Upgrade_2))
+
+                    #Modifies data to output it
+                    Upgrade_Cost_1 = Upgrade_Cost_1[3:len(Upgrade_Cost_1)-4]
+                    Upgrade_Part_1 = Upgrade_Part_1[3:len(Upgrade_Part_1)-4]
+                    Upgrade_Time_1 = Upgrade_Time_1[3:len(Upgrade_Time_1)-4]
+
+                    Upgrade_Cost_2 = Upgrade_Cost_2[3:len(Upgrade_Cost_2)-4]
+                    Upgrade_Part_2 = Upgrade_Part_2[3:len(Upgrade_Part_2)-4]
+                    Upgrade_Time_2 = Upgrade_Time_2[3:len(Upgrade_Time_2)-4]
+                    
+                    #Used to update the text box with upgrades comparisons 
+                    window_Upgrade_Comparison['-MULTILINE KEY-'].print('First Available Upgrade', justification = 'left', font=('Arial', 10, 'bold'))
+                    window_Upgrade_Comparison['-MULTILINE KEY-'].print(f"Upgrade Name: {Upgrade_1}", justification = 'left')
+                    window_Upgrade_Comparison['-MULTILINE KEY-'].print(f"Cost: {Upgrade_Cost_1}", justification = 'left')
+                    window_Upgrade_Comparison['-MULTILINE KEY-'].print(f"Part(s): {Upgrade_Part_1}", justification = 'left')
+                    window_Upgrade_Comparison['-MULTILINE KEY-'].print(f"Time: {Upgrade_Time_1}", justification = 'left')
+                    
+                    window_Upgrade_Comparison['-MULTILINE KEY-'].print('Second Available Upgrade', justification = 'left', font=('Arial', 10, 'bold'))
+                    window_Upgrade_Comparison['-MULTILINE KEY-'].print(f"Upgrade Name: {Upgrade_2}", justification = 'left')
+                    window_Upgrade_Comparison['-MULTILINE KEY-'].print(f"Cost: {Upgrade_Cost_2}", justification = 'left')
+                    window_Upgrade_Comparison['-MULTILINE KEY-'].print(f"Part(s): {Upgrade_Part_2}", justification = 'left')
+                    window_Upgrade_Comparison['-MULTILINE KEY-'].print(f"Time: {Upgrade_Time_2}", justification = 'left')
+
+            #Closes the GUI
+            window_Upgrade_Comparison.close()
 ```
 
 The code above is what is used to pull data on two separate available upgrades and output them to the user in a window so that the user can compare the two available upgrades against each other.
@@ -946,7 +1114,7 @@ The code above is what is used to pull data on two separate available upgrades a
 
                 #Starts the Time Install
                 if event in "Submit":
-                    Installed_Upgrade_Data = str(get_Upgrades("Tools", values[0]))
+                    Installed_Upgrade_Data = str(get_Upgrades("Tools", values[0].upper()))
                     
                     #Used to update the text for View Installed Upgrade Data
                     window_View_Installed_Upgrade['-MULTILINE KEY-'].print(str(Installed_Upgrade_Data[3:(len(Installed_Upgrade_Data)-4)]), justification = 'center')
@@ -982,7 +1150,7 @@ The code above is what is used to pull all the data on a specific tool to view a
                 #Starts the View Available Upgrade
                 if event in "Submit":
                     #Available Upgrade Name
-                    upgrade_name = values[0]
+                    upgrade_name = values[0].upper()
                     
                     #Gets the cost data from databse
                     cost = str(get_Cost("Tool Upgrades", upgrade_name))
@@ -1017,10 +1185,115 @@ The code above is what is used to pull all the data on a specific available upgr
 **Needed Investment**
 
 ```python
+#Setup for the View Available Upgrade GUI
+            layout_Needed_Investment = [
+                [sg.Text('Tool Name', size=(17, 1), justification = 'center'), sg.InputText(size = (30,1), do_not_clear=False)],
+                [sg.Stretch(), sg.Submit(), sg.Exit(key = '-EXIT-'), sg.Stretch()],
+                [sg.Stretch(), sg.Text('Needed Investment Data', justification = 'center'), sg.Stretch()],
+                [sg.Stretch(), sg.Multiline('', key = '-MULTILINE KEY-', size=(50,5)), sg.Stretch()]                
+            ]
 
+            #Opens the Needed Investment GUI
+            window_Needed_Investment = sg.Window('Needed Investment', layout_Needed_Investment, enable_close_attempted_event = True) 
+
+            #This is an Event Loop
+            while True:  
+                event, values = window_Needed_Investment.read()
+
+                #Closes the GUI
+                if (event == sg.WINDOW_CLOSE_ATTEMPTED_EVENT or event == '-EXIT-') and sg.popup_yes_no('Do you really want to exit?', no_titlebar = True, background_color = "Grey", text_color = "Black", button_color = ("Black", "Grey")) == 'Yes':
+                    break
+
+                #Starts the Needed Investment
+                if event in "Submit":
+                    #Used to create or connect to SQLite Database
+                    connection = create_connection("Tool Upgrades")
+
+                    cursor = connection.cursor()
+                    Cursor_Name = "SELECT name FROM sqlite_master WHERE type='table';"
+
+                    #Selects what table to all the avilable upgrade from database
+                    List_of_Available_Upgrades = cursor.execute(Cursor_Name)
+
+                    #Gets the data from the database
+                    List_of_Available_Upgrades = cursor.fetchall()
+
+                    #List of all upgrades in the database
+                    All_Available_Upgrades = []
+                    All_Installed_Upgrades = []
+                    Needed_Upgrades = []
+                    Needed_Upgrades_str = ""
+                    Total_Amount_Needed_Invested = 0.00
+                    Total_Amount_Needed_Invested_str = "The total needed investment: "
+
+                    #Used to put the upgrades into a list
+                    List_of_Available_Upgrades = str(List_of_Available_Upgrades)
+                    List_of_Available_Upgrades = List_of_Available_Upgrades[3:len(List_of_Available_Upgrades)-4]
+                    List_of_Available_Upgrades = List_of_Available_Upgrades.split("',), ('")
+
+                    #Used to get a list of all the upgrades inputted into the databse
+                    for i in range(len(List_of_Available_Upgrades)):
+                        All_Available_Upgrades.append(List_of_Available_Upgrades[i])
+
+                    #Used to get the list of upgrades from tool
+                    List_of_Installed_Upgrades = str(get_Upgrades("Tools", values[0].upper()))
+                    List_of_Installed_Upgrades = List_of_Installed_Upgrades[3:len(List_of_Installed_Upgrades)-4]
+                    List_of_Installed_Upgrades = List_of_Installed_Upgrades.split(", ")
+
+                    #Used to get a list of installed upgrades from database
+                    for i in range(len(List_of_Installed_Upgrades)):
+                        #Used to find the Cost of the upgrade
+                        All_Installed_Upgrades.append(List_of_Installed_Upgrades[i])
+
+                    #Used to find what upgrades are not installed
+                    for i in range(len(List_of_Available_Upgrades)):
+                        #Pulls the available upgrade out of list
+                        Available_Upgrade = List_of_Available_Upgrades[i]
+
+                        #Checks if the value is in the all available list
+                        if Available_Upgrade not in All_Installed_Upgrades:
+                            Needed_Upgrades.append(Available_Upgrade)
+
+                    #Used to get the String of Needed Upgrades for output
+                    for i in range(len(Needed_Upgrades)):
+                        #If the first value is being outputted
+                        if i == 0:
+                            Needed_Upgrades_str = Needed_Upgrades_str + Needed_Upgrades[i]
+
+                        #if the rest of the values are being outputted
+                        if i != 0:
+                            Needed_Upgrades_str = Needed_Upgrades_str + ", " + Needed_Upgrades[i]
+
+                    #Used to find the amount invested
+                    for i in range(len(Needed_Upgrades)):
+                        #Used to find the total cost of investment
+                        Amount_Needed_Invested = str(get_Cost("Tool Upgrades", Needed_Upgrades[i]))
+                        Amount_Needed_Invested = Amount_Needed_Invested[3:len(Amount_Needed_Invested)-4]
+                        Amount_Needed_Invested = float(Amount_Needed_Invested)
+                        Total_Amount_Needed_Invested = Total_Amount_Needed_Invested + Amount_Needed_Invested
+
+                    #Converts the total amount to be displayed as money would
+                    locale.setlocale( locale.LC_ALL, 'English_United States.1252' )
+                    Total_Amount_Needed_Invested = locale.currency( Total_Amount_Needed_Invested, grouping = True )
+
+                    #Used to get final text ready to output
+                    Total_Amount_Needed_Invested_str = Total_Amount_Needed_Invested_str + str(Total_Amount_Needed_Invested) + " for " + values[0].upper()                        
+                    
+                    #Used to update the text for Needed Investment Data
+                    window_Needed_Investment['-MULTILINE KEY-'].print('Needed Upgrades for ' + values[0].upper(), justification = 'left', font=('Arial', 10, 'bold'))
+                    window_Needed_Investment['-MULTILINE KEY-'].print(Needed_Upgrades_str, justification = 'left')
+                    window_Needed_Investment['-MULTILINE KEY-'].print('Needed Investement for ' + values[0].upper(), justification = 'left', font=('Arial', 10, 'bold'))
+                    window_Needed_Investment['-MULTILINE KEY-'].print(Total_Amount_Needed_Invested_str, justification = 'left')
+
+            #Closes the GUI
+            window_Needed_Investment.close()
 ```
 
-The code above is what is used to find out what upgrades have not been installed onto a tool yet. Then, the code takes that list of upgrades and finds how much money will need to be spent on purchasing those upgrades by using the available upgrade data to determine the cost of each upgrade that hasn’t been installed on the tool yet. 
+The code above is what is used to find out what upgrades have not been installed onto a tool yet. Then, the code takes that list of upgrades and finds how much money will need to be spent on purchasing those upgrades by using the available upgrade data to determine the cost of each upgrade that hasn’t been installed on the tool yet. The changes that were made were to add a way to make the amount of money needed to upgrade the tool to be display how money should be displayed. This was done by importing the locale library, and setting the locale currency to dollars. Then, passing the total amount needed into the locale.currency function to allow the function to covert the output to be viewed how dollars should be.
+
+## Global Changes to the Code
+
+Made changes across all of the GUIs so that any time a user inputs data into the application it automatically makes the data fully capitalized. This change was implemented so that it would prevent errors or bugs from users inputting data differently from each other. An example would be if one user inputted CFM T1 for a tool, then a different user tries to view what the list of upgrades are installed on this tool but they input cfm t1. With this, the first iteration would error and crash, but with this change it corrects this so that it doesn't matter what the user inputs they can find the information they are looking for. 
 
 # Test Plan and Cases
 **Test Case Name:** TC-1
