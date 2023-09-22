@@ -105,7 +105,7 @@ The general approach to developing this application is to develop the SQL databa
 
 ## Database Dictionary
 
-| Column | Description | Datatype | Null |  PK   |
+| Column | Description | Data Type | Null |  PK   |
 | :-----:| :----------:| :-------:| :---:| :---: |
 | Installed Upgrade - Tool Name | The name of the tool for the installed upgrades that are trying to be tracked by the application. | String | No | Yes |
 | Installed Upgrade - Upgrades | Running list of all the upgrades that are installed on the tool. | String | No | No |
@@ -256,7 +256,7 @@ The general approach to developing this application is to develop the SQL databa
 | NFR-2 | Durability | 1) Perform extensive testing on all the features that will be implemented in the application. |
 | NFR-3 | Efficiency | 1) Design the methods for pulling data from the database in the most efficient way. 2) Perform testing on the different methods for pulling data from the database. |
 | NFR-4 | Maintainability | 1) Provide comments for all code that has been written so any developer can understand what each portion of code is supposed to be doing. 2) Provide documentation that helps with what to look at when troubleshooting issues within the application. |
-| NFR-5 | Performance | 1) Design code to break up tasks so that one function is not performing multiple tasks that have the possiblity to slow down the application. 2) Perform testing on all functions to verify they are creating lagging of the application. |
+| NFR-5 | Performance | 1) Design code to break up tasks so that one function is not performing multiple tasks that have the possibility to slow down the application. 2) Perform testing on all functions to verify they are creating lagging of the application. |
 | NFR-6 | Testability | 1) Designing test cases for when testing is being performed to help the developers understand what needs to be tested. 2) Provides tools that will help with testing of the application. |
 
 <p align="center">Table 3: Non-Functional Requirements Justification

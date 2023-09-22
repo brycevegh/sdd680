@@ -69,13 +69,13 @@ Out of Scope Features:
 
 - Design the application to accept qualification data from the tool’s qualifications so that trends can be made, and tool efficiency can be determined. 
 
-| Stakeholder Name | Role | Responsiblities |
+| Stakeholder Name | Role | Responsibilities |
 | :----------------: | :------: | :----: |
 | Bryce Vegh | Lead Designer | To draft and finalize all documents pertaining to the project. While also designing all the code for the project |
 
 <p align="center">Table 1: Stakeholder Information
 
-| ID    | Task  | Dependencies | Status | Effort Hours | Start Datae | Planned Completion | Estimate to Complete | Actual Completion |
+| ID    | Task  | Dependencies | Status | Effort Hours | Start Date | Planned Completion | Estimate to Complete | Actual Completion |
 | :---: | :---: | :----------: |:-----: | :----------: | :---------: |:-----------------: | :------------------: | :---------------: | 
 | 1     | Create the first portion of the functions and methods used to pull data from SQL Database. |     N/A      | Complete | 12 | 5/5/2023 | 5/8/2023 | 1.5 Days | 2 Days |
 | 2     | Tests the first portion of the functions and methods used to pull data from SQL Database for initial bugs. | 1 | Complete | 4 | 5/8/2023 | 5/8/2023 | 0.5 Days | 0.5 Days |
@@ -93,7 +93,7 @@ Out of Scope Features:
 
 ## Project Success Measures
 
-**Project Completeion Criteria**
+**Project Completion Criteria**
 
 1. Application is developed within the deadline of October 25, 2023 
 
@@ -101,13 +101,13 @@ Out of Scope Features:
 
 3. The SQL Database can retrieve, add, and delete the different data that is stored within the different databases depending on what the user chooses. 
 
-4. GUI allows the user a way to interact with the data that is stored in both of the databses. 
+4. GUI allows the user a way to interact with the data that is stored in both of the databases. 
 
 5. Application has an uptime of at least 85%. 
 
-6. The GUI has a simple design that tries to have minimal number of buttions, tab selection bars, etc. 
+6. The GUI has a simple design that tries to have minimal number of buttons, tab selection bars, etc. 
 
-| ID | Description | Commet | Type  | Date Entered |
+| ID | Description | Comment | Type  | Date Entered |
 | :----------------: | :------: | :----: | :----: | :----: |
 | 1 | That the application will have level of permissions given to the different users.  | Believe that this is possible but will need to research how to make a project have the capability.  | Assumption | 11/23/2022 |
 | 2 | That Python will have the capability to have the SQL database open and running the GUI for the user simultaneously.  | I have not researched that this is possible. But, from my knowledge and prototyping I do not see where this could be an issue.  | Assumption | 11/23/2022 |
@@ -116,7 +116,7 @@ Out of Scope Features:
 
 <p align="center">Table 3: Assumptions and Constraints
 
-## Tool Upgrade Tracking Applicaiton High-Level Solution
+## Tool Upgrade Tracking Application High-Level Solution
 
 ### Introduction 
 
@@ -264,7 +264,7 @@ def create_table_for_tool(Path, Tool_Name, List_of_Upgrades):
 	# Used to create or connect to SQLite Database	
 	connection = create_connection(Path)
 	
-	#Used to create a cusor within the table
+	#Used to create a cursor within the table
 	cursor = connection.cursor()
 	
 	Table_Name = f"Create Table '{Tool_Name}' (List_of_Upgrades)"

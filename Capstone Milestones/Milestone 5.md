@@ -22,9 +22,20 @@ The accomplishment of this application is to create a user-friendly application 
 
 # Implementation Plan - Second Iteration
 
-
-**New Implementation Plan will be developed once I know everything that I will be changing in the code of the application**
-
+| ID    | Task  | Estimate Hours | Actual Hours | Percent Complete |
+| :---: | :---: | :------------: | :----------: | :--------------: |
+| 1 | Change how the user input is received by the application, make it to where all user input comes in as all capitalized.  | 8 | 6 | 100% |
+| 2 | Test that the input change did not affect any of the different features of the application by running the test plans/cases.  | 16 | 20 | 100% |
+| 3 | Change the homepage GUI to have the buttons and title blocks be vertically aligned instead of horizontally aligned.  | 2 | 2 | 100% |
+| 4 | Test the homepage to verify that the change to the homepage GUI did not affect any functionality of the application. | 4 | 3.5 | 100% |
+| 5 | Research and change the login GUI to have the ability to hide the user's password when they are entering it into the application. | 4 | 3 | 100% |
+| 6 | Test to verify that the change to the login GUI is functioning correctly.  | 1 | 0.5 | 100% |
+| 7 | Change the Time Installing feature to allow for only two decimal places to be shown when outputting the time installed data to the user. | 3 | 2.5 | 100% |
+| 8 | Test the added functionality to the Time Installing feature to verify the feature is functioning correctly. | 2.5 | 2 | 100% |
+| 9 | Research and change how the Amount Invested feature outputs dollar amounts to the user to view.  | 6 | 7.5 | 100% |
+| 10 | Test the functionality of the Amount Invested feature with the new output conversion method.  | 2.5 | 2 | 100% |
+| 11 | Research and change how the Needed Investment feature outputs dollar amounts to the user to view.  | 4 | 3 | 100% |
+| 12 | Test the functionality of the Amount Invested feature with the new output conversion method.  | 2 | 1.5 | 100% |
 
 <p align="center">Table 1: Implementation Plan for First Iteration
 
@@ -48,7 +59,7 @@ The accomplishment of this application is to create a user-friendly application 
 # Source Code Listing
 
 
-**Waiting to input code snippets that are being modifed during this iteration, so some of the code snippets will be blank**
+**Waiting to input code snippets that are being modified during this iteration, so some of the code snippets will be blank**
 
 ## Import Statement and Variable definitions
 
@@ -401,7 +412,7 @@ if Engineer_Mode == True:
     window_Engineer.close()
 ```
 
-The code above is what is used to create the GUI for the home page of the application, this home page is the same for both the viewer and engineer mode. The different is that in the viewer mode, the users do not have access to certain features that would allow them to add, edit, or delete data from the database. I changed the layout of the Home GUI screen to be vertically aligned with all the buttons instead of horizontally aligned due to the vertically aligned looking visually better. I also went through the previous Capstone Milestones and updated the Home GUI wireframes to reflect this, but the iteration 1 code will still having the Home GUI horizontally aligned as I want to have record of this change. 
+The code above is what is used to create the GUI for the home page of the application, this home page is the same for both the viewer and engineer mode. The different is that in the viewer mode, the users do not have access to certain features that would allow them to add, edit, or delete data from the database. I changed the layout of the home GUI screen to be vertically aligned with all the buttons instead of horizontally aligned due to the vertically aligned looking visually better. I also went through the previous Capstone Milestones and updated the home GUI wireframes to reflect this, but the iteration 1 code will still have the Home GUI horizontally aligned as I want to have record of this change. 
 
 ```python
 #Popup window telling users feature is not available
@@ -637,7 +648,7 @@ The code above is what is used to add new data to the SQL database for what upgr
             window_Low_Cost_Upgrade.close()
 ```
 
-The code above is what takes all the available upgrades that are stored in the SQL database, once it has all the upgrades it puts them into groups. These groups are if the upgrade is less than $10,000, between $10,000 and $25,000, and if they are greater than $25,000. Next, the code goes through and outputs these groups to the user to see so that they can choose an upgrade that is based on how much they cost. Changed up how the GUI window layout is defined from the first iteration of the software. Removed the spaces that were added behind the under $10k and Over $25k title blocks to make the GUI window layout code line look a bit more neat. Added two separate sg.Text() functions with the needed spacing to align the title blocks in their correct position instead of just having the spaces after the title block names in their respective sg.Text() function. 
+The code above is what takes all the available upgrades that are stored in the SQL database, once it has all the upgrades it puts them into groups. These groups are if the upgrade is less than $10,000, between $10,000 and $25,000, and if they are greater than $25,000. Next, the code goes through and outputs these groups to the user to see so that they can choose an upgrade that is based on how much they cost. Changed up how the GUI window layout is defined from the first iteration of the software. Removed the spaces that were added behind the under $10k and Over $25k title blocks to make the GUI window layout code line look a bit neater. Added two separate sg.Text() functions with the needed spacing to align the title blocks in their correct position instead of just having the spaces after the title block names in their respective sg.Text() function. 
 
 **Time Installing**
 
@@ -691,7 +702,7 @@ The code above is what takes all the available upgrades that are stored in the S
             window_Time_Installing.close()
 ```
 
-The code above is what is used to find out how much time has been spent on upgrading a specific tool. Meaning that this code will find all the upgrades that have been installed and cross-reference them with the available upgrades to find out what their install times are and add them all up to get the correct amount of time that has been spent upgrading the tool. The changes that were made to this portion of the code were the adding of the rounding function when find the total time spent installing upgrades on the tool. This round function will allow for the output to be more visually appealing to the user and be in a format that the user is more use to. This was a small change, but it makes the application more user friendly due to the output of this portion being what the user is use to. 
+The code above is what is used to find out how much time has been spent on upgrading a specific tool. Meaning that this code will find all the upgrades that have been installed and cross-reference them with the available upgrades to find out what their install times are and add them all up to get the correct amount of time that has been spent upgrading the tool. The changes that were made to this portion of the code were the adding of the rounding function when finding the total time spent installing upgrades on the tool. This rounding function will allow for the output to be more visually appealing to the user and be in a format that the user is more use to. This was a small change, but it makes the application more user friendly due to the output of this portion being what the user is used to. 
 
 **Edit Installed Upgrade**
 
@@ -881,7 +892,7 @@ The code above is what is used to make edits to available upgrades that can be i
             window_Low_Install_Upgrade.close() 
 ```
 
-The code above is what takes all the available upgrades that are stored in the SQL database, once it has all the upgrades it puts them into groups. These groups are if the upgrade takes less than 8 hours to install, between 8 and 24 hours, and it takes longer than 24 hours to install. Next, the code goes through and outputs these groups to the user to see so that they can choose an upgrade that is based on how long it will take to install. Changed up how the GUI window layout is defined from the first iteration of the software. Removed the spaces that were added behind the Less Than 8 Hours and Over 24 Hours title blocks to make the GUI window layout code line look a bit more neat. Added two separate sg.Text() functions with the needed spacing to align the title blocks in their correct position instead of just having the spaces after the title block names in their respective sg.Text() function. 
+The code above is what takes all the available upgrades that are stored in the SQL database, once it has all the upgrades it puts them into groups. These groups are if the upgrade takes less than 8 hours to install, between 8 and 24 hours, and it takes longer than 24 hours to install. Next, the code goes through and outputs these groups to the user to see so that they can choose an upgrade that is based on how long it will take to install. Changed up how the GUI window layout is defined from the first iteration of the software. Removed the spaces that were added behind the Less Than 8 Hours and Over 24 Hours title blocks to make the GUI window layout code line look a bit neater. Added two separate sg.Text() functions with the needed spacing to align the title blocks in their correct position instead of just having the spaces after the title block names in their respective sg.Text() function. 
 
 **Amount Invested**
 
@@ -941,7 +952,7 @@ The code above is what takes all the available upgrades that are stored in the S
             window_Edit_Available_Upgrade.close()
 ```
 
-The code above is what is used to find out what upgrades have been installed onto a tool. Then, take that list of upgrades and find how much money has been spent on purchasing those upgrades by using the available upgrade data to determine the cost of each upgrade installed on the tool. The changes that were made were to add a way to make the amount of money spent upgrading the tool to be display how money should be displayed. This was done by importing the locale library, and setting the locale currency to dollars. Then, passing the total amount invested into the locale.currency function to allow the function to covert the output to be viewed how dollars should be. 
+The code above is what is used to find out what upgrades have been installed onto a tool. Then, take that list of upgrades and find how much money has been spent on purchasing those upgrades by using the available upgrade data to determine the cost of each upgrade installed on the tool. The changes that were made were to add a way to make the amount of money spent upgrading the tool to be display how money should be displayed. This was done by importing the locale library and setting the locale currency to dollars. Then, passing the total amount invested into the locale.currency function to allow the function to covert the output to be viewed how dollars should be. 
 
 **Delete Installed Upgrade**
 
@@ -1289,11 +1300,11 @@ The code above is what is used to pull all the data on a specific available upgr
             window_Needed_Investment.close()
 ```
 
-The code above is what is used to find out what upgrades have not been installed onto a tool yet. Then, the code takes that list of upgrades and finds how much money will need to be spent on purchasing those upgrades by using the available upgrade data to determine the cost of each upgrade that hasn’t been installed on the tool yet. The changes that were made were to add a way to make the amount of money needed to upgrade the tool to be display how money should be displayed. This was done by importing the locale library, and setting the locale currency to dollars. Then, passing the total amount needed into the locale.currency function to allow the function to covert the output to be viewed how dollars should be.
+The code above is what is used to find out what upgrades have not been installed onto a tool yet. Then, the code takes that list of upgrades and finds how much money will need to be spent on purchasing those upgrades by using the available upgrade data to determine the cost of each upgrade that hasn’t been installed on the tool yet. The changes that were made were to add a way to make the amount of money needed to upgrade the tool to be display how money should be displayed. This was done by importing the locale library and setting the locale currency to dollars. Then, passing the total amount needed into the locale.currency function to allow the function to covert the output to be viewed how dollars should be.
 
 ## Global Changes to the Code
 
-Made changes across all of the GUIs so that any time a user inputs data into the application it automatically makes the data fully capitalized. This change was implemented so that it would prevent errors or bugs from users inputting data differently from each other. An example would be if one user inputted CFM T1 for a tool, then a different user tries to view what the list of upgrades are installed on this tool but they input cfm t1. With this, the first iteration would error and crash, but with this change it corrects this so that it doesn't matter what the user inputs they can find the information they are looking for. 
+Made changes across all of the GUIs so that any time a user inputs data into the application it automatically makes the data fully capitalized. This change was implemented so that it would prevent errors or bugs from users inputting data differently from each other. An example would be if one user inputted CFM T1 for a tool, then a different user tries to view what the list of upgrades are installed on this tool, but they input cfm t1. With this, the first iteration would error and crash, but with this change it corrects this so that it doesn't matter what the user inputs they can find the information they are looking for. 
 
 # Test Plan and Cases
 **Test Case Name:** TC-1
@@ -1374,7 +1385,7 @@ Made changes across all of the GUIs so that any time a user inputs data into the
 | 4 | Add an Available Upgrade that is over $25,000. | Use the Add Available Upgrade button, add the upgrade. | Upgrade Name: Rapitran Cost: 75,000 Parts: Rapitran, Mounting Plate Time: 48 | Successfully added the upgrade | Pass |
 | 5 | Test the functionality of the Low Cost Upgrade. | From the homepage, click on the Low Cost Upgrade button. This will open up GUI and all that will need to be done is hit the submit button. Hitting the submit will cause the three text boxes to be updated. Verify that the Power Valve upgrade is in the left most box, the computer upgrade is in the middle box, and the Raptiran is in the right most box. | N/A | Successfully sorted the Upgrades | Pass |
 | 6 | Log out by exiting the application, and log back in in the viewing mode. | Enter the username and password of the viewing mode. | Username: Viewing Password: VM181604 | Successful Login | Pass |
-| 7 | Repeat test step 5 for the viewing mode. | Read the test steps in step 5 to redo this test for the viewing mode. | N/A | Successfully sorted the Upgrades | Pass |
+| 7 | Repeat test step 5 for the viewing mode. | Read the test steps in step 5 to re-do this test for the viewing mode. | N/A | Successfully sorted the Upgrades | Pass |
 
 <p align="center">Table 6: Test Case for Tool Upgrade Tracking Application
 
@@ -1396,7 +1407,7 @@ Made changes across all of the GUIs so that any time a user inputs data into the
 
 **Test Case Name:** TC-6
 
-**Module:** GUI Button for Tool Comparison Installed Upgrades
+**Module:** GUI Button for Tool Comparison
 
 **Test Objective:** To verify that the tool comparison method of the application is correctly pulling the Installed Upgrade data for both of the tools and displaying it for the user.
 
@@ -1405,14 +1416,14 @@ Made changes across all of the GUIs so that any time a user inputs data into the
 | 1 | Log in to Engineering Mode. | Enter the username and password of the engineering mode. | Username: Engineering Password: EM141852 | Successful Login | Pass |
 | 2 | Add an Installed Upgrades. | Once Logged in, click on the Add Installed Upgrade button. This will bring up another GUI that will allow you to enter in the information for an Installed Upgrade. | Tool Name: CFM T1 List of Upgrades: Power Valve, Computer, Software Update | Successful Adding of Data Message | Pass |
 | 3 | Add an Installed Upgrades. | Once Logged in, click on the Add Installed Upgrade button. This will bring up another GUI that will allow you to enter in the information for an Installed Upgrade. | Tool Name: CFM T3 List of Upgrades: UPS, Injection Rack, Rapitran | Successful Adding of Data Message | Pass |
-| 4 | Choose the name of the tool you want to compare. | Once the Installed Upgrades are added to the application, you will navigate to the home page and click the Tool Comparison Installed Upgrades button. This will open another window where you will enter in the two names of the tools you want to compare. | Tool Name #1: CFM T1 Tool Name #2: CFM T2 | Successful pulling of Tools Installed Upgrade Data | Pass |
+| 4 | Choose the name of the tool you want to compare. | Once the Installed Upgrades are added to the application, you will navigate to the home page and click the Tool Comparison button. This will open another window where you will enter in the two names of the tools you want to compare. | Tool Name #1: CFM T1 Tool Name #2: CFM T2 | Successful pulling of Tools Installed Upgrade Data | Pass |
 | 5 | Verify that the data that was pulled for both of the Installed Upgrades is correct. | After the submit button is clicked, the text box in the window will be updated with the Installed Upgrade data. Verify that the data is correct for each of the tools. | N/A | Successful Comparison of the Installed Upgrades | Pass |
 
 <p align="center">Table 8: Test Case for Tool Upgrade Tracking Application
 
 **Test Case Name:** TC-7
 
-**Module:** GUI Button for Tool Comparison Available Upgrades
+**Module:** GUI Button for Upgrade Comparison
 
 **Test Objective:** To verify that the upgrade comparison method of the application is correctly pulling the Available Upgrade data for both of the upgrades and displaying it for the user.
 
@@ -1421,7 +1432,7 @@ Made changes across all of the GUIs so that any time a user inputs data into the
 | 1 | Log in to Engineering Mode. | Enter the username and password of the engineering mode. | Username: Engineering Password: EM141852 | Successful Login | Pass |
 | 2 | Add an Available Upgrades. | Once Logged in, click on the Add Available Upgrade button. This will bring up another GUI that will allow you to enter in the information for an Available Upgrade. | Upgrade Name: Power Valve Cost: 8,000 Parts: Card, Airline, Screws Time: 7 | Successful Adding of Data Message | Pass |
 | 3 | Add an Available Upgrades. | Once Logged in, click on the Add Available Upgrade button. This will bring up another GUI that will allow you to enter in the information for an Available Upgrade. | Upgrade Name: Computer Cost: 18,000 Parts: Monitor, Cables Time: 12 | Successful Adding of Data Message | Pass |
-| 4 | Choose the name of the upgrades you want to compare. | Once the Available Upgrades are added to the application, you will naviagate to the home page and click the Upgrade Comparison button. This will open another window where you will enter in the two names of the upgrades you want to compare. | Upgrade Name #1: Power Valve Upgrade Name #2: Computer | Successful pulling of Available Upgrade Data | Pass |
+| 4 | Choose the name of the upgrades you want to compare. | Once the Available Upgrades are added to the application, you will navigate to the home page and click the Upgrade Comparison button. This will open another window where you will enter in the two names of the upgrades you want to compare. | Upgrade Name #1: Power Valve Upgrade Name #2: Computer | Successful pulling of Available Upgrade Data | Pass |
 | 5 | Verify that the data that was pulled for both of the Available Upgrades is correct. | After the submit button is clicked, the text box in the window will be updated with the Available Upgrade data. Verify that the data is correct for each of the upgrades. | N/A | Successful Comparison of the Available Upgrades | Pass |
 
 <p align="center">Table 9: Test Case for Tool Upgrade Tracking Application
@@ -1440,7 +1451,7 @@ Made changes across all of the GUIs so that any time a user inputs data into the
 | 4 | Add an Available Upgrades. | Once Logged in, click on the Add Available Upgrade button. This will bring up another GUI that will allow you to enter in the information for an Available Upgrade. | Upgrade Name: Rapitran Cost: 75,000 Parts: Rapitran, Mounting Plate Time: 48 | Successful Adding of Data Message | Pass |
 | 5 | Add an Available Upgrades. | Once Logged in, click on the Add Available Upgrade button. This will bring up another GUI that will allow you to enter in the information for an Available Upgrade. | Upgrade Name: Power Valve Cost: 8,000 Parts: Card, Airline, Screws Time: 7 | Successful Adding of Data Message | Pass |
 | 6 | Add an Installed Upgrades. | Once Logged in, click on the Add Installed Upgrade button. This will bring up another GUI that will allow you to enter in the information for an Installed Upgrade. | Tool Name: CFM T2 List of Upgrades: UPS, Injection Rack, Rapitran | Successful Adding of Data Message | Pass |
-| 7 | Verifiy that the Needed Investment methods of the application are working correctly. | Once all the upgrades are added and the tool is added, naviagate back to the home page and click on the needed investment button. Another window will pop when the button is clicked, here you will input the Tool Name. Hit submit, this will update the text box within the window with the needed upgrades and the cost of all the upgrades. Verify this information so that the needed upgardes is Power Valve and the total  investment about is $8,000. | Tool Name: CFM T2 | Successful output of needed upgrades and investment | Pass |
+| 7 | Verify that the Needed Investment methods of the application are working correctly. | Once all the upgrades are added and the tool is added, navigate back to the home page and click on the needed investment button. Another window will pop when the button is clicked, here you will input the Tool Name. Hit submit, this will update the text box within the window with the needed upgrades and the cost of all the upgrades. Verify this information so that the needed upgrade is Power Valve and the total  investment about is $8,000. | Tool Name: CFM T2 | Successful output of needed upgrades and investment | Pass |
 
 <p align="center">Table 10: Test Case for Tool Upgrade Tracking Application
 
