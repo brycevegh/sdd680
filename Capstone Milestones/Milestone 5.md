@@ -58,9 +58,6 @@ The accomplishment of this application is to create a user-friendly application 
 
 # Source Code Listing
 
-
-**Waiting to input code snippets that are being modified during this iteration, so some of the code snippets will be blank**
-
 ## Import Statement and Variable definitions
 
 ```python
