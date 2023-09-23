@@ -1,3 +1,3 @@
-# Welcome to my GitHub Repository for SDD-680: Software Maintenance and Testing
+# GitHub Repository for SDD-680: Software Maintenance and Testing
 
 In this Repository, you will find all the class work that pertains to SDD-680: Software Maintenance and Testing. This will include the weekly assignments that are required for the class, the final capstone milestone that is being developed in this class, all previous milestones that have been developed in previous classes, and all the versions of the Python code that have been developed for the Upgrade Tracking Application. 
