@@ -30,7 +30,6 @@ Additionally, the software should trigger appropriate alarms and safety mechanis
 In conclusion, these three case study scenarios highlight the need for executing several tests in software development and validation processes. Boundary value analysis, load testing, and fault scenario testing are critical aspects of software quality assurance, and the testing techniques and strategies discussed in Chapter 10 provide valuable insights into how to approach and address these challenges effectively.
 
 ## Part 2
-Analyze and define best practices when testing is not available or feasible.
 
 In software development, ensuring the quality and reliability of a product is paramount, but there are situations where comprehensive testing may not be feasible or available due to various constraints. In such cases, it becomes imperative to adopt alternative strategies and best practices to maintain software quality. These practices not only compensate for the absence of traditional testing but also help in early issue detection and mitigation.
 
