@@ -5,6 +5,6 @@
 2. Have at least 50% of the current milestone completed.
 
 3. Summary of your progress on Milestone 5.
-	a. the work completed at this time
-	b. the remaining work required to complete this milestone
-	c. any problems you may have encountered.
+	1. the work completed at this time
+	2. the remaining work required to complete this milestone
+	3. any problems you may have encountered.
