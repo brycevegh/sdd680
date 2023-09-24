@@ -1488,4 +1488,4 @@ Made changes across all of the GUIs so that any time a user inputs data into the
 <p align="center">Table 12: Test Case for Tool Upgrade Tracking Application
 
 # Application Demo Screencast
-[Upgrade Tracking Application](https://youtu.be/Mp7tbNfrDNQ)
+[Upgrade Tracking Application](https://youtu.be/4XIJav785PU)
