@@ -1,10 +1,12 @@
 # Summary of Progress on Milestone 5
 
-1. All project documentation showing you have applied the instructor or peer review feedback from your previous capstone milestone assignments to your project.
+1. All project documentation has been updated with the feedback that has been given by previous instructors. I have also converted all previous milestones to markdown files and uploaded them to my GitHub page in their respective folder.
 
 2. Have at least 50% of the current milestone completed.
 
 3. Summary of your progress on Milestone 5.
-	1. the work completed at this time
-	2. the remaining work required to complete this milestone
-	3. any problems you may have encountered.
+	1. The work that is completed is the development of the implementation plan, development of the traceability matrix, adding of the source code listings, adding of comments to what has been changed from the first iteration to the second iteration in the source code listings, and development of the test plans and cases.
+	
+	2.  
+	
+	3. I haven't really encountered any problems with the changes that I have made to the application. The only thing that has been somewhat a problem is that I have had to do research to figure out how to implement some of the changes and this research has taken longer than what I expected. 
