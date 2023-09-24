@@ -2,7 +2,7 @@
 
 1. All project documentation has been updated with the feedback that has been given by previous instructors. I have also converted all previous milestones to markdown files and uploaded them to my GitHub page in their respective folder.
 
-2. At this time, I have the 100% of the Milestone 5 completed. The only thing I will need to do is make any changes to the milestone based off the instructor feedback I get from the first submission. 
+2. At this time, I have 100% of the Milestone 5 completed. The only thing I will need to do is make any changes to the milestone based off the instructor feedback I get from the first submission. 
 
 3. Summary of your progress on Milestone 5.
 	1. The work that is completed is the development of the implementation plan, development of the traceability matrix, adding of the source code listings, adding of comments to what has been changed from the first iteration to the second iteration in the source code listings, development of the test plans and cases, and development of the screencast that demonstrates the applications features for the second iteration.
