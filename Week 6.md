@@ -2,6 +2,7 @@
 ## Part 1
 
 **Stubs**
+
 In the realm of unit testing, managing dependencies is a critical aspect of ensuring that tests are effective, maintainable, and isolated from external factors. Stubs serve as valuable tools when you need to control the indirect input to the unit under test (Tarlinder, 2016-a). Stubs are particularly useful for isolating a unit from its actual dependencies and focusing solely on its core behavior. By acting as stand-ins for real collaborators, stubs return predefined values, effectively mimicking the behavior of the actual collaborators (Tarlinder, 2016-a).
 
 One primary scenario where stubs shine is in controlling the indirect input of the tested object. For instance, if a method of the tested object relies on the output of a collaborator, it's crucial to ensure that the collaborator returns specific values for the test to provide meaningful results (Tarlinder, 2016-a). Stubs come into play in such situations by replacing the actual collaborator with a controlled version, allowing developers to dictate what values the collaborator should provide. This level of control allows unit tests to remain deterministic and reproducible.
