@@ -38,11 +38,11 @@ In conclusion, Chapter 12 provides valuable insights into three essential kinds 
 
 **State Testing**
 
-State testing primarily focuses on the internal state of an object or system after a specific operation, emphasizing the correctness and consistency of the system's data or properties (Testing [source]). This approach involves the use of test doubles such as stubs and spies to verify the system's state changes. Stubs, for instance, provide predefined responses to method calls, effectively isolating the System Under Test from its dependencies and simulating specific states of collaborators (Testing [source]). In the source, a spy (MailServiceSpy) is employed to observe and record information about the number of messages sent by the mailing service, showcasing the application of state testing principles.
+State testing primarily focuses on the internal state of an object or system after a specific operation, emphasizing the correctness and consistency of the system's data or properties (Brunie, 2021). This approach involves the use of test doubles such as stubs and spies to verify the system's state changes. Stubs, for instance, provide predefined responses to method calls, effectively isolating the System Under Test from its dependencies and simulating specific states of collaborators (Brunie, 2021). In the source, a spy (MailServiceSpy) is employed to observe and record information about the number of messages sent by the mailing service, showcasing the application of state testing principles.
 
 **Behavior Testing**
 
-On the other hand, behavior testing centers around the expected interactions and sequences of method calls between objects or components within the system (Testing [source]). Behavior testing is commonly associated with the use of mock test doubles, which record and validate the interactions between the System Under Test and its dependencies. Mocks are used for behavior verification, ensuring that methods are invoked in the expected order and with the correct arguments (Testing [source]). For instance, in the provided example, a mock (MailServiceMock) is used to verify specific method invocations, such as send, and their order when filling an order object, illustrating the principles of behavior testing.
+On the other hand, behavior testing centers around the expected interactions and sequences of method calls between objects or components within the system (Brunie, 2021). Behavior testing is commonly associated with the use of mock test doubles, which record and validate the interactions between the System Under Test and its dependencies. Mocks are used for behavior verification, ensuring that methods are invoked in the expected order and with the correct arguments (Brunie, 2021). For instance, in the provided example, a mock (MailServiceMock) is used to verify specific method invocations, such as send, and their order when filling an order object, illustrating the principles of behavior testing.
 
 **Summary**
 
@@ -85,6 +85,8 @@ Testing edge cases and error handling with stubs and mocks offers several advant
 In summary, the use of stubs and mocks in software testing provides essential benefits, including isolation and controlled testing environments, enhanced test control and behavior verification, and simplified testing of edge cases and error handling. These advantages contribute to more effective and comprehensive testing processes, leading to higher software quality and increased confidence in the robustness of the software being developed.
 
 ## References
+Brunie, R. (2021, June 16). Behavior vs State verification. Medium. https://romainbrunie.medium.com/behavior-vs-state-verification-25eee7ff43eb
+
 Tarlinder, A. (2016-a). Chapter 12: Test Doubles. In Developer Testing: Building Quality into Software (pp. 159–176). Addison-Wesley Professional.
 
 Tarlinder, A. (2016-b). Chapter 13: Mocking Frameworks. In Developer Testing: Building Quality into Software (pp. 177–190). Addison-Wesley Professional.
