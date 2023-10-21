@@ -57,7 +57,43 @@ In summary, these five issue tracking and reporting tools offer a range of featu
 # Testing Management - Part 2
 Determine the best order of steps in the refactoring stage and justify your answer with supporting evidence.
 
+
+
+
+
 # Testing Management - Part 3
-Explain the common challenges when introducing test-driven development into a software project.
+
+Introducing Test-Driven Development (TDD) into a software project can be a complex process with various challenges. There are several common challenges that are faced when attempting to adopt TDD. The following sections are four of the most common challenges that are faced by the development team. 
+
+## Challenge 1: Existing Codebase Not Designed for Testability
+
+The state of an existing codebase often presents a major obstacle when adopting TDD. It's common to encounter code that was not initially designed with testability in mind, making it challenging to write unit tests (Tarlinder, 2016).
+
+Addressing this challenge usually involves refactoring the code to improve its testability. This refactoring may include breaking down large, complex functions or classes into smaller, more modular components. These smaller components are then more compatible to unit testing. Nevertheless, such refactoring efforts can be met with resistance, primarily from management. Management may express concerns regarding the time and resources required for these structural changes.
+
+## Challenge 2: Resistance to Change
+
+Resistance to change often emerges within the team, particularly regarding the belief that the code is unique and cannot be tested effectively using TDD. It's crucial to provide education and communicate the benefits of TDD to address this resistance.
+Effective communication is key, and it is essential to demonstrate how TDD can be adapted to handle various types of code, even in highly complex and mission-critical systems. Sharing success stories and best practices from other teams can help change the team's mindset and instill confidence in TDD as a valuable practice (Tarlinder, 2016).
+
+## Challenge 3: Time and Cost Concerns
+
+Time and cost concerns often surface, with management being concerned about the resources required for codebase improvements and TDD adoption (Tarlinder, 2016). To address this challenge, making a compelling business case for TDD is crucial.
+
+This business case should highlight how an initial time investment in refactoring and TDD adoption can lead to long-term benefits. These benefits may include reduced defects, faster development, and easier maintenance (Tarlinder, 2016). Demonstrating the return on investment in TDD practices over time is essential to convince stakeholders to allocate the necessary resources.
+
+## Challenge 4: Perceived Incompleteness of Testing
+
+Some team members may perceive TDD as insufficient for achieving complete testing. It's important to clarify the role of TDD within the overall testing strategy. TDD is a tool for ensuring code quality and driving development, but it is not meant to provide exhaustive testing on its own (Tarlinder, 2016).
+
+To achieve comprehensive test coverage, other testing methods, such as integration and end-to-end testing, should complement TDD. Emphasizing the role of TDD in a holistic testing strategy is vital in addressing this challenge (Tarlinder, 2016).
+
+## Summary
+
+In summary, when introducing TDD into a software project, these common challenges, as cited, need to be addressed effectively. This may involve codebase refactoring, communication, making a business case for TDD, and clarifying TDD's role within the overall testing strategy. By understanding and overcoming these challenges, teams can successfully integrate TDD into their software development processes, leading to improved code quality and reduced defects in the long run.
 
 ## References
+
+Nuclino. (n.d.). 10 Best Issue Tracking Software Systems in 2023. Www.nuclino.com. https://www.nuclino.com/solutions/issue-tracking-software#:~:text=Jira&text=Jira%20is%20one%20of%20the 
+
+Tarlinder, A. (2016). Chapter 14: Test-Driven Development - Classic Style. In Developer Testing: Building Quality into Software (pp. 191–212). Addison-Wesley Professional.
