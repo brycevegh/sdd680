@@ -1,5 +1,4 @@
-# Testing Management
-## Part 1
+# Testing Management - Part 1
 
 ## Nuclino
 
@@ -55,10 +54,10 @@ A small software development team can employ Bugzilla for tracking and resolving
 
 In summary, these five issue tracking and reporting tools offer a range of features and capabilities to address different business needs. The use case examples demonstrate how each tool can be applied in real-world scenarios, based on their unique strengths as outlined by Nuclino.
 
-## Part 2
+# Testing Management - Part 2
 Determine the best order of steps in the refactoring stage and justify your answer with supporting evidence.
 
-## Part 3
+# Testing Management - Part 3
 Explain the common challenges when introducing test-driven development into a software project.
 
 ## References
