@@ -55,11 +55,30 @@ A small software development team can employ Bugzilla for tracking and resolving
 In summary, these five issue tracking and reporting tools offer a range of features and capabilities to address different business needs. The use case examples demonstrate how each tool can be applied in real-world scenarios, based on their unique strengths as outlined by Nuclino.
 
 # Testing Management - Part 2
-Determine the best order of steps in the refactoring stage and justify your answer with supporting evidence.
 
+The Red-Green-Refactor approach is a fundamental concept in Agile development and is particularly relevant when considering the order of steps in the refactoring stage. This approach can be broken down into three distinct steps:
 
+1. **RED - Stop and Consider What Needs to be Developed:** The first step in the Red-Green-Refactor approach involves taking a close look at the existing codebase (Stone, 2018). Developers need to pause and consider what aspects of the code require improvement. This is the planning phase where they identify areas that need to be refactored. It's the moment to think about what can be enhanced to make the code more efficient, maintainable, and readable.
 
+2. **GREEN - Get the Development to Pass Basic Testing:** The second step, often referred to as the "GREEN" phase, focuses on ensuring that the code remains functional. Developers must run basic tests to confirm that the code behaves as expected and that no regressions are introduced. This step is essential for maintaining the stability of the software. It acts as a safety net to detect any unintended consequences that may result from code changes (Stone, 2018).
 
+3. **REFACTOR - Implement Improvements:** The final step, known as the "REFACTOR" phase, is where the actual code improvements are made. Armed with insights gained from the previous steps, developers can now proceed to enhance the code's quality, readability, and maintainability. This is where they address issues such as code duplication, complex methods, and other areas that need improvement (Stone, 2018).
+
+The Red-Green-Refactor approach ensures a structured and systematic order of steps in the refactoring stage. It offers several advantages:
+
+- **Safety:** By conducting basic testing in the GREEN phase, developers ensure that the code remains functional. This minimizes the risk of introducing new issues during the refactoring process.
+
+- **Clarity:** The RED phase provides a clear understanding of what needs to be improved. Developers identify specific areas that require attention and create a plan for the refactoring process.
+
+- **Stability:** Verifying that the code passes basic testing before proceeding with the REFACTOR phase helps maintain the overall stability of the software.
+
+- **Incremental Improvement:** The approach allows for incremental code improvement. Developers can tackle specific issues in a structured manner, making the codebase more efficient and maintainable over time.
+
+This order of steps aligns with the principle of "think before you act." It emphasizes careful consideration (RED), followed by testing (GREEN) to ensure stability, and only then proceeding with code improvements (REFACTOR). It is an approach that reduces the risk of introducing new issues and provides a systematic way to enhance code quality and maintainability (Stone, 2018).
+
+## Summary 
+
+In summary, the best order of steps in the refactoring stage involves first assessing the code (RED), verifying that it remains functional (GREEN), and then implementing the necessary improvements (REFACTOR). This structured method of refactoring ensures that code quality is improved while minimizing the risk of introducing new issues, ultimately contributing to a more efficient and maintainable codebase.
 
 # Testing Management - Part 3
 
@@ -95,5 +114,7 @@ In summary, when introducing TDD into a software project, these common challenge
 ## References
 
 Nuclino. (n.d.). 10 Best Issue Tracking Software Systems in 2023. Www.nuclino.com. https://www.nuclino.com/solutions/issue-tracking-software#:~:text=Jira&text=Jira%20is%20one%20of%20the 
+
+Stone, S. (2018, September 27). Code Refactoring Best Practices: When (and When Not) to Do It. AltexSoft. https://www.altexsoft.com/blog/engineering/code-refactoring-best-practices-when-and-when-not-to-do-it/
 
 Tarlinder, A. (2016). Chapter 14: Test-Driven Development - Classic Style. In Developer Testing: Building Quality into Software (pp. 191–212). Addison-Wesley Professional.
